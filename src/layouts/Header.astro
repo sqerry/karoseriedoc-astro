@@ -1,0 +1,129 @@
+<header class="header">
+    <div class="container header-wrapper">
+        <a href="/" class="logo">
+            Karoserie<span>Doc</span>
+        </a>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="/">Úvodní stránka</a></li>
+                <li><a href="/o-nas">O nás</a></li>
+                <li><a href="/galerie">Galerie</a></li>
+                <li><a href="/sluzby">Služby</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="tel">
+            <a href="tel:777076174">+420 777 076 174</a>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<style lang="scss">
+    a:not(.logo) {
+        font-size: 1.5rem;
+    }
+    .header {
+        padding: 2rem 0;
+    }
+    .header-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        width: 25%;
+        color: $clr-primary;
+        font-size: 3.6rem;
+        font-family: $ff-heading;
+        span {
+            color: $clr-white;
+        }
+    }
+    .site-nav {
+        width: 50%;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 3.2rem;
+
+            li {
+                display: flex;
+
+                a {
+                    color: $clr-white;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    padding: 1.6rem 0;
+
+                    &.active-page {
+                        color: $clr-primary;
+                    }
+                }
+            }
+        }
+    }
+    .tel {
+        text-align: right;
+        width: 25%;
+    }
+
+    $hamburger-menu-size: 4rem;
+
+    .hamburger-menu {
+        height: 3.2rem;
+        width: $hamburger-menu-size;
+        cursor: pointer;
+
+        @media (min-width: 1024px) {
+            display: none;
+        }
+
+        span {
+            background: red;
+            border-radius: 0.3rem;
+            content: '';
+            position: absolute;
+            width: $hamburger-menu-size;
+            height: 0.6rem;
+            margin-top: 1.3rem;
+
+            transition: 0.3s ease-in-out;
+
+            &::before,
+            &::after {
+                background: red;
+                border-radius: 0.3rem;
+                content: '';
+                position: absolute;
+                width: $hamburger-menu-size;
+                height: 0.6rem;
+                transition: 0.3s ease-in-out;
+            }
+
+            &::before {
+                margin-top: -1.2rem;
+            }
+
+            &::after {
+                margin-top: 1.2rem;
+            }
+        }
+
+        &.active span {
+            background: transparent;
+
+            &::before {
+                margin-top: 0;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                margin-top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+</style>

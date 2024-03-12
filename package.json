@@ -10,6 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.5.2"
+    "@appzic/astro-reset-css": "^1.2.0",
+    "@julian_cataldo/astro-resets": "^0.12.6",
+    "aos": "^2.3.4",
+    "astro": "^4.5.2",
+    "sass": "^1.71.1",
+    "swiper": "^11.0.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }
