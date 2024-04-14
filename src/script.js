@@ -1,3 +1,34 @@
+import Swiper from 'swiper'
+import { Navigation, Pagination } from 'swiper/modules'
+// import Swiper and modules styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+
+    loop: true,
+
+    // If we need pagination
+    modules: [Navigation, Pagination],
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+})
+
 document.addEventListener('DOMContentLoaded', () => {
     setActivePage()
     toggleHamburgerMenu()
@@ -12,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.toggle('active-page', isActive)
         })
     }
-
     function toggleHamburgerMenu() {
         const menuBtn = document.querySelector('.hamburger-menu')
 

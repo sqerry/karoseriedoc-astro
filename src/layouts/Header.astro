@@ -1,22 +1,21 @@
+---
+import SiteNav from '../components/Navigation.astro'
+---
+
 <header class="header">
     <div class="container header-wrapper">
         <a href="/" class="logo">
             Karoserie<span>Doc</span>
         </a>
-        <nav class="site-nav">
-            <ul>
-                <li><a href="/">Úvodní stránka</a></li>
-                <li><a href="/o-nas">O nás</a></li>
-                <li><a href="/galerie">Galerie</a></li>
-                <li><a href="/sluzby">Služby</a></li>
-                <li><a href="/kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
+        <SiteNav />
         <div class="tel">
             <a href="tel:777076174">+420 777 076 174</a>
         </div>
         <div class="hamburger-menu">
             <span></span>
+            <div class="mobile-nav">
+                <SiteNav />
+            </div>
         </div>
     </div>
 </header>
@@ -27,47 +26,49 @@
     }
     .header {
         padding: 2rem 0;
+        background-color: $clr-black;
     }
     .header-wrapper {
         display: flex;
         align-items: center;
+
+        @media (max-width: 1023px) {
+            justify-content: space-between;
+        }
     }
     .logo {
         width: 25%;
         color: $clr-primary;
         font-size: 3.6rem;
         font-family: $ff-heading;
+
+        @media (max-width: 1199px) {
+            font-size: 2.6rem;
+        }
         span {
             color: $clr-white;
-        }
-    }
-    .site-nav {
-        width: 50%;
-
-        ul {
-            display: flex;
-            justify-content: center;
-            gap: 3.2rem;
-
-            li {
-                display: flex;
-
-                a {
-                    color: $clr-white;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    padding: 1.6rem 0;
-
-                    &.active-page {
-                        color: $clr-primary;
-                    }
-                }
-            }
         }
     }
     .tel {
         text-align: right;
         width: 25%;
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+            &:before {
+                font-family: elementskit !important;
+                content: '\e976';
+                color: $clr-primary;
+                font-size: 1.8rem;
+            }
+        }
     }
 
     $hamburger-menu-size: 4rem;
@@ -82,7 +83,8 @@
         }
 
         span {
-            background: red;
+            z-index: 10;
+            background: $clr-primary;
             border-radius: 0.3rem;
             content: '';
             position: absolute;
@@ -92,38 +94,65 @@
 
             transition: 0.3s ease-in-out;
 
+            @media (max-width: 767px) {
+                width: 3.2rem;
+                height: 0.4rem;
+            }
+
             &::before,
             &::after {
-                background: red;
+                background: $clr-primary;
                 border-radius: 0.3rem;
                 content: '';
                 position: absolute;
                 width: $hamburger-menu-size;
                 height: 0.6rem;
                 transition: 0.3s ease-in-out;
+
+                @media (max-width: 767px) {
+                    width: 3.2rem;
+                    height: 0.4rem;
+                }
             }
 
             &::before {
                 margin-top: -1.2rem;
+
+                @media (max-width: 767px) {
+                    margin-top: -1rem;
+                }
             }
 
             &::after {
                 margin-top: 1.2rem;
+                @media (max-width: 767px) {
+                    margin-top: 1rem;
+                }
             }
         }
 
-        &.active span {
-            background: transparent;
+        .site-nav {
+            display: flex;
+        }
 
-            &::before {
-                margin-top: 0;
-                transform: rotate(45deg);
-            }
+        &.active {
+            span {
+                background: transparent;
 
-            &::after {
-                margin-top: 0;
-                transform: rotate(-45deg);
+                &::before {
+                    margin-top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    margin-top: 0;
+                    transform: rotate(-45deg);
+                }
             }
+        }
+
+        .mobile-nav {
+            display: none;
         }
     }
 </style>
