@@ -10,9 +10,11 @@ const { link, imgSrc, title, description } = Astro.props
 ---
 
 <div class="service-card">
-    <a href={link}>
-        <img src={imgSrc} alt={title} class="service-card__image" />
-    </a>
+    <div class="image-wrapper">
+        <a href={link}>
+            <img src={imgSrc} alt={title} class="service-card__image" />
+        </a>
+    </div>
     <div class="service-card__content">
         <h3 class="service-card__title">
             <a href={link}>{title}</a>
@@ -25,6 +27,23 @@ const { link, imgSrc, title, description } = Astro.props
 <style lang="scss">
     .service-card {
         background-color: #1d2226;
+
+        .image-wrapper {
+            overflow: hidden;
+        }
+
+        &:hover {
+            img {
+                scale: 1.2;
+            }
+        }
+
+        a:has(img) {
+            max-height: 200px;
+            img {
+                transition: 0.3s;
+            }
+        }
 
         &__content {
             padding: 32px;
@@ -40,17 +59,22 @@ const { link, imgSrc, title, description } = Astro.props
 
         &__description {
             margin-bottom: 19px;
+            font-size: 16px;
         }
 
         &__title {
             margin-bottom: 16px;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             letter-spacing: 0.2px;
             text-align: center;
 
             a {
                 color: $clr-primary;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
         &__link {

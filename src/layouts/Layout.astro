@@ -35,6 +35,10 @@ const { title, description } = Astro.props
                 font-size: 62.5%;
                 background-color: $clr-black;
                 color: $clr-white;
+
+                &:has(.hamburger-menu.active) {
+                    overflow: hidden;
+                }
             }
             .swiper {
                 width: 100%;
@@ -68,6 +72,12 @@ const { title, description } = Astro.props
                 font-size: 1.6rem;
                 height: 120vh;
                 font-family: $ff-primary;
+
+                &:has(.header.sticky) {
+                    @media (max-width: 1023px) {
+                        margin-top: 79px;
+                    }
+                }
             }
             .container {
                 width: 128rem;

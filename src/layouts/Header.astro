@@ -36,6 +36,10 @@ import SiteNav from '../components/Navigation.astro'
             left: 0;
             right: 0;
             z-index: 100;
+
+            @media (max-width: 1023px) {
+                position: fixed;
+            }
         }
     }
     .header-wrapper {
