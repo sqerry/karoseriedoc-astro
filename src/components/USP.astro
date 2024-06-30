@@ -1,0 +1,109 @@
+<div class="usp container">
+    <div class="usp-item">
+        <div class="usp-icon usp-1"></div>
+        <div class="usp-content">
+            <h3>Opravy metodou PDR</h3>
+            <p>Opravy promáčklin bez lakování metodou PDR</p>
+        </div>
+    </div>
+    <div class="usp-item">
+        <div class="usp-icon usp-2"></div>
+        <div class="usp-content">
+            <h3>Ochranné nástřiky dutin/podvozků</h3>
+            <p>Profesionální ošetření podvozku, karoserie a dutin vašeho vozu.</p>
+        </div>
+    </div>
+    <div class="usp-item">
+        <div class="usp-icon usp-3"></div>
+        <div class="usp-content">
+            <h3>Drobné klempířské/lakrnické práce</h3>
+            <p>Lakování/vyvařování jednotlivch dílů karoserie</p>
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    .usp {
+        display: flex;
+        background: linear-gradient(135deg, rgb(29, 34, 38) 0px, rgb(84, 89, 95) 100%);
+        padding: 2rem 3rem;
+        margin-top: -7rem;
+        z-index: 7;
+        position: relative;
+        gap: 2.2rem;
+
+        @media (max-width: 1199px) {
+            max-width: 100%;
+            width: 100%;
+            margin-top: 0;
+        }
+        @media (max-width: 767px) {
+            flex-direction: column;
+            padding: 3rem;
+        }
+    }
+
+    .usp-item {
+        display: flex;
+
+        @media (min-width: 768px) {
+            width: calc(33.3333% - 1.1rem);
+        }
+    }
+
+    .usp-icon {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 1rem;
+        background-color: $clr-primary;
+        display: grid;
+        place-content: center;
+        flex: 0 0 auto;
+
+        @media (max-width: 1199px) {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        &:before {
+            font-family: $ff-icons;
+            font-size: 40px;
+            color: $clr-black;
+            font-weight: 300;
+            @media (max-width: 1199px) {
+                font-size: 24px;
+            }
+        }
+        &.usp-1 {
+            &:before {
+                content: '\ebd0';
+            }
+        }
+        &.usp-2 {
+            &:before {
+                content: '\ebd5';
+            }
+        }
+        &.usp-3 {
+            &:before {
+                content: '\ebbf';
+            }
+        }
+    }
+
+    .usp-content {
+        color: #fff;
+    }
+
+    .usp-content h3 {
+        color: $clr-primary;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .usp-content p {
+        margin: 0.5rem 0 0;
+        font-size: 1.4rem;
+        max-width: 295px;
+    }
+</style>

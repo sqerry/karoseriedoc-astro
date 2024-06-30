@@ -1,5 +1,10 @@
 ---
 import { slidesContent } from '../data/slideContent.js'
+import Swiper from 'swiper'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 ---
 
 <section class="hero-section">
@@ -37,7 +42,10 @@ import { slidesContent } from '../data/slideContent.js'
 <style lang="scss">
     .hero-section {
         .swiper-pagination {
-            bottom: 10rem;
+            bottom: 8.5rem;
+            @media (max-width: 1199px) {
+                bottom: 3rem;
+            }
         }
         .swiper-button-prev,
         .swiper-button-next {
@@ -49,6 +57,14 @@ import { slidesContent } from '../data/slideContent.js'
             height: auto;
             padding-top: 6em;
             padding-bottom: 14rem;
+
+            @media (max-width: 1199px) {
+                padding-bottom: 8rem;
+            }
+
+            @media (max-width: 479px) {
+                padding-top: 3em;
+            }
 
             .background-overlay {
                 height: 100%;
@@ -98,6 +114,10 @@ import { slidesContent } from '../data/slideContent.js'
                         font-weight: 500;
                         display: flex;
                         margin-bottom: 0.5rem;
+
+                        @media (max-width: 479px) {
+                            font-weight: 400;
+                        }
                         &:before {
                             content: '\eaaf';
                             font-family: $ff-icons;

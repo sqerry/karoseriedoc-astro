@@ -1,18 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Header from '../layouts/Header.astro'
-import Card from '../components/Card.astro'
-import Swiper from 'swiper'
-import { Navigation, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 import Hero from '../components/Hero.astro'
+import USP from '../components/USP.astro'
+
+const uspItems = [
+    {
+        title: 'Opravy metodou PDR',
+        text: 'Opravy promáčklin bez lakování metodou PDR',
+    },
+    {
+        title: 'Ochranné nástřiky dutin/podvozků',
+        text: 'Profesionální ošetření podvozku, karoserie a dutin vašeho vozu.',
+    },
+    {
+        title: 'Drobné klempířské/lakýrnické práce',
+        text: 'Lakování/vyvařování jednotlivých dílů karoserie',
+    },
+]
 ---
 
 <Layout title="Opravy promáčklin bez lakování metodou PDR | KaroserieDoc" description="Test">
     <main>
         <Hero />
+        <USP items={uspItems} />
     </main>
 </Layout>
 
