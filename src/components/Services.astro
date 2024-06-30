@@ -1,0 +1,37 @@
+---
+import ServiceCard from './ServiceCard.astro'
+---
+
+<div class="services">
+    <ServiceCard
+        link="/service1"
+        imgSrc="/images/service.jpg"
+        title="Opravy vozidel po kroupách bez poškození laku"
+        description="Provádíme kompletní opravy důlků na karoserii vozidel poškozených krupobitím. Bez poškození laku – technologií PDR (Paintless Dent Repair)"
+    />
+    <ServiceCard
+        link="/service2"
+        imgSrc="/images/service.jpg"
+        title="Opravy deformací bez lakování metodou PDR"
+        description="Provádíme opravy deformací na karoseriích vozidel a nádrží motocyklů. Bez poškození laku – technologií PDR (Paintless Dent Repair)"
+    />
+    <ServiceCard
+        link="/service3"
+        imgSrc="/images/service.jpg"
+        title="Ochranné nástřiky dutin a podvozků"
+        description="Profesionální ošetření podvozku, karoserie a dutin vašeho vozu. Nástřiky provádíme značkovými přípravky DINITROL"
+    />
+    <ServiceCard
+        link="/service4"
+        imgSrc="/images/service.jpg"
+        title="Drobné klempířské a lakýrnické práce"
+        description="Lakování/vyvařování jednotlivých dílů karoserie"
+    />
+</div>
+<style lang="scss">
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+</style>

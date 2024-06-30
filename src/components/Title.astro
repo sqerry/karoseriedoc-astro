@@ -1,0 +1,39 @@
+---
+// src/components/Title.astro
+export interface Props {
+    subtitle: string
+    title: string
+    position: 'left' | 'center'
+}
+
+const { subtitle, title, position } = Astro.props
+---
+
+<div class={`title-component title-component--${position}`}>
+    <h3 class="title-component__subtitle">{subtitle}</h3>
+    <h2 class="title-component__title">{title}</h2>
+</div>
+
+<style lang="scss">
+    .title-component {
+        text-align: var(--text-align);
+        margin: 20px 0;
+    }
+    .title-component--left {
+        --text-align: left;
+    }
+    .title-component--center {
+        --text-align: center;
+    }
+    .title-component__subtitle {
+        color: $clr-primary;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .title-component__title {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+    }
+</style>

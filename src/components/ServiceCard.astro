@@ -1,0 +1,63 @@
+---
+export interface Props {
+    link: string
+    imgSrc: string
+    title: string
+    description: string
+}
+
+const { link, imgSrc, title, description } = Astro.props
+---
+
+<div class="service-card">
+    <a href={link}>
+        <img src={imgSrc} alt={title} class="service-card__image" />
+    </a>
+    <div class="service-card__content">
+        <h3 class="service-card__title">
+            <a href={link}>{title}</a>
+        </h3>
+        <p class="service-card__description">{description}</p>
+        <a href={link} class="btn service-card__link">Více informací</a>
+    </div>
+</div>
+
+<style lang="scss">
+    .service-card {
+        background-color: #1d2226;
+
+        &__content {
+            padding: 32px;
+            text-align: center;
+            min-height: 385px;
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: 767px) {
+                min-height: 300px;
+            }
+        }
+
+        &__description {
+            margin-bottom: 19px;
+        }
+
+        &__title {
+            margin-bottom: 16px;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            text-align: center;
+
+            a {
+                color: $clr-primary;
+            }
+        }
+        &__link {
+            margin-top: auto;
+            margin-left: auto;
+            margin-right: auto;
+            width: 195px;
+        }
+    }
+</style>

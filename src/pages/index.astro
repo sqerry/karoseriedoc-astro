@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
 import USP from '../components/USP.astro'
+import Services from '../components/Services.astro'
+import Title from '../components/Title.astro'
 
 const uspItems = [
     {
@@ -23,10 +25,17 @@ const uspItems = [
     <main>
         <Hero />
         <USP items={uspItems} />
+        <section class="services-section">
+            <Title subtitle="Co nabízíme" title="VŠE NA JEDNOM MÍSTĚ." position="center" />
+            <div class="container">
+                <Services />
+            </div>
+        </section>
     </main>
 </Layout>
 
 <style lang="scss">
-    main {
+    .services-section {
+        padding: 5rem 0;
     }
 </style>
