@@ -1,0 +1,116 @@
+---
+import { slidesContent } from '../data/slideContent.js'
+---
+
+<section class="hero-section">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            {
+                slidesContent.map((slide) => (
+                    <div class="swiper-slide">
+                        <div class="background-overlay" style={`background-image: url(${slide.image})`} />
+                        <div class="slide-content container">
+                            <h6>{slide.subtitle}</h6>
+                            <h2 class="hero-title">{slide.title}</h2>
+                            <ul>
+                                {slide.features.map((feature) => (
+                                    <li>
+                                        <span>{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <a href={slide.buttonLink} class="btn">
+                                {slide.buttonText}
+                            </a>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<style lang="scss">
+    .hero-section {
+        .swiper-pagination {
+            bottom: 10rem;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            @media (max-width: 140rem) {
+                display: none;
+            }
+        }
+        .swiper-slide {
+            height: auto;
+            padding-top: 6em;
+            padding-bottom: 14rem;
+
+            .background-overlay {
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 2;
+                opacity: 0.5;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center -20rem;
+
+                @media (max-width: 140rem) {
+                    background-position: center center;
+                }
+            }
+            .slide-content {
+                z-index: 3;
+                position: relative;
+
+                h6 {
+                    font-size: $fs-400;
+                    font-weight: 500;
+                    letter-spacing: 0.1rem;
+                    color: $clr-primary;
+                    margin-bottom: 1.5rem;
+
+                    @media (max-width: 479px) {
+                        font-size: 1.4rem;
+                    }
+                }
+                h2.hero-title {
+                    font-size: 4rem;
+                    max-width: 50rem;
+                    line-height: 1.2;
+                    margin-bottom: 1.5rem;
+
+                    @media (max-width: 479px) {
+                        font-size: 3rem;
+                    }
+                }
+                ul {
+                    margin-bottom: 1.9rem;
+                    max-width: 45rem;
+                    li {
+                        font-weight: 500;
+                        display: flex;
+                        margin-bottom: 0.5rem;
+                        &:before {
+                            content: '\eaaf';
+                            font-family: $ff-icons;
+                            font-size: 1.4rem;
+                            color: $clr-primary;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                .btn {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+</style>

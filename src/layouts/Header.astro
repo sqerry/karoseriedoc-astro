@@ -27,6 +27,16 @@ import SiteNav from '../components/Navigation.astro'
     .header {
         padding: 2rem 0;
         background-color: $clr-black;
+        top: -130px;
+        transition: 0.3s ease-in-out;
+
+        &.sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
     }
     .header-wrapper {
         display: flex;
@@ -83,7 +93,7 @@ import SiteNav from '../components/Navigation.astro'
         }
 
         span {
-            z-index: 10;
+            z-index: 100;
             background: $clr-primary;
             border-radius: 0.3rem;
             content: '';
