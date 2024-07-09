@@ -1,0 +1,159 @@
+---
+import Logo from '../components/Logo.astro'
+---
+
+<div class="footer-bottom">
+    <div class="contact-info">
+        <Logo />
+        <ul>
+            <li>
+                <div class="icon location"></div>
+                <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=Chodová+Planá+488,+Chodová+Planá+348+13"
+                    target="_blank">
+                    Chodová Planá 488, Chodová Planá 348 13
+                </a>
+            </li>
+            <li>
+                <div class="icon email"></div>
+                <a href="mailto:alexandrmelichar@gmail.com"> alexandrmelichar@gmail.com </a>
+            </li>
+            <li>
+                <div class="icon tel"></div>
+                <a href="tel:+420777076174"> +420 777 076 174 </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-banner services">
+        <h4>Služby</h4>
+        <ul>
+            <li>
+                <div class="icon checkmark"></div>
+
+                <a href="">Opravy vozidel po kroupách bez poškození laku​</a>
+            </li>
+            <li>
+                <div class="icon checkmark"></div>
+
+                <a href="">Opravy deformací bez lakování metodou PDR​</a>
+            </li>
+            <li>
+                <div class="icon checkmark"></div>
+
+                <a href="">Ochranné nástřiky dutin a podvozků</a>
+            </li>
+            <li>
+                <div class="icon checkmark"></div>
+
+                <a href="">Drobné klempířské a lakýrnické práce</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer-banner">
+        <h4>Otevírací doba</h4>
+        <ul>
+            <li>
+                <div class="icon clock"></div>
+                <p>Dle telefonické domluvy</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="signature">
+    <div class="signature-author">
+        Vytvořil <a href="https://www.linkedin.com/in/robert-nguyen-92419220a/"> RN</a>
+    </div>
+    <p>Copyright &copy; KaroserieDoc {new Date().getFullYear()}</p>
+</div>
+<style lang="scss">
+    .signature {
+        border-top: 1px solid #54595f;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 5rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #9c9fa3;
+
+        a {
+            color: #9c9fa3;
+        }
+    }
+    .footer-bottom {
+        display: flex;
+        margin-top: 3.2rem;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+        > div {
+            width: 33.3333%;
+            padding: 2rem;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+        .contact-info {
+            ul {
+                margin-top: 1rem;
+            }
+        }
+        .footer-banner {
+            h4 {
+                margin-bottom: 3.2rem;
+                font-size: 2rem;
+                font-weight: 600;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: -1.5rem;
+                    width: 10%;
+                    height: 1px;
+                    background-color: $clr-primary;
+                }
+            }
+        }
+        a,
+        p {
+            font-size: 1.4rem;
+            display: block;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            padding-bottom: 0.3rem;
+        }
+
+        .icon {
+            margin-right: 1rem;
+            &.location:before {
+                content: '\ea58';
+            }
+            &.email:before {
+                content: '\ea44';
+            }
+            &.tel:before {
+                content: '\ea54';
+            }
+            &.checkmark:before {
+                content: '\eaaf';
+            }
+            &.clock:before {
+                content: '\eb9c';
+            }
+
+            &:before {
+                font-size: 1.4rem;
+                font-family: $ff-icons;
+                color: $clr-primary;
+            }
+        }
+    }
+</style>

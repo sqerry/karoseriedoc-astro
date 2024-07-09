@@ -1,3 +1,7 @@
+---
+import FooterBottom from '../components/FooterBottom.astro'
+---
+
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer-top">
@@ -15,30 +19,28 @@
             </div>
             <div class="footer-top-item">
                 <div class="icon tel"></div>
-                <div class="footer-info-item">
+                <a href="tel:+420 777 076 174" class="footer-info-item">
                     <div class="footer-info-item__title">
-                        <h4>Addresa</h4>
+                        <h4>Zavolejte</h4>
                     </div>
                     <div class="footer-info-item__content">
-                        <p>Chodová Planá 488</p>
-                        <p>Chodová Planá, 348 13</p>
+                        <p>+420 777 076 174</p>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="footer-top-item">
+            <a href="https://www.instagram.com/karoseriedoc/" target="_blank" class="footer-top-item">
                 <div class="icon ig"></div>
                 <div class="footer-info-item">
                     <div class="footer-info-item__title">
-                        <h4>Addresa</h4>
+                        <h4>Instagram</h4>
                     </div>
                     <div class="footer-info-item__content">
-                        <p>Chodová Planá 488</p>
-                        <p>Chodová Planá, 348 13</p>
+                        <p>@karoseriedoc</p>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="footer-bottom"></div>
+        <FooterBottom />
         <div class="signature"></div>
     </div>
 </footer>
@@ -51,8 +53,55 @@
 
         .footer-top {
             display: flex;
+            background-color: #54595f;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
+
             .footer-top-item {
                 display: flex;
+                width: 33.33333%;
+                padding: 2rem;
+                align-items: center;
+                &:not(:last-child) {
+                    border-right: solid 1px #7a7a7a;
+                }
+
+                @media (max-width: 767px) {
+                    &:not(:last-child) {
+                        width: 100%;
+                        border-bottom: solid 1px #7a7a7a;
+                    }
+                }
+
+                .icon {
+                    margin-right: 2rem;
+                    &:before {
+                        font-size: 4.5rem;
+                        font-family: $ff-icons;
+                        color: $clr-primary;
+                    }
+                    &.map {
+                        &::before {
+                            content: '\e910';
+                        }
+                    }
+                    &.tel {
+                        &::before {
+                            content: '\ea54';
+                        }
+                    }
+                    &.ig {
+                        &::before {
+                            content: '\eb6c';
+                        }
+                    }
+                }
+                .footer-info-item__title h4 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
 
                 &__content {
                 }
