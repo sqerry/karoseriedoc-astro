@@ -8,7 +8,12 @@ import Logo from '../components/Logo.astro'
         <Logo />
         <SiteNav />
         <div class="tel">
-            <a href="tel:777076174">+420 777 076 174</a>
+            <a href="tel:777076174">
+                <div class="tel-wrapper">
+                    <span class="tel">+420 777 076 174</span>
+                    <span class="tel-text">Konzultace zdarma!</span>
+                </div>
+            </a>
         </div>
         <div class="hamburger-menu">
             <span></span>
@@ -69,11 +74,31 @@ import Logo from '../components/Logo.astro'
             align-items: center;
             justify-content: flex-end;
             gap: 1rem;
+
             &:before {
                 font-family: elementskit !important;
                 content: '\e976';
                 color: $clr-primary;
                 font-size: 1.8rem;
+            }
+
+            .tel {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 1rem;
+
+                // &:before {
+                //     font-family: elementskit !important;
+                //     content: '\e976';
+                //     color: $clr-primary;
+                //     font-size: 1.8rem;
+                // }
+            }
+            .tel-text {
+                font-size: 1.4rem;
+                font-weight: 600;
             }
         }
     }
