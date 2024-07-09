@@ -1,12 +1,11 @@
 ---
 import SiteNav from '../components/Navigation.astro'
+import Logo from '../components/Logo.astro'
 ---
 
 <header class="header">
     <div class="container header-wrapper">
-        <a href="/" class="logo">
-            Karoserie<span>Doc</span>
-        </a>
+        <Logo />
         <SiteNav />
         <div class="tel">
             <a href="tel:777076174">+420 777 076 174</a>
@@ -52,15 +51,9 @@ import SiteNav from '../components/Navigation.astro'
     }
     .logo {
         width: 25%;
-        color: $clr-primary;
-        font-size: 3.6rem;
-        font-family: $ff-heading;
 
         @media (max-width: 1199px) {
             font-size: 2.6rem;
-        }
-        span {
-            color: $clr-white;
         }
     }
     .tel {

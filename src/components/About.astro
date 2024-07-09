@@ -1,0 +1,202 @@
+---
+import Title from '../components/Title.astro'
+---
+
+<section class="about-us-section">
+    <div class="container">
+        <div class="about-wrapper">
+            <div class="about-us-image">
+                <img src="/images/about-us.jpg" alt="About Us" />
+                <div class="stat-item image-stat">
+                    <span class="stat-number">2478+</span>
+                    <span class="stat-label">Vymačkaných důlků</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <h3 class="section-title">O nás</h3>
+                <h2 class="section-subtitle">Profesionální přístup s důrazem na kvalitu</h2>
+
+                <p class="section-description">Textové informace v přípravě. Děkujeme za pochopení.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-content">
+                            <span class="stat-number">15,365<span class="plus">+</span></span>
+                            <span class="stat-label">Úderů kladivem</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-content">
+                            <span class="stat-number">198<span class="plus">+</span></span>
+                            <span class="stat-label">spasovanch blatníků</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-content">
+                            <span class="stat-number">142<span class="plus">+</span></span>
+                            <span class="stat-label">Nalakovanch dílů</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .about-us-section {
+        padding-top: 4rem;
+    }
+    .about-wrapper {
+        display: flex;
+        gap: 4.8rem;
+
+        @media (max-width: 991px) {
+            flex-direction: column-reverse;
+        }
+
+        .about-us-image {
+            width: 35%;
+            position: relative;
+
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+
+            @media (max-width: 767px) {
+                img {
+                    // display: none;
+                    position: absolute;
+                    top: -380px;
+                    z-index: -1;
+                    filter: brightness(0.4);
+                    max-height: 480px;
+                    margin: 0 auto;
+                    width: 90%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    object-fit: cover;
+                }
+            }
+
+            .image-stat.stat-item {
+                position: absolute;
+                bottom: -2rem;
+                right: -1rem;
+                background-color: #1d2226;
+                padding: 2.5rem;
+                padding-left: 7rem;
+                padding-right: 7rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @media (max-width: 767px) {
+                    position: relative;
+                    bottom: 0;
+                    right: 0;
+                    max-width: 295px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+                .stat-number {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    font-family: $ff-heading;
+                    color: $clr-primary;
+                }
+                .stat-label {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+            }
+        }
+        .about-content {
+            width: 65%;
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+            .section-title {
+                margin-top: 4.8rem;
+                color: $clr-primary;
+                margin-bottom: 1.2rem;
+                @media (max-width: 767px) {
+                    max-width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .section-subtitle {
+                font-size: 3.2rem;
+                max-width: 400px !important;
+                margin-bottom: 1.9rem;
+                line-height: 1.2;
+
+                @media (max-width: 767px) {
+                    max-width: 100% !important;
+                    text-align: center;
+                }
+            }
+            .section-description {
+                margin-bottom: 3.2rem;
+                @media (max-width: 767px) {
+                    max-width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        .stats {
+            display: flex;
+            gap: 5rem;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat-item {
+                display: flex;
+                align-items: center;
+                gap: 1.4rem;
+                .stat-content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .stat-number {
+                        font-size: 3.2rem;
+                        font-weight: 700;
+                        font-family: $ff-heading;
+                        .plus {
+                            margin-left: 0.4rem;
+                            font-size: 2.4rem;
+                            color: $clr-primary;
+                        }
+                    }
+                    .stat-label {
+                        font-size: 1.4rem;
+                    }
+                }
+                &:before {
+                    font-family: elementskit !important;
+                    color: $clr-primary;
+                    font-size: 5rem;
+                }
+                &:nth-child(1) {
+                    &:before {
+                        content: '\ea9a';
+                    }
+                }
+                &:nth-child(2) {
+                    &:before {
+                        content: '\ea78';
+                    }
+                }
+                &:nth-child(3) {
+                    &:before {
+                        content: '\ebd0';
+                    }
+                }
+            }
+        }
+    }
+</style>

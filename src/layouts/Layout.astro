@@ -1,6 +1,7 @@
 ---
 import ResetCSS from '@appzic/astro-reset-css'
 import Header from '../layouts/Header.astro'
+import Footer from '../layouts/Footer.astro'
 const { title, description } = Astro.props
 ---
 
@@ -25,9 +26,8 @@ const { title, description } = Astro.props
 
     <body>
         <Header />
-
         <slot />
-
+        <Footer />
         <script src="../script.js"></script>
 
         <style lang="scss" is:global>
@@ -38,6 +38,11 @@ const { title, description } = Astro.props
 
                 &:has(.hamburger-menu.active) {
                     overflow: hidden;
+                }
+            }
+            .page-title {
+                @media (max-width: 767px) {
+                    font-size: 2.5rem;
                 }
             }
             .swiper {

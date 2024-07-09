@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro'
 import USP from '../components/USP.astro'
 import Services from '../components/Services.astro'
 import Title from '../components/Title.astro'
+import About from '../components/About.astro'
 
 const uspItems = [
     {
@@ -31,15 +32,16 @@ const uspItems = [
                 <Services />
             </div>
         </section>
+        <About />
     </main>
 </Layout>
 
 <style lang="scss">
     .services-section {
-        padding: 6rem 0;
+        padding: 4rem 0;
 
         @media (max-width: 767px) {
-            padding: 3rem 0;
+            padding: 2.5rem 0;
         }
     }
 </style>
