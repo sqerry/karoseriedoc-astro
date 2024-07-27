@@ -1,20 +1,25 @@
 ---
 import FooterBottom from '../components/FooterBottom.astro'
+import Ratings from '../components/Ratings.astro'
 ---
 
 <footer class="footer">
     <div class="footer__container container">
+        <Ratings />
         <div class="footer-top">
             <div class="footer-top-item">
                 <div class="icon map"></div>
                 <div class="footer-info-item">
-                    <div class="footer-info-item__title">
+                    <a
+                        href="https://www.google.com/maps/dir/?api=1&destination=Chodová+Planá+488,+Chodová+Planá+348+13"
+                        target="_blank"
+                        class="footer-info-item__title">
                         <h4>Addresa</h4>
-                    </div>
-                    <div class="footer-info-item__content">
-                        <p>Chodová Planá 488</p>
-                        <p>Chodová Planá, 348 13</p>
-                    </div>
+                        <div class="footer-info-item__content">
+                            <p>Chodová Planá 488</p>
+                            <p>Chodová Planá, 348 13</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="footer-top-item">

@@ -1,0 +1,37 @@
+---
+export interface Props {
+    pageName: string
+    imageSrc: string
+}
+const { pageName, imageSrc } = Astro.props
+---
+
+<section class="page-header" style={`background-image: url(${imageSrc})`}>
+    <h1>{pageName}</h1>
+</section>
+
+<style lang="scss">
+    .page-header {
+        position: relative;
+        min-height: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5) inset;
+
+        @media (max-width: 767px) {
+            min-height: 190px;
+        }
+
+        h1 {
+            position: relative;
+            text-align: center;
+            z-index: 3;
+            color: white;
+            font-size: 3.2rem;
+        }
+    }
+</style>
