@@ -58,6 +58,12 @@ import Logo from '../components/Logo.astro'
                 <p>Dle telefonické domluvy</p>
             </li>
         </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/karoseriedoc" target="_blank" class="facebook">
+                <img src="/images/facebook-circle.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/karoseriedoc/" target="_blank" class="instagram"> </a>
+        </div>
     </div>
 </div>
 <div class="signature">
@@ -103,6 +109,8 @@ import Logo from '../components/Logo.astro'
             }
         }
         .footer-banner {
+            display: flex;
+            flex-direction: column;
             h4 {
                 margin-bottom: 3.2rem;
                 font-size: 2rem;
@@ -153,6 +161,31 @@ import Logo from '../components/Logo.astro'
                 font-size: 1.4rem;
                 font-family: $ff-icons;
                 color: $clr-primary;
+            }
+        }
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+            justify-content: flex-end;
+            a {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+            .facebook {
+            }
+            .instagram {
+                margin: 0;
+                position: relative;
+                &::before {
+                    font-family: $ff-icons;
+                    content: '\eb6c';
+                    font-size: 2rem;
+                    position: absolute;
+                    top: -2px;
+                    color: $clr-primary;
+                }
             }
         }
     }
