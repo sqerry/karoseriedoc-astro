@@ -26,6 +26,9 @@ dependencies:
   astro-i18next:
     specifier: 1.0.0-beta.21
     version: 1.0.0-beta.21(astro@4.14.3)
+  i18next:
+    specifier: ^23.14.0
+    version: 23.14.0
   jolty:
     specifier: ^0.6.2
     version: 0.6.2
@@ -2152,6 +2155,12 @@ packages:
 
   /i18next@22.5.1:
     resolution: {integrity: sha512-8TGPgM3pAD+VRsMtUMNknRz3kzqwp/gPALrWMsDnmC1mKqJwpWyooQRLMcbTwq8z8YwSmuj+ZYvc+xCuEpkssA==}
+    dependencies:
+      '@babel/runtime': 7.25.0
+    dev: false
+
+  /i18next@23.14.0:
+    resolution: {integrity: sha512-Y5GL4OdA8IU2geRrt2+Uc1iIhsjICdHZzT9tNwQ3TVqdNzgxHToGCKf/TPRP80vTCAP6svg2WbbJL+Gx5MFQVA==}
     dependencies:
       '@babel/runtime': 7.25.0
     dev: false
