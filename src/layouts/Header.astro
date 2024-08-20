@@ -5,6 +5,33 @@ import { LanguageSelector } from 'astro-i18next/components'
 import { t } from 'i18next'
 ---
 
+<div class="top-navigation-bar">
+    <div class="container">
+        <ul>
+            <li class="location">
+                <div class="icon location"></div>
+                <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=Chodová+Planá+488,+Chodová+Planá+348+13"
+                    target="_blank">
+                    Chodová Planá 488, Chodová Planá 348 13
+                </a>
+            </li>
+            <li>
+                <div class="icon email"></div>
+                <a href="mailto:alexandrmelichar@gmail.com">alexandrmelichar@gmail.com</a>
+            </li>
+            <li class="tel">
+                <a href={`tel:${t('header.tel.number')}`}>{t('header.tel.number')}</a>
+            </li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/karoseriedoc" target="_blank" class="facebook">
+                <img src="/images/facebook-circle.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/karoseriedoc/" target="_blank" class="instagram"> </a>
+        </div>
+    </div>
+</div>
 <header class="header">
     <div class="container header-wrapper">
         <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
@@ -31,6 +58,44 @@ import { t } from 'i18next'
 </header>
 
 <style lang="scss">
+    .top-navigation-bar {
+        background-color: #1d2226;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        // background-color: $clr-secondary;
+
+        ul {
+            display: flex;
+            gap: 3rem;
+            padding: 1rem 0;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                &.tel {
+                    @media (min-width: 1024px) {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 1023px) {
+                    &:not(.tel) {
+                        display: none;
+                    }
+                    &.tel {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        a {
+            // color: $clr-black;
+        }
+    }
     a:not(.logo) {
         font-size: 1.5rem;
     }

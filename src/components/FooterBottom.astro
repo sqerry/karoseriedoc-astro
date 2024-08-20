@@ -88,6 +88,9 @@ import Logo from '../components/Logo.astro'
             color: #9c9fa3;
         }
     }
+    .social-links {
+        margin-top: auto;
+    }
     .footer-bottom {
         display: flex;
         margin-top: 3.2rem;
@@ -137,56 +140,6 @@ import Logo from '../components/Logo.astro'
             display: flex;
             align-items: center;
             padding-bottom: 0.3rem;
-        }
-
-        .icon {
-            margin-right: 1rem;
-            &.location:before {
-                content: '\ea58';
-            }
-            &.email:before {
-                content: '\ea44';
-            }
-            &.tel:before {
-                content: '\ea54';
-            }
-            &.checkmark:before {
-                content: '\eaaf';
-            }
-            &.clock:before {
-                content: '\eb9c';
-            }
-
-            &:before {
-                font-size: 1.4rem;
-                font-family: $ff-icons;
-                color: $clr-primary;
-            }
-        }
-        .social-links {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: auto;
-            justify-content: flex-end;
-            a {
-                width: 2.4rem;
-                height: 2.4rem;
-            }
-            .facebook {
-            }
-            .instagram {
-                margin: 0;
-                position: relative;
-                &::before {
-                    font-family: $ff-icons;
-                    content: '\eb6c';
-                    font-size: 2rem;
-                    position: absolute;
-                    top: -2px;
-                    color: $clr-primary;
-                }
-            }
         }
     }
 </style>

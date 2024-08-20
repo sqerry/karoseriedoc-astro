@@ -64,6 +64,54 @@ const { title, description } = Astro.props
                 --uc-primary-oklch-dark: 97% 0 0;
                 --uc-primary-oklch-light: 10% 0 0;
             }
+            .social-links {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                justify-content: flex-end;
+                a {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+                .facebook {
+                }
+                .instagram {
+                    margin: 0;
+                    position: relative;
+                    &::before {
+                        font-family: $ff-icons;
+                        content: '\eb6c';
+                        font-size: 2rem;
+                        position: absolute;
+                        top: -2px;
+                        color: $clr-primary;
+                    }
+                }
+            }
+            .icon {
+                margin-right: 1rem;
+                &.location:before {
+                    content: '\ea58';
+                }
+                &.email:before {
+                    content: '\ea44';
+                }
+                &.tel:before {
+                    content: '\ea54';
+                }
+                &.checkmark:before {
+                    content: '\eaaf';
+                }
+                &.clock:before {
+                    content: '\eb9c';
+                }
+
+                &:before {
+                    font-size: 1.4rem;
+                    font-family: $ff-icons;
+                    color: $clr-primary;
+                }
+            }
             .swiper {
                 width: 100%;
 
