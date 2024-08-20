@@ -43,6 +43,12 @@ const { link, imgSrc, title, description } = Astro.props
             display: block;
             img {
                 transition: 0.3s;
+
+                @media (max-width: 767px) {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
 
             @media (max-width: 767px) {

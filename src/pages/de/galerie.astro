@@ -1,6 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import PageHeader from '../components/PageHeader.astro'
+import { changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+changeLanguage("de");
 ---
 
 <Layout title="Galerie" description="Galerie">
@@ -88,53 +91,76 @@ import PageHeader from '../components/PageHeader.astro'
     </div>
 </Layout>
 <script>
-    const filterContainer = document.querySelector('.gallery-filter')
-    if (filterContainer) {
-        const galleryItems = document.querySelectorAll('.gallery-item')
+    function setupGalleryFilter() {
+        const filterContainer = document.querySelector('.gallery-filter')
+        if (filterContainer) {
+            const galleryItems = document.querySelectorAll('.gallery-item')
 
-        filterContainer.addEventListener('click', (event) => {
-            const target = event.target as HTMLElement
-            if (target.classList.contains('filter-item')) {
-                // deactivate existing active 'filter-item'
-                filterContainer.querySelector('.active')?.classList.remove('active')
-                // activate new 'filter-item'
-                target.classList.add('active')
-                const filterValue = target.getAttribute('data-filter')
-                if (filterValue !== null) {
-                    galleryItems.forEach((item) => {
-                        if (item.classList.contains(filterValue) || filterValue === 'all') {
-                            item.classList.remove('hide')
-                            item.classList.add('show')
-                        } else {
-                            item.classList.remove('show')
-                            item.classList.add('hide')
-                        }
-                    })
+            filterContainer.addEventListener('click', (event) => {
+                const target = event.target as HTMLElement
+                if (target.classList.contains('filter-item')) {
+                    updateActiveFilter(filterContainer, target)
+                    filterGalleryItems(target, galleryItems)
                 }
+            })
+        }
+    }
+
+    function updateActiveFilter(filterContainer: Element, target: HTMLElement) {
+        filterContainer.querySelector('.active')?.classList.remove('active')
+        target.classList.add('active')
+    }
+
+    function filterGalleryItems(target: HTMLElement, galleryItems: NodeListOf<Element>) {
+        const filterValue = target.getAttribute('data-filter')
+        if (filterValue !== null) {
+            galleryItems.forEach((item) => {
+                if (item.classList.contains(filterValue) || filterValue === 'all') {
+                    item.classList.remove('hide')
+                    item.classList.add('show')
+                } else {
+                    item.classList.remove('show')
+                    item.classList.add('hide')
+                }
+            })
+        }
+    }
+
+    function setupImageModal() {
+        const modal = document.getElementById('imageModal')
+        const modalImg = document.getElementById('modalImage') as HTMLImageElement
+        const galleryImages = document.querySelectorAll('.gallery-item-inner img')
+        const closeBtn = document.querySelector('.close') as HTMLElement
+
+        galleryImages.forEach((img) => {
+            img.addEventListener('click', () => openModal(modal!, modalImg!, img as HTMLImageElement))
+        })
+
+        closeBtn?.addEventListener('click', () => closeModal(modal!))
+
+        document.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                closeModal(modal!)
             }
         })
     }
 
-    const modal = document.getElementById('imageModal')
-    const modalImg = document.getElementById('modalImage') as HTMLImageElement
-    const galleryImages = document.querySelectorAll('.gallery-item-inner img')
-    const closeBtn = document.querySelector('.close') as HTMLElement
+    function openModal(modal: HTMLElement, modalImg: HTMLImageElement, img: HTMLImageElement) {
+        modal.style.display = 'flex'
+        modalImg.src = img.src
+    }
 
-    galleryImages.forEach((img) => {
-        img.addEventListener('click', () => {
-            modal!.style.display = 'flex'
-            modalImg!.src = (img as HTMLImageElement).src
-        })
+    function closeModal(modal: HTMLElement) {
+        modal.style.display = 'none'
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setupGalleryFilter()
+        setupImageModal()
     })
-
-    closeBtn.addEventListener('click', () => {
-        modal!.style.display = 'none'
-    })
-
-    window.addEventListener('click', (event) => {
-        if (event.target == modal) {
-            modal!.style.display = 'none'
-        }
+    document.addEventListener('astro:after-swap', () => {
+        setupGalleryFilter()
+        setupImageModal()
     })
 </script>
 <style lang="scss">

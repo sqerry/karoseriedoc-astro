@@ -1,0 +1,27 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Title from "../../components/Title.astro";
+import Services from "../../components/Services.astro";
+
+changeLanguage("de");
+---
+
+<Layout title="Služby" description="Služby">
+    <PageHeader pageName="Služby" imageSrc="/images/hero.jpg" />
+    <main>
+        <section class="services-section">
+            <Title subtitle="Co nabízíme" title="VŠE NA JEDNOM MÍSTĚ." position="center" />
+            <div class="container">
+                <Services />
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style lang="scss">
+    .services-section {
+        padding-top: 5rem;
+    }
+</style>

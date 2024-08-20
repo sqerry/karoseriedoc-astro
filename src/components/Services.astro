@@ -1,52 +1,53 @@
 ---
 import ServiceCard from './ServiceCard.astro'
+import i18next, { t } from 'i18next'
 ---
 
 <div class="services">
     <ServiceCard
-        link="/service1"
+        link={t('urls.opravy-vozidel-kroupy')}
         imgSrc="/images/service.jpg"
         title="Opravy vozidel po kroupách bez poškození laku"
         description="Provádíme kompletní opravy důlků na karoserii vozidel poškozených krupobitím. Bez poškození laku – technologií PDR (Paintless Dent Repair)"
     />
     <ServiceCard
-        link="/service2"
+        link={t('urls.opravy-deformaci-pdr')}
         imgSrc="/images/service.jpg"
         title="Opravy deformací bez lakování metodou PDR"
         description="Provádíme opravy deformací na karoseriích vozidel a nádrží motocyklů. Bez poškození laku – technologií PDR (Paintless Dent Repair)"
     />
     <ServiceCard
-        link="/service3"
+        link={t('urls.ochrane-nastriky')}
         imgSrc="/images/service.jpg"
         title="Ochranné nástřiky dutin a podvozků"
         description="Profesionální ošetření podvozku, karoserie a dutin vašeho vozu. Nástřiky provádíme značkovými přípravky DINITROL"
     />
     <ServiceCard
-        link="/service4"
+        link={t('urls.klempirnicka-lakyrnicka')}
         imgSrc="/images/service.jpg"
         title="Drobné klempířské a lakýrnické ucho"
         description="Lakování/vyvařování jednotlivých dílů karoserie"
     />
     <ServiceCard
-        link="/service5"
+        link={t('urls.vyvarovani')}
         imgSrc="/images/service.jpg"
         title="Vyvařování a karosářské opravy"
         description="Lakování/vyvařování jednotlivých dílů karoserie"
     />
     <ServiceCard
-        link="/service6"
+        link={t('urls.udrzba-klimatizace')}
         imgSrc="/images/service.jpg"
         title="Údržba a opravy klimatizací"
         description="Lakování/vyvařování jednotlivých dílů karoserie"
     />
     <ServiceCard
-        link="/service7"
+        link={t('urls.pneuservis')}
         imgSrc="/images/service.jpg"
         title="Pneuservis"
         description="Lakování/vyvařování jednotlivých dílů karoserie"
     />
     <ServiceCard
-        link="/service8"
+        link={t('urls.cisteni-a-myti')}
         imgSrc="/images/service.jpg"
         title="Čištění a mytí vozidel"
         description="Lakování/vyvařování jednotlivých dílů karoserie"

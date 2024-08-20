@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config'
+import astroI18next from 'astro-i18next'
 import { fileURLToPath } from 'url'
 import path, { dirname } from 'path'
 
@@ -22,5 +23,16 @@ export default defineConfig({
         },
       },
     },
+    ssr: {
+      noExternal: ['@formspark/use-formspark'],
+    },
   },
+  // redirects: {
+  //   '/ServicesPage': '/sluzby',
+  // },
+  i18n: {
+    defaultLocale: 'cs',
+    locales: ['cs', 'de'],
+  },
+  integrations: [astroI18next()],
 })

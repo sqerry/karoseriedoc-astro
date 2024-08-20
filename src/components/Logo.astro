@@ -2,6 +2,21 @@
     Karoserie<span>Doc</span>
 </a>
 
+<script>
+    function updateLogo() {
+        const htmlLang = document.documentElement.lang
+        const logo = document.querySelector('.logo')
+
+        if (htmlLang === 'cs') {
+            logo.setAttribute('href', '/')
+        } else {
+            logo.setAttribute('href', `/${htmlLang}/`)
+        }
+    }
+    document.addEventListener('DOMContentLoaded', updateLogo)
+    document.addEventListener('astro:after-swap', updateLogo)
+</script>
+
 <style lang="scss">
     .logo {
         color: $clr-primary;

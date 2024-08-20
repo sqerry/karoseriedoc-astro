@@ -1,25 +1,31 @@
 ---
 import SiteNav from '../components/Navigation.astro'
 import Logo from '../components/Logo.astro'
+import { LanguageSelector } from 'astro-i18next/components'
+import { t } from 'i18next'
 ---
 
 <header class="header">
     <div class="container header-wrapper">
-        <Logo />
+        <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
+        <div class="header-logo">
+            <Logo />
+        </div>
         <SiteNav />
         <div class="tel">
-            <a href="tel:777076174">
+            <a href={`tel:${t('header.tel.number')}`}>
                 <div class="tel-wrapper">
-                    <span class="tel">+420 777 076 174</span>
-                    <span class="tel-text">Konzultace zdarma!</span>
+                    <span class="tel">{t('header.tel.number')}</span>
+                    <span class="tel-text">{t('header.tel.cto')}</span>
                 </div>
             </a>
         </div>
         <div class="hamburger-menu">
             <span></span>
-            <div class="mobile-nav">
-                <SiteNav />
-            </div>
+        </div>
+        <div class="mobile-nav">
+            <SiteNav />
+            <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
         </div>
     </div>
 </header>
@@ -27,6 +33,9 @@ import Logo from '../components/Logo.astro'
 <style lang="scss">
     a:not(.logo) {
         font-size: 1.5rem;
+    }
+    .header-logo {
+        width: 25%;
     }
     .header {
         padding: 2rem 0;
@@ -49,9 +58,22 @@ import Logo from '../components/Logo.astro'
     .header-wrapper {
         display: flex;
         align-items: center;
+        position: relative;
 
         @media (max-width: 1023px) {
             justify-content: space-between;
+            position: static;
+        }
+    }
+
+    .lang-switcher {
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        background-color: $clr-black;
+
+        @media (max-width: 1023px) {
+            display: none;
         }
     }
     .logo {
@@ -63,7 +85,7 @@ import Logo from '../components/Logo.astro'
     }
     .tel {
         text-align: right;
-        width: 25%;
+        width: 20%;
 
         @media (max-width: 1023px) {
             display: none;
@@ -181,10 +203,6 @@ import Logo from '../components/Logo.astro'
                     transform: rotate(-45deg);
                 }
             }
-        }
-
-        .mobile-nav {
-            display: none;
         }
     }
 </style>

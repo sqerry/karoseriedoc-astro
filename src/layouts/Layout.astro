@@ -1,12 +1,16 @@
 ---
+import i18next, { t } from 'i18next'
+import { HeadHrefLangs } from 'astro-i18next/components'
+
 import ResetCSS from '@appzic/astro-reset-css'
 import Header from '../layouts/Header.astro'
 import Footer from '../layouts/Footer.astro'
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
 const { title, description } = Astro.props
 ---
 
 <!doctype html>
-<html lang="cs">
+<html lang={i18next.language}>
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content={description} />
@@ -20,8 +24,14 @@ const { title, description } = Astro.props
             rel="stylesheet"
         />
 
+        <HeadHrefLangs />
         <ResetCSS />
         <title>{title}</title>
+        <ViewTransitions />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@v1/web/uc-file-uploader-regular.min.css"
+        />
     </head>
 
     <body>
@@ -35,6 +45,11 @@ const { title, description } = Astro.props
                 font-size: 62.5%;
                 background-color: $clr-black;
                 color: $clr-white;
+                scroll-padding-top: 70px;
+
+                @media (max-width: 767px) {
+                    scroll-padding-top: 0;
+                }
 
                 &:has(.hamburger-menu.active) {
                     overflow: hidden;
@@ -44,6 +59,10 @@ const { title, description } = Astro.props
                 @media (max-width: 767px) {
                     font-size: 2.5rem;
                 }
+            }
+            .my-config {
+                --uc-primary-oklch-dark: 97% 0 0;
+                --uc-primary-oklch-light: 10% 0 0;
             }
             .swiper {
                 width: 100%;

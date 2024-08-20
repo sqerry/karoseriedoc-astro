@@ -1,22 +1,35 @@
+---
+import { localizePath, localizeUrl } from 'astro-i18next'
+import { t } from 'i18next'
+import { LanguageSelector } from 'astro-i18next/components'
+---
+
 <nav class="site-nav">
     <ul>
-        <li><a href="/">Úvodní stránka</a></li>
-        <li><a id="about-link" href="/o-nas">O nás</a></li>
-        <li><a href="/gallery">Galerie</a></li>
-        <li><a href="/ServicesPage">Služby</a></li>
-        <li><a href="/kontakt">Kontakt</a></li>
+        <li><a href={localizePath('/')}>{t('nav.home')}</a></li>
+        <li><a id="about-link" href={localizePath('/o-nas')}>{t('nav.about')}</a></li>
+        <li><a href={localizePath('/galerie')}>{t('nav.gallery')}</a></li>
+        <li><a id="services-link" href={localizePath('/sluzby')}>{t('nav.services')}</a></li>
+        <li><a href={localizePath('/kontakt')}>{t('nav.contact')}</a></li>
+        <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
     </ul>
 </nav>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const aboutLink = document.getElementById('about-link')
+    function updateAboutLink() {
+        const aboutLinks = document.querySelectorAll('#about-link')
+        const htmlLang = document.documentElement.lang
 
-        if (window.location.pathname === '/') {
-            aboutLink?.setAttribute('href', '#about-section')
-        } else {
-            aboutLink?.setAttribute('href', '/#about-section')
-        }
-    })
+        aboutLinks.forEach((aboutLink) => {
+            if (htmlLang === 'cs') {
+                aboutLink.setAttribute('href', '/#about-section')
+            } else {
+                aboutLink.setAttribute('href', `/${htmlLang}/#about-section`)
+            }
+        })
+    }
+
+    document.addEventListener('DOMContentLoaded', updateAboutLink)
+    document.addEventListener('astro:after-swap', updateAboutLink)
 </script>
 
 <style lang="scss">
@@ -25,6 +38,14 @@
 
         @media (max-width: 1023px) {
             display: none;
+        }
+
+        .lang-switcher {
+            background-color: $clr-black;
+            cursor: pointer;
+            @media (min-width: 1024px) {
+                display: none;
+            }
         }
     }
     ul {

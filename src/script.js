@@ -5,32 +5,42 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
+function initSwiper() {
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
 
-    loop: true,
+        loop: true,
 
-    // If we need pagination
-    modules: [Navigation, Pagination],
+        // If we need pagination
+        modules: [Navigation, Pagination],
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-})
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+    setActivePage()
+    toggleHamburgerMenu()
+    initSwiper()
+    window.addEventListener('scroll', handleScroll)
+})
+
+document.addEventListener('astro:after-swap', () => {
+    initSwiper()
     setActivePage()
     toggleHamburgerMenu()
     window.addEventListener('scroll', handleScroll)
@@ -48,13 +58,16 @@ function setActivePage() {
 }
 function toggleHamburgerMenu() {
     const menuBtn = document.querySelector('.hamburger-menu')
+    const body = document.body
 
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
             menuBtn.classList.toggle('active')
+            body.classList.toggle('hamburger-active')
         })
     }
 }
+
 function handleScroll() {
     const navbarContainer = document.querySelector('.header')
 

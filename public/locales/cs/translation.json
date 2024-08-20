@@ -1,0 +1,44 @@
+{
+  "urls": {
+    "opravy-vozidel-kroupy": "opravy-vozidel-po-kroupach-bez-poskozeni-laku",
+    "opravy-deformaci-pdr": "opravy-deformaci-bez-lakovani-metodou-pdr",
+    "ochrane-nastriky": "ochranne-nastriky-dutin-a-podvozku",
+    "klempirnicka-lakyrnicka": "drobne-klempirske-a-lakyrnicke-prace",
+    "vyvarovani": "vyvarovani-a-karosarske-opravy",
+    "udrzba-klimatizace": "udrzba-a-opravy-klimatizaci",
+    "pneuservis": "pneuservis",
+    "cisteni-a-myti": "cisteni-a-myti-vozidel"
+  },
+  "usp": {
+    "title1": "Opravy metodou PDR",
+    "text1": "Opravy promáčklin bez lakování metodou PDR",
+    "title2": "Ochranné nástřiky dutin/podvozků",
+    "text2": "Profesionální ošetření podvozku, karoserie a dutin vašeho vozu.",
+    "title3": "Drobné klempířské/lakýrnické práce",
+    "text3": "Lakování/vyvařování jednotlivých dílů karoserie"
+  },
+  "nav": {
+    "home": "Úvodní stránka",
+    "about": "O nás",
+    "gallery": "Galerie",
+    "services": "Služby",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "tel": {
+      "number": "+420 777 076 174",
+      "cto": "Konzultace zdarma!"
+    }
+  },
+  "form": {
+    "name": "Jméno",
+    "namePlaceholder": "Petr Novák",
+    "tel": "Telefon",
+    "telPlaceholder": "+420 777 777 777",
+    "email": "E-mail",
+    "mailPlaceholder": "petr.novak@email.cz",
+    "message": "Zpráva",
+    "messagePlaceholder": "Vaše zpráva",
+    "send": "Odeslat"
+  }
+}

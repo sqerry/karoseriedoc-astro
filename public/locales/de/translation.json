@@ -1,0 +1,34 @@
+{
+  "usp": {
+    "title1": "PDR-Reparaturen",
+    "text1": "Reparatur von Dellen ohne Lackierung durch PDR",
+    "title2": "Hohlraum-/Fahrgestell-Schutzlackierung",
+    "text2": "Professionelle Behandlung von Fahrwerk, Karosserie und Hohlräumen Ihres Fahrzeugs",
+    "title3": "Kleinere Klempner-/Lackierarbeiten",
+    "text3": "Lackieren/Schweißen einzelner Karosserieteile"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "gallery": "Galerie",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "tel": {
+      "number": "+420 777 076 174",
+      "cto": "Kostenlose Beratung!"
+    }
+  },
+  "form": {
+    "name": "Jméno",
+    "namePlaceholder": "Petr Novák",
+    "tel": "Telefon",
+    "telPlaceholder": "+420 777 777 777",
+    "email": "E-mail",
+    "mailPlaceholder": "petr.novak@email.cz",
+    "message": "Zpráva",
+    "messagePlaceholder": "Vaše zpráva",
+    "send": "Odeslat"
+  }
+}
