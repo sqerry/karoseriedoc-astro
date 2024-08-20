@@ -1,4 +1,5 @@
 ---
+import i18next from 'i18next'
 import { localizePath, localizeUrl } from 'astro-i18next'
 import { t } from 'i18next'
 import { LanguageSelector } from 'astro-i18next/components'
@@ -6,11 +7,13 @@ import { LanguageSelector } from 'astro-i18next/components'
 
 <nav class="site-nav">
     <ul>
-        <li><a href={localizePath('/')}>{t('nav.home')}</a></li>
-        <li><a id="about-link" href={localizePath('/o-nas')}>{t('nav.about')}</a></li>
-        <li><a href={localizePath('/galerie')}>{t('nav.gallery')}</a></li>
-        <li><a id="services-link" href={localizePath('/sluzby')}>{t('nav.services')}</a></li>
-        <li><a href={localizePath('/kontakt')}>{t('nav.contact')}</a></li>
+        <li><a href={localizePath('/', i18next.language)}>{t('nav.home')}</a></li>
+        <li><a id="about-link" href={localizePath('/o-nas', i18next.language)}>{t('nav.about')}</a></li>
+        <li><a href={localizePath('/galerie', i18next.language)}>{t('nav.gallery')}</a></li>
+        <li>
+            <a id="services-link" href={localizePath('/sluzby', i18next.language)}>{t('nav.services')}</a>
+        </li>
+        <li><a href={localizePath('/kontakt', i18next.language)}>{t('nav.contact')}</a></li>
         <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
     </ul>
 </nav>

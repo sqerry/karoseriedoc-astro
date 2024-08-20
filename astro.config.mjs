@@ -27,9 +27,6 @@ export default defineConfig({
       noExternal: ['@formspark/use-formspark'],
     },
   },
-  // redirects: {
-  //   '/ServicesPage': '/sluzby',
-  // },
   i18n: {
     defaultLocale: 'cs',
     locales: ['cs', 'de'],

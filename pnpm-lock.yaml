@@ -27,8 +27,8 @@ dependencies:
     specifier: 1.0.0-beta.21
     version: 1.0.0-beta.21(astro@4.14.3)
   i18next:
-    specifier: ^23.14.0
-    version: 23.14.0
+    specifier: ^22.4.10
+    version: 22.4.10
   i18next-fs-backend:
     specifier: ^2.3.2
     version: 2.3.2
@@ -1166,7 +1166,7 @@ packages:
       '@proload/core': 0.3.3
       '@proload/plugin-tsm': 0.2.1(@proload/core@0.3.3)
       astro: 4.14.3(sass@1.77.8)(typescript@5.5.4)
-      i18next: 22.5.1
+      i18next: 22.4.10
       i18next-browser-languagedetector: 7.2.1
       i18next-fs-backend: 2.3.2
       i18next-http-backend: 2.6.0
@@ -2156,14 +2156,8 @@ packages:
       - encoding
     dev: false
 
-  /i18next@22.5.1:
-    resolution: {integrity: sha512-8TGPgM3pAD+VRsMtUMNknRz3kzqwp/gPALrWMsDnmC1mKqJwpWyooQRLMcbTwq8z8YwSmuj+ZYvc+xCuEpkssA==}
-    dependencies:
-      '@babel/runtime': 7.25.0
-    dev: false
-
-  /i18next@23.14.0:
-    resolution: {integrity: sha512-Y5GL4OdA8IU2geRrt2+Uc1iIhsjICdHZzT9tNwQ3TVqdNzgxHToGCKf/TPRP80vTCAP6svg2WbbJL+Gx5MFQVA==}
+  /i18next@22.4.10:
+    resolution: {integrity: sha512-3EqgGK6fAJRjnGgfkNSStl4mYLCjUoJID338yVyLMj5APT67HUtWoqSayZewiiC5elzMUB1VEUwcmSCoeQcNEA==}
     dependencies:
       '@babel/runtime': 7.25.0
     dev: false
