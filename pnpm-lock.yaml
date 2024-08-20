@@ -29,6 +29,9 @@ dependencies:
   i18next:
     specifier: ^23.14.0
     version: 23.14.0
+  i18next-fs-backend:
+    specifier: ^2.3.2
+    version: 2.3.2
   jolty:
     specifier: ^0.6.2
     version: 0.6.2
