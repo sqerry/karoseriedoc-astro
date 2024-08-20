@@ -30,6 +30,9 @@
       "cto": "Konzultace zdarma!"
     }
   },
+  "contact": {
+    "consultation": "Konzultace zdarma!"
+  },
   "form": {
     "name": "Jméno",
     "namePlaceholder": "Petr Novák",
@@ -39,6 +42,8 @@
     "mailPlaceholder": "petr.novak@email.cz",
     "message": "Zpráva",
     "messagePlaceholder": "Vaše zpráva",
-    "send": "Odeslat"
+    "send": "Odeslat",
+    "messageSuccess": "Zpráva byla úspěšně odeslána.",
+    "messageError": "Zpráva nebyla odeslána. Zkuste to znovu."
   }
 }
