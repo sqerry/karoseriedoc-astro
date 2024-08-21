@@ -1,5 +1,6 @@
 ---
 import Logo from '../components/Logo.astro'
+import SocialLinks from '../components/SocialLinks.astro'
 ---
 
 <div class="footer-bottom">
@@ -58,12 +59,7 @@ import Logo from '../components/Logo.astro'
                 <p>Dle telefonické domluvy</p>
             </li>
         </ul>
-        <div class="social-links">
-            <a href="https://www.facebook.com/karoseriedoc" target="_blank" class="facebook">
-                <img src="/images/facebook-circle.svg" alt="Facebook" />
-            </a>
-            <a href="https://www.instagram.com/karoseriedoc/" target="_blank" class="instagram"> </a>
-        </div>
+        <SocialLinks />
     </div>
 </div>
 <div class="signature">
@@ -114,6 +110,9 @@ import Logo from '../components/Logo.astro'
         .footer-banner {
             display: flex;
             flex-direction: column;
+            ul {
+                margin-bottom: auto;
+            }
             h4 {
                 margin-bottom: 3.2rem;
                 font-size: 2rem;

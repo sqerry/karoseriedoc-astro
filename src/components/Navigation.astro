@@ -28,6 +28,14 @@ import { LanguageSelector } from 'astro-i18next/components'
             } else {
                 aboutLink.setAttribute('href', `/${htmlLang}/#about-section`)
             }
+
+            // Add event listener for click if screen width is 1023px or less
+            if (window.innerWidth <= 1023) {
+                aboutLink.addEventListener('click', () => {
+                    document.body.classList.remove('hamburger-active')
+                    document.querySelector('.hamburger-menu').classList.remove('active')
+                })
+            }
         })
     }
 

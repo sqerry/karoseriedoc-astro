@@ -3,6 +3,7 @@ import SiteNav from '../components/Navigation.astro'
 import Logo from '../components/Logo.astro'
 import { LanguageSelector } from 'astro-i18next/components'
 import { t } from 'i18next'
+import SocialLinks from '../components/SocialLinks.astro'
 ---
 
 <div class="top-navigation-bar">
@@ -24,12 +25,8 @@ import { t } from 'i18next'
                 <a href={`tel:${t('header.tel.number')}`}>{t('header.tel.number')}</a>
             </li>
         </ul>
-        <div class="social-links">
-            <a href="https://www.facebook.com/karoseriedoc" target="_blank" class="facebook">
-                <img src="/images/facebook-circle.svg" alt="Facebook" />
-            </a>
-            <a href="https://www.instagram.com/karoseriedoc/" target="_blank" class="instagram"> </a>
-        </div>
+        <SocialLinks />
+        <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
     </div>
 </div>
 <header class="header">
@@ -63,14 +60,23 @@ import { t } from 'i18next'
 
         .container {
             display: flex;
-            justify-content: space-between;
         }
         // background-color: $clr-secondary;
+        .lang-switcher {
+            background-color: #1d2226;
+            margin-left: 6px;
+            margin-top: 6px;
+            display: none;
 
+            @media (max-width: 1023px) {
+                display: block;
+            }
+        }
         ul {
             display: flex;
             gap: 3rem;
             padding: 1rem 0;
+            flex: 1;
 
             li {
                 display: flex;
@@ -119,6 +125,17 @@ import { t } from 'i18next'
                 position: fixed;
             }
         }
+
+        .lang-switcher {
+            position: absolute;
+            cursor: pointer;
+            right: 1.5rem;
+            background-color: $clr-black;
+
+            @media (max-width: 1023px) {
+                display: none;
+            }
+        }
     }
     .header-wrapper {
         display: flex;
@@ -131,16 +148,6 @@ import { t } from 'i18next'
         }
     }
 
-    .lang-switcher {
-        position: absolute;
-        cursor: pointer;
-        right: 0;
-        background-color: $clr-black;
-
-        @media (max-width: 1023px) {
-            display: none;
-        }
-    }
     .logo {
         width: 25%;
 
