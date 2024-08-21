@@ -79,6 +79,10 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
     <main>
         <section class="contact-section">
             <div class="container">
+                <div class="tel">
+                    <h2>{t('contact.consultation')}</h2>
+                    <a href={`tel:${t('header.tel.number')}`}>{t('header.tel.number')}</a>
+                </div>
                 <div class="contact-form-wrapper">
                     <form action="https://submit-form.com/ZNtwxLz1P" id="contactForm">
                         <div class="form-group">
@@ -129,8 +133,8 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
                                     <uc-form-input ctx-name="my-uploader"></uc-form-input>
                                 </uc-file-uploader-regular>
                             </div>
-                            <div class="message message-success">Zpráva byla úspěšně odeslána.</div>
-                            <div class="message message-error">Zpráva nebyla odeslána. Zkuste to znovu.</div>
+                            <div class="message message-success">{t('form.messageSuccess')}</div>
+                            <div class="message message-error">{t('form.messageError')}</div>
                         </div>
                         <button class="btn btn-primary">{t('form.send')}</button>
                     </form>
@@ -155,7 +159,7 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
             padding-top: 5rem;
         }
         .contact-section {
-            margin-top: 80px;
+            margin-top: 5rem;
 
             .btn {
                 width: 100%;
@@ -206,6 +210,22 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
                 @media (max-width: 1024px) {
                     width: 100%;
                 }
+            }
+        }
+        .tel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 3rem;
+
+            h2 {
+                font-size: 3rem;
+            }
+            a {
+                color: $clr-primary;
+                font-weight: 700;
+                font-size: 2rem;
             }
         }
         iframe {
