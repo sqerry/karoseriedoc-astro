@@ -33,6 +33,11 @@ const { pageName, imageSrc } = Astro.props
             color: white;
             font-size: 3.2rem;
             max-width: 500px;
+
+            @media (max-width: 767px) {
+                font-size: 2.4rem;
+                max-width: 345px;
+            }
         }
     }
 </style>
