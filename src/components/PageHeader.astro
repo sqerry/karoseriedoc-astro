@@ -2,11 +2,13 @@
 export interface Props {
     pageName: string
     imageSrc: string
+    customStyle?: string
+    customClass?: string
 }
-const { pageName, imageSrc } = Astro.props
+const { pageName, imageSrc, customClass } = Astro.props
 ---
 
-<section class="page-header" style={`background-image: url(${imageSrc})`}>
+<section class={`page-header ${customClass}`} style={`background-image: url(${imageSrc})`}>
     <h1>{pageName}</h1>
 </section>
 
@@ -22,6 +24,25 @@ const { pageName, imageSrc } = Astro.props
         background-size: cover;
         box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5) inset;
 
+        &.service-detail--opravy-deformaci-bez-lakovani-metodou-pdr {
+            background-position: center -87rem;
+        }
+
+        &.page-header--galerie {
+            background-position-y: -50rem;
+
+            @media (max-width: 1500px) {
+                background-position-y: -32rem;
+            }
+
+            @media (max-width: 991px) {
+                background-position-y: -20rem;
+            }
+
+            @media (max-width: 767px) {
+                background-position-y: -7rem;
+            }
+        }
         @media (max-width: 767px) {
             min-height: 190px;
         }

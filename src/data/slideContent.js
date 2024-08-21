@@ -5,7 +5,9 @@ export const slidesContent = [
         features: ['technologie PDR', 'Doživotní záruka', 'Bezplatná prohlídka a kalkulace ceny'],
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '#',
-        image: '/images/hero.jpg',
+        image: '/images/deformace.webp',
+        customClass: 'slide-content--deformace',
+       
     },
     {
         title: 'Opravy vozidel po kroupách bez poškození laku​',
@@ -13,7 +15,7 @@ export const slidesContent = [
         features: ['technologie PDR', 'Doživotní záruka', 'Bezplatná prohlídka a kalkulace ceny'],
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '#',
-        image: '/images/hero.jpg',
+        image: '/images/po-kroupech.webp',
     },
     {
         title: 'Ochranné nástřiky dutin a podvozků',
@@ -25,7 +27,9 @@ export const slidesContent = [
         ],
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '#',
-        image: '/images/hero.jpg',
+        image: '/images/ochrane-nastriky.webp',
+        customClass: 'slide-content--ochrane-nastriky',
+
     },
 
     {
@@ -38,6 +42,6 @@ export const slidesContent = [
         ],
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '#',
-        image: '/images/hero.jpg',
+        image: '/images/DSC_5215.webp',
     },
 ]

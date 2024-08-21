@@ -4,15 +4,25 @@ export interface Props {
     imgSrc: string
     title: string
     description: string
+    imgPosition?: string
+    customStyleImg?: string
 }
 
-const { link, imgSrc, title, description } = Astro.props
+const { link, imgSrc, title, description, imgPosition, customStyleImg } = Astro.props
 ---
 
 <div class="service-card">
     <div class="image-wrapper">
         <a href={link}>
-            <img src={imgSrc} alt={title} class="service-card__image" />
+            <img
+                src={imgSrc}
+                alt={title}
+                class="service-card__image"
+                loading="lazy"
+                style={imgPosition
+                    ? `object-position: center ${imgPosition}rem; ${customStyleImg}`
+                    : customStyleImg}
+            />
         </a>
     </div>
     <div class="service-card__content">
@@ -43,6 +53,7 @@ const { link, imgSrc, title, description } = Astro.props
             display: block;
             img {
                 transition: 0.3s;
+                object-fit: cover;
 
                 @media (max-width: 767px) {
                     height: 100%;

@@ -2,12 +2,13 @@
   "urls": {
     "opravy-vozidel-kroupy": "opravy-vozidel-po-kroupach-bez-poskozeni-laku",
     "opravy-deformaci-pdr": "opravy-deformaci-bez-lakovani-metodou-pdr",
-    "ochrane-nastriky": "ochranne-nastriky-dutin-a-podvozku",
+    "ochrane-nastriky": "ochrane-nastriky-dutin-a-podvozku",
     "klempirnicka-lakyrnicka": "drobne-klempirske-a-lakyrnicke-prace",
     "vyvarovani": "vyvarovani-a-karosarske-opravy",
     "udrzba-klimatizace": "udrzba-a-opravy-klimatizaci",
     "pneuservis": "pneuservis",
-    "cisteni-a-myti": "cisteni-a-myti-vozidel"
+    "cisteni-a-myti": "cisteni-a-myti-vozidel",
+    "bezna-udrzba": "bezna-udrzba-vozidel"
   },
   "usp": {
     "title1": "Opravy metodou PDR",

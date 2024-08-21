@@ -12,7 +12,7 @@ import 'swiper/css/pagination'
         <div class="swiper-wrapper">
             {
                 slidesContent.map((slide) => (
-                    <div class="swiper-slide">
+                    <div class={`swiper-slide ${slide.customClass ? slide.customClass : ''}`}>
                         <div class="background-overlay" style={`background-image: url(${slide.image})`} />
                         <div class="slide-content container">
                             <h6>{slide.subtitle}</h6>
@@ -40,6 +40,20 @@ import 'swiper/css/pagination'
 </section>
 
 <style lang="scss">
+    .slide-content--deformace {
+        .background-overlay {
+            @media (min-width: 1024px) {
+                background-position: center -87px !important;
+            }
+        }
+    }
+    .slide-content--ochrane-nastriky {
+        .background-overlay {
+            @media (min-width: 1024px) {
+                background-position: center -34rem !important;
+            }
+        }
+    }
     .hero-section {
         .swiper-pagination {
             bottom: 8.5rem;

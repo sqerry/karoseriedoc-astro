@@ -1,8 +1,8 @@
 ---
 title: 'Opravy vozidel po kroupách bez poškození laku'
-customClass: 'service-detail--opravy-deformaci-bez-lakovani-metodou-pdr'
 description: 'Provádíme kompletní opravy důlků na karoserii vozidel poškozených krupobitím.'
-headerImage: '/images/DSC_5155.webp'
+headerImage: '/images/DSC_5215.webp'
+# background-position-y: -129rem XXX;
 uspItems:
   - text: 'Oprava karosérie vozidla bez poškození laku technologií PDR'
   - text: 'Rychlost opravy – obvykle 2-3 pracovní dny'

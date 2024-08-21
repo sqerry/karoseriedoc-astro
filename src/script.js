@@ -11,10 +11,10 @@ function initSwiper() {
 
         loop: true,
 
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-          },
+        // autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction: false,
+        //   },
 
         // If we need pagination
         modules: [Navigation, Pagination, Autoplay],

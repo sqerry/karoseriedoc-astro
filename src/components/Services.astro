@@ -6,54 +6,68 @@ import i18next, { t } from 'i18next'
 <div class="services">
     <ServiceCard
         link={t('urls.opravy-vozidel-kroupy')}
-        imgSrc="/images/service.jpg"
+        imgSrc="/images/po-kroupech.webp"
         title="Opravy vozidel po kroupách bez poškození laku"
         description="Provádíme kompletní opravy důlků na karoserii vozidel poškozených krupobitím. Bez poškození laku – technologií PDR (Paintless Dent Repair)"
     />
     <ServiceCard
         link={t('urls.opravy-deformaci-pdr')}
-        imgSrc="/images/service.jpg"
+        imgSrc="/images/deformace.webp"
         title="Opravy deformací bez lakování metodou PDR"
         description="Provádíme opravy deformací na karoseriích vozidel a nádrží motocyklů. Bez poškození laku – technologií PDR (Paintless Dent Repair)"
+        imgPosition=""
     />
     <ServiceCard
         link={t('urls.ochrane-nastriky')}
-        imgSrc="/images/service.jpg"
-        title="Ochranné nástřiky dutin a podvozků"
+        imgSrc="/images/ochrane-nastriky.webp"
+        title="Ochrané nástřiky dutin a podvozků"
         description="Profesionální ošetření podvozku, karoserie a dutin vašeho vozu. Nástřiky provádíme značkovými přípravky DINITROL"
     />
-    <ServiceCard
-        link={t('urls.klempirnicka-lakyrnicka')}
-        imgSrc="/images/service.jpg"
-        title="Drobné klempířské a lakýrnické ucho"
-        description="Lakování/vyvařování jednotlivých dílů karoserie"
-    />
+
     <ServiceCard
         link={t('urls.vyvarovani')}
-        imgSrc="/images/service.jpg"
+        imgSrc="/images/DSC_5215.webp"
         title="Vyvařování a karosářské opravy"
         description="Lakování/vyvařování jednotlivých dílů karoserie"
+        imgPosition="-14"
     />
     <ServiceCard
         link={t('urls.udrzba-klimatizace')}
-        imgSrc="/images/service.jpg"
+        imgSrc="/images/DSC_5152.webp"
         title="Údržba a opravy klimatizací"
         description="Lakování/vyvařování jednotlivých dílů karoserie"
+        imgPosition="-15"
     />
     <ServiceCard
         link={t('urls.pneuservis')}
-        imgSrc="/images/service.jpg"
+        imgSrc="/images/DSC_5227.webp"
         title="Pneuservis"
         description="Lakování/vyvařování jednotlivých dílů karoserie"
+        imgPosition="-13"
+    />
+    <ServiceCard
+        link={t('urls.bezna-udrzba')}
+        imgSrc="/images/DSC_5256.webp"
+        title="Běžná údržba vozidel"
+        description="Lakování/vyvařování jednotlivých dílů karoserie"
+        imgPosition="-13"
     />
     <ServiceCard
         link={t('urls.cisteni-a-myti')}
-        imgSrc="/images/service.jpg"
+        imgSrc="/images/cisteni.webp"
         title="Čištění a mytí vozidel"
         description="Lakování/vyvařování jednotlivých dílů karoserie"
+        customStyleImg="height: 100%; object-fit: cover;"
     />
 </div>
 <style lang="scss">
+    // klimatizace object-position: 0px -15rem;
+    // nastriky object-position: center -5rem;
+    // Vyvařování a karosářské opravy object-position: center -14rem;
+    // pneuservis object-position: center -13rem;
+    // cisteni     height: 100%; object-fit: cover;
+    // bezna udrzba object-position: center -13rem;
+
     .services {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
