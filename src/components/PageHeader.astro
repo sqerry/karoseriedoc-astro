@@ -25,7 +25,23 @@ const { pageName, imageSrc, customClass } = Astro.props
         box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5) inset;
 
         &.service-detail--opravy-deformaci-bez-lakovani-metodou-pdr {
-            background-position: center -87rem;
+            background-position: center -104rem;
+
+            @media (max-width: 1600px) {
+                background-position: center -87rem;
+            }
+            @media (max-width: 1400px) {
+                background-position: center -75rem;
+            }
+            @media (max-width: 1050px) {
+                background-position: center -50rem;
+            }
+            @media (max-width: 900px) {
+                background-position: center -40rem;
+            }
+            @media (max-width: 767px) {
+                background-position: center -20rem;
+            }
         }
 
         &.page-header--galerie {

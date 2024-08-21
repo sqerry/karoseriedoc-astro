@@ -5,6 +5,7 @@ const servicesCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     headerImage: z.string(),
+    customClass: z.string().optional(),
     uspItems: z.array(
       z.object({
         text: z.string(),
