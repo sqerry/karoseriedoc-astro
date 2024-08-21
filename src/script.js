@@ -1,18 +1,23 @@
 import Swiper from 'swiper'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 // import Swiper and modules styles
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 function initSwiper() {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.hero-section .swiper', {
         // Optional parameters
 
         loop: true,
 
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+
         // If we need pagination
-        modules: [Navigation, Pagination],
+        modules: [Navigation, Pagination, Autoplay],
 
         pagination: {
             el: '.swiper-pagination',
@@ -31,6 +36,8 @@ function initSwiper() {
         },
     })
 }
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     setActivePage()

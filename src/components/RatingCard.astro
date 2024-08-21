@@ -74,18 +74,12 @@ function timePassed(dateString) {
 
 <style lang="scss">
     .rating-card {
-        /* From https://css.glass */
-        // background: rgba(245, 201, 92, 0.75);
-        // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(4.5px);
         -webkit-backdrop-filter: blur(4.5px);
-        background-color: #20292f; // Dark Gray
+        background-color: #20292f;
         max-width: 435px;
         padding: 2rem;
 
-        @media (max-width: 767px) {
-            max-width: 300px;
-        }
         img {
             max-height: 6rem;
             border-radius: 50%;
@@ -111,7 +105,8 @@ function timePassed(dateString) {
             }
         }
         .rating-card-description {
-            max-height: 100px;
+            max-height: 10rem;
+            min-height: 10rem;
             overflow: auto;
             padding-right: 1rem;
 

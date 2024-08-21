@@ -6,153 +6,134 @@ import RatingCard from '../components/RatingCard.astro'
 <div class="ratings">
     <Title title="Co o nás říkají" subtitle="Recenze Google" position="center" />
     <div class="ratings-wrapper">
-        <div class="scroller" data-direction="right" data-speed="slow">
-            <div class="scroller__inner">
-                <RatingCard
-                    link="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURtdWZ5Vm1BRRAB!2m1!1s0x0:0x15f7903e6ed3d5df!3m1!1s2@1:CIHM0ogKEICAgIDmufyVmAE%7CCgsI0bzrjwYQ2OCibQ%7C?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
-                    imgSrc="/images/reviews/review-1.png"
-                    name="Marek Šuraba"
-                    description="Dnes mi pán dokázal, že je opravdu kouzelník!!! Měl jsem na své audi velmi špatně promáčklý lem zadního blatníku, u nejmenované konkurence mi řekli, že tohle nikdo nevytáhne na 100% protože to bylo fakt blbě promačklé přímo v lemu. Nicméně pán od KaroserieDoc řekl že to zvládne a taky zvládl!! Když jsem si byl auto vyzvednout nikdo by nepoznal že tam někdy promáčklina byla! A cena proti konkurenci byla opravdu luxusní, maximální spokojenost. Pánovi moc děkuji a určitě přijedu zas když to někde bouchnu 😅"
-                    date="27.2.2022"
-                    stars={5}
-                />
-                <RatingCard
-                    link="https://maps.app.goo.gl/kNHxsnDNX8UrkhtV7"
-                    imgSrc="/images/reviews/review-2.png"
-                    name="Elušenka"
-                    description="Chtěla bych se s Vámi podělit o skvělou péči mého auta.👌 Jak spasovaní dílů ,tak ošetření podvozku na jedničku.👌 Skvělá komunikace i práce mohu jen doporučit.🌼 Vím na koho se vždy obrátit.🤗"
-                    date="27.2.2022"
-                    stars={5}
-                />
-                <RatingCard
-                    link="https://maps.app.goo.gl/svWzkndeamB43FuK6"
-                    imgSrc="/images/reviews/review-3.png"
-                    name="Drahoslav Koura"
-                    description="Profesionální práce a vstřícnost.  Promáčklý zadní blatník u 3dv auta od fotbalového míče. Hloubka cca 12 mm a průměr 220 mm.Vypadalo to jak od medicinbalu. Má zlaté a šikovné ruce. Nepoznáte, že se autíčku něco stalo. Moc díky"
-                    date="27.2.2023"
-                    stars={5}
-                />
-                <RatingCard
-                    link="https://maps.app.goo.gl/PFHEVPqqQDCKrwAx7"
-                    imgSrc="/images/reviews/review-4.png"
-                    name="Jana Hrdličková"
-                    description="Perfektní, můžeme jen doporučit  - oprava promáčklé kapoty trvala sotva hodinku, na kapotě není poznat, že by byla kdy poškozená. S cenou jsme také spokojení - konkurence by stála rozhodně víc! A co určitě chci vyzvednout, je přístup k zákazníkovi - máme většinou problém zajet do servisu kvůli pracovnímu vytížení, ale pán nám velmi ochotně vyšel vstříc a opravu provedl v neděli. Takže, i když doufám, že už se našemu autu nic nestane, ale pokud ano, víme, na koho se obrátit."
-                    date="27.2.2023"
-                    stars={5}
-                />
-                <RatingCard
-                    link="https://maps.app.goo.gl/a3taNkBFd9Yc2oiJ9"
-                    imgSrc="/images/reviews/review-5.png"
-                    name="Matteo Borgorelli"
-                    description="Pan mi opravil nalakoval zrezlý blatnik. S opravou jsem více než spokojen. Mnohokrát děkuji ."
-                    date="27.2.2021"
-                    stars={5}
-                />
+        <div class="swiper mySwiper ratings-swiper" data-direction="right" data-speed="slow">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <RatingCard
+                        link="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURtdWZ5Vm1BRRAB!2m1!1s0x0:0x15f7903e6ed3d5df!3m1!1s2@1:CIHM0ogKEICAgIDmufyVmAE%7CCgsI0bzrjwYQ2OCibQ%7C?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
+                        imgSrc="/images/reviews/review-1.png"
+                        name="Marek Šuraba"
+                        description="Dnes mi pán dokázal, že je opravdu kouzelník!!! Měl jsem na své audi velmi špatně promáčklý lem zadního blatníku, u nejmenované konkurence mi řekli, že tohle nikdo nevytáhne na 100% protože to bylo fakt blbě promačklé přímo v lemu. Nicméně pán od KaroserieDoc řekl že to zvládne a taky zvládl!! Když jsem si byl auto vyzvednout nikdo by nepoznal že tam někdy promáčklina byla! A cena proti konkurenci byla opravdu luxusní, maximální spokojenost. Pánovi moc děkuji a určitě přijedu zas když to někde bouchnu 😅"
+                        date="27.2.2022"
+                        stars={5}
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <RatingCard
+                        link="https://maps.app.goo.gl/kNHxsnDNX8UrkhtV7"
+                        imgSrc="/images/reviews/review-2.png"
+                        name="Elušenka"
+                        description="Chtěla bych se s Vámi podělit o skvělou péči mého auta.👌 Jak spasovaní dílů ,tak ošetření podvozku na jedničku.👌 Skvělá komunikace i práce mohu jen doporučit.🌼 Vím na koho se vždy obrátit.🤗"
+                        date="27.2.2022"
+                        stars={5}
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <RatingCard
+                        link="https://maps.app.goo.gl/svWzkndeamB43FuK6"
+                        imgSrc="/images/reviews/review-3.png"
+                        name="Drahoslav Koura"
+                        description="Profesionální práce a vstřícnost.  Promáčklý zadní blatník u 3dv auta od fotbalového míče. Hloubka cca 12 mm a průměr 220 mm.Vypadalo to jak od medicinbalu. Má zlaté a šikovné ruce. Nepoznáte, že se autíčku něco stalo. Moc díky"
+                        date="27.2.2023"
+                        stars={5}
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <RatingCard
+                        link="https://maps.app.goo.gl/PFHEVPqqQDCKrwAx7"
+                        imgSrc="/images/reviews/review-4.png"
+                        name="Jana Hrdličková"
+                        description="Perfektní, můžeme jen doporučit  - oprava promáčklé kapoty trvala sotva hodinku, na kapotě není poznat, že by byla kdy poškozená. S cenou jsme také spokojení - konkurence by stála rozhodně víc! A co určitě chci vyzvednout, je přístup k zákazníkovi - máme většinou problém zajet do servisu kvůli pracovnímu vytížení, ale pán nám velmi ochotně vyšel vstříc a opravu provedl v neděli. Takže, i když doufám, že už se našemu autu nic nestane, ale pokud ano, víme, na koho se obrátit."
+                        date="27.2.2023"
+                        stars={5}
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <RatingCard
+                        link="https://maps.app.goo.gl/a3taNkBFd9Yc2oiJ9"
+                        imgSrc="/images/reviews/review-5.png"
+                        name="Matteo Borgorelli"
+                        description="Pan mi opravil nalakoval zrezlý blatnik. S opravou jsem více než spokojen. Mnohokrát děkuji ."
+                        date="27.2.2021"
+                        stars={5}
+                    />
+                </div>
             </div>
         </div>
     </div>
-    <script>
-        function addAnimation() {
-            const scrollers = document.querySelectorAll('.scroller')
-
-            scrollers.forEach((scroller) => {
-                // add data-animated="true" to every `.scroller` on the page
-                scroller.setAttribute('data-animated', 'true')
-
-                // Make an array from the elements within `.scroller-inner`
-                const scrollerInner = scroller.querySelector('.scroller__inner')
-                const scrollerContent = Array.from(scrollerInner.children)
-
-                // For each item in the array, clone it
-                // add aria-hidden to it
-                // add it into the `.scroller-inner`
-                scrollerContent.forEach((item) => {
-                    const duplicatedItem = item.cloneNode(true)
-                    // duplicatedItem.setAttribute('aria-hidden', 'true')
-                    scrollerInner.appendChild(duplicatedItem)
-                })
-            })
-        }
-
-        document.addEventListener('DOMContentLoaded', addAnimation)
-        document.addEventListener('astro:after-swap', addAnimation)
-    </script>
-    <style lang="scss">
-        .scroller {
-        }
-
-        .scroller__inner {
-            padding-block: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .scroller[data-animated='true'] {
-            overflow: hidden;
-            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-        }
-
-        .scroller[data-animated='true'] .scroller__inner {
-            width: max-content;
-            flex-wrap: nowrap;
-            animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear
-                infinite;
-        }
-
-        .scroller[data-animated='true']:hover .scroller__inner {
-            animation-play-state: paused;
-        }
-
-        .scroller[data-direction='right'] {
-            --_animation-direction: reverse;
-        }
-
-        .scroller[data-direction='left'] {
-            --_animation-direction: forwards;
-        }
-
-        .scroller[data-speed='fast'] {
-            --_animation-duration: 20s;
-        }
-
-        .scroller[data-speed='slow'] {
-            --_animation-duration: 60s;
-        }
-
-        @keyframes scroll {
-            to {
-                transform: translate(calc(-50% - 0.5rem));
-            }
-        }
-
-        /* general styles */
-
-        :root {
-            --clr-neutral-100: hsl(0, 0%, 100%);
-            --clr-primary-100: hsl(205, 15%, 58%);
-            --clr-primary-400: hsl(215, 25%, 27%);
-            --clr-primary-800: hsl(217, 33%, 17%);
-            --clr-primary-900: hsl(218, 33%, 9%);
-        }
-
-        .tag-list {
-            margin: 0;
-            padding-inline: 0;
-            list-style: none;
-        }
-
-        .tag-list li {
-            padding: 1rem;
-            background: var(--clr-primary-400);
-            border-radius: 0.5rem;
-            box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
-        }
-
-        /* for testing purposed to ensure the animation lined up correctly */
-        .test {
-            background: red !important;
-        }
-    </style>
 </div>
+<script>
+    import Swiper from 'swiper/bundle'
+    import { Autoplay } from 'swiper/modules'
+    import 'swiper/css'
+
+    function addAnimation() {
+        const animationAdded = document.querySelector('.ratings-wrapper.animation-added')
+
+        if (animationAdded) return
+
+        const ratingsWrapper = document.querySelector('.ratings-wrapper')
+        let swiper2 = new Swiper('.ratings-swiper', {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            speed: 10000,
+            grabCursor: true,
+            breakpoints: {
+                767: {
+                    slidesPerView: 3,
+                },
+            },
+        })
+
+        var transformValue
+        const swiperWrapper = document.querySelector('.ratings-wrapper .swiper-wrapper')
+
+        swiperWrapper.addEventListener('mouseenter', function () {
+            swiper2.autoplay.stop()
+            transformValue = this.style.transform
+            this.style.transitionDuration = '0ms'
+            this.style.transform = 'translate3d(' + swiper2.getTranslate() + 'px, 0px, 0px)'
+        })
+
+        swiperWrapper.addEventListener('mouseleave', function () {
+            this.style.transitionDuration = swiper2.params.speed + 'ms'
+            this.style.transform = transformValue
+            swiper2.autoplay.start()
+        })
+        swiperWrapper.addEventListener('touchstart', function () {
+            swiper2.autoplay.stop()
+            transformValue = this.style.transform
+            this.style.transitionDuration = '0ms'
+            this.style.transform = 'translate3d(' + swiper2.getTranslate() + 'px, 0px, 0px)'
+        })
+
+        swiperWrapper.addEventListener('touchend', function () {
+            this.style.transitionDuration = swiper2.params.speed + 'ms'
+            this.style.transform = transformValue
+            swiper2.autoplay.start()
+        })
+        ratingsWrapper.classList.add('animation-added')
+    }
+
+    addAnimation()
+
+    document.addEventListener('DOMContentLoaded', addAnimation)
+    document.addEventListener('astro:after-swap', addAnimation)
+</script>
+<style lang="scss">
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+    .ratings-wrapper {
+        padding-block: 1rem;
+        -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    }
+
+    /* for testing purposed to ensure the animation lined up correctly */
+</style>
