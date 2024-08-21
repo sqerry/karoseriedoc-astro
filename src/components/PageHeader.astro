@@ -24,6 +24,57 @@ const { pageName, imageSrc, customClass } = Astro.props
         background-size: cover;
         box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5) inset;
 
+        &.service-detail--ochrane-nastriky-dutin-a-podvozku {
+            background-position-y: -50rem;
+
+            @media (max-width: 1600px) {
+                background-position-y: -30rem;
+            }
+            @media (max-width: 1400px) {
+                background-position-y: -10rem;
+            }
+        }
+
+        &.service-detail--pneuservis {
+            background-position-y: -130rem;
+
+            @media (max-width: 1600px) {
+                background-position-y: -110rem;
+            }
+            @media (max-width: 1400px) {
+                background-position-y: -90rem;
+            }
+            @media (max-width: 1050px) {
+                background-position-y: -70rem;
+            }
+            @media (max-width: 900px) {
+                background-position-y: -60rem;
+            }
+            @media (max-width: 767px) {
+                background-position-y: -20rem;
+            }
+        }
+
+        &.service-detail--opravy-vozidel-po-kroupach-bez-poškození-laku {
+            background-position: center -153rem;
+
+            @media (max-width: 1600px) {
+                background-position: center -130rem;
+            }
+            @media (max-width: 1400px) {
+                background-position: center -110rem;
+            }
+            @media (max-width: 1050px) {
+                background-position: center -80rem;
+            }
+            @media (max-width: 900px) {
+                background-position: center -60rem;
+            }
+            @media (max-width: 767px) {
+                background-position: center -20rem;
+            }
+        }
+
         &.service-detail--opravy-deformaci-bez-lakovani-metodou-pdr {
             background-position: center -104rem;
 
