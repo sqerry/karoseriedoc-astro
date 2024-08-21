@@ -45,6 +45,7 @@
     "messagePlaceholder": "Vaše zpráva",
     "send": "Odeslat",
     "messageSuccess": "Zpráva byla úspěšně odeslána.",
-    "messageError": "Zpráva nebyla odeslána. Zkuste to znovu."
+    "messageError": "Zpráva nebyla odeslána. Zkuste to znovu.",
+    "upload": "Zde můžete nahrát fotku vašeho poškození"
   }
 }

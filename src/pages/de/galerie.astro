@@ -8,8 +8,8 @@ changeLanguage("de");
 
 <Layout title="Galerie" description="Galerie">
     <main>
-        <PageHeader pageName="Galerie" imageSrc="/images/DSC_5138.jpg" />
-        <!--     background-position-y: -50rem; -->
+        <PageHeader pageName="Galerie" imageSrc="/images/DSC_5138.webp" customClass="page-header--galerie" />
+
         <section class="gallery">
             <div class="container">
                 <div class="row">
@@ -166,6 +166,9 @@ changeLanguage("de");
             })
         </script>
         <style lang="scss">
+            .page-header--galerie {
+                background-position-y: -50rem;
+            }
             .row {
                 display: flex;
                 flex-wrap: wrap;
