@@ -7,7 +7,6 @@ export const slidesContent = [
         buttonLink: '#',
         image: '/images/deformace.webp',
         customClass: 'slide-content--deformace',
-       
     },
     {
         title: 'Opravy vozidel po kroupách bez poškození laku​',
@@ -29,7 +28,6 @@ export const slidesContent = [
         buttonLink: '#',
         image: '/images/ochrane-nastriky.webp',
         customClass: 'slide-content--ochrane-nastriky',
-
     },
 
     {
@@ -43,5 +41,6 @@ export const slidesContent = [
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '#',
         image: '/images/DSC_5215.webp',
+        customClass: 'slide-content--klempir',
     },
 ]
