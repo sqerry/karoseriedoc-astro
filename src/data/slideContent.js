@@ -70,8 +70,8 @@ export const slidesContentCs = [
         ],
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '/pneuservis',
-        image: '/images/DSC_5099.webp',
-        customClass: 'slide-content--klimatizace',
+        image: '/images/DSC_5227.webp',
+        customClass: 'slide-content--pneuservis',
     },
 ]
 
@@ -146,8 +146,8 @@ export const slidesContentDe = [
         ],
         buttonText: 'MEHR INFORMATIONEN',
         buttonLink: '/reifenservice',
-        image: '/images/DSC_5099.webp',
-        customClass: 'slide-content--klimatizace',
+        image: '/images/DSC_5227.webp',
+        customClass: 'slide-content--pneuservis',
     },
 ]
 
