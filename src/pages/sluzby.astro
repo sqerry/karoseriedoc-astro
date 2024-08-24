@@ -1,18 +1,18 @@
 ---
-import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import PageHeader from "../components/PageHeader.astro";
 import Title from "../components/Title.astro";
 import Services from "../components/Services.astro";
+import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("cs");
 ---
 
 <Layout title="Služby" description="Služby">
-    <PageHeader pageName="Služby" imageSrc="/images/DSC_5264.webp" />
+    <PageHeader pageName={t('services.servicesPageTitle')} imageSrc="/images/DSC_5264.webp" />
     <main>
         <section class="services-section">
-            <Title subtitle="Co nabízíme" title="VŠE NA JEDNOM MÍSTĚ." position="center" />
+            <Title subtitle={t('services.subtitle')} title={t('services.title')} position="center" />
             <div class="container">
                 <Services />
             </div>

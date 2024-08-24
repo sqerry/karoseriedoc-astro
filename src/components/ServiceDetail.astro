@@ -2,12 +2,11 @@
 import Layout from '../layouts/Layout.astro'
 import PageHeader from './PageHeader.astro'
 import { localizePath, localizeUrl } from 'astro-i18next'
+import i18next, { t } from 'i18next'
 
 const { frontmatter, Content } = Astro.props
-console.log(frontmatter)
 ---
 
-<!-- <PageHeader pageName={frontmatter.title} imageSrc="/images/DSC_5155.jpg" />  -->
 <PageHeader
     pageName={frontmatter.title}
     imageSrc={frontmatter.headerImage}
@@ -20,25 +19,27 @@ console.log(frontmatter)
             <div class="service-content-inner markdown-content">
                 <Content />
             </div>
-            <div class="service-usp">
-                <ul>
-                    {
-                        frontmatter.uspItems.map((item) => (
-                            <li>
-                                <span class="checkmark" />
-                                <span class="text">{item.text}</span>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
+            {
+                frontmatter.uspItems && frontmatter.uspItems.length > 0 && (
+                    <div class="service-usp">
+                        <ul>
+                            {frontmatter.uspItems.map((item) => (
+                                <li>
+                                    <span class="checkmark" />
+                                    <span class="text" set:html={item.text} />
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )
+            }
         </div>
         <div class="contact-banner">
             <div class="contact-banner-inner">
-                <h2>Potřebujete poradit?</h2>
-                <p>Napište nám na email a my vám ozveme váše potřeby.</p>
+                <h2>{t('contact.title')}</h2>
+                <p>{t('contact.description')}</p>
                 <a class="btn btn-primary" href={localizePath('/kontakt')} target="_blank" class="button"
-                    >Kontaktujte nás!</a
+                    >{t('contact.button')}</a
                 >
             </div>
         </div>
@@ -80,6 +81,25 @@ console.log(frontmatter)
 
                 :global(p) {
                     margin-bottom: 19px !important;
+                }
+
+                :global(.color-primary) {
+                    font-family: $ff-heading;
+                    // color: $clr-primary;
+                    font-weight: 700;
+                }
+                :global(li span) {
+                    font-weight: 700;
+                }
+                :global(li:before) {
+                    content: '';
+
+                    display: inline-block;
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    background-color: $clr-primary;
+                    border-radius: 50%;
+                    margin-right: 1rem;
                 }
             }
         }
@@ -128,6 +148,15 @@ console.log(frontmatter)
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 column-gap: 1rem;
+
+                .text {
+                    :global(span) {
+                        // color: $clr-primary;
+                        font-weight: 700;
+                        width: 100%;
+                        display: block;
+                    }
+                }
 
                 @media (max-width: 767px) {
                     grid-template-columns: 1fr;

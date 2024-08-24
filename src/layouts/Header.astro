@@ -19,7 +19,7 @@ import SocialLinks from '../components/SocialLinks.astro'
             </li>
             <li>
                 <div class="icon email"></div>
-                <a href="mailto:alexandrmelichar@gmail.com">alexandrmelichar@gmail.com</a>
+                <a href={`mailto:${t('global.email')}`}>{t('global.email')}</a>
             </li>
             <li class="tel">
                 <a href={`tel:${t('header.tel.number')}`}>{t('header.tel.number')}</a>

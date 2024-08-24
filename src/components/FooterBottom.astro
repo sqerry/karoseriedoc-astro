@@ -1,6 +1,7 @@
 ---
 import Logo from '../components/Logo.astro'
 import SocialLinks from '../components/SocialLinks.astro'
+import i18next, { t, changeLanguage } from 'i18next'
 ---
 
 <div class="footer-bottom">
@@ -17,7 +18,7 @@ import SocialLinks from '../components/SocialLinks.astro'
             </li>
             <li>
                 <div class="icon email"></div>
-                <a href="mailto:alexandrmelichar@gmail.com"> alexandrmelichar@gmail.com </a>
+                <a href={`mailto:${t('global.email')}`}> {t('global.email')} </a>
             </li>
             <li>
                 <div class="icon tel"></div>
@@ -26,7 +27,7 @@ import SocialLinks from '../components/SocialLinks.astro'
         </ul>
     </div>
     <div class="footer-banner services">
-        <h4>Služby</h4>
+        <h4>{t('footer.services.title')}</h4>
         <ul>
             <li>
                 <div class="icon checkmark"></div>
@@ -52,11 +53,17 @@ import SocialLinks from '../components/SocialLinks.astro'
     </div>
 
     <div class="footer-banner">
-        <h4>Otevírací doba</h4>
+        <h4>{t('footer.openingHours.title')}</h4>
         <ul>
             <li>
+                <p>{t('footer.openingHours.monday')}</p>
+            </li>
+            <li>
+                <p>{t('footer.openingHours.saturday')}</p>
+            </li>
+            <li>
                 <div class="icon clock"></div>
-                <p>Dle telefonické domluvy</p>
+                <p>{t('footer.openingHours.phone')}</p>
             </li>
         </ul>
         <SocialLinks />
@@ -139,6 +146,10 @@ import SocialLinks from '../components/SocialLinks.astro'
             display: flex;
             align-items: center;
             padding-bottom: 0.3rem;
+
+            &:has(.clock) {
+                margin-top: 1.5rem;
+            }
         }
     }
 </style>

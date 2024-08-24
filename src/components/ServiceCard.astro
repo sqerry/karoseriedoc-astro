@@ -3,12 +3,11 @@ export interface Props {
     link: string
     imgSrc: string
     title: string
-    description: string
     imgPosition?: string
     customStyleImg?: string
 }
 
-const { link, imgSrc, title, description, imgPosition, customStyleImg } = Astro.props
+const { link, imgSrc, title, imgPosition, customStyleImg } = Astro.props
 ---
 
 <div class="service-card">
@@ -29,7 +28,6 @@ const { link, imgSrc, title, description, imgPosition, customStyleImg } = Astro.
         <h3 class="service-card__title">
             <a href={link}>{title}</a>
         </h3>
-        <p class="service-card__description">{description}</p>
         <a href={link} class="btn service-card__link">Více informací</a>
     </div>
 </div>

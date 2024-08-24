@@ -1,4 +1,7 @@
 {
+  "global": {
+    "email": "alexandrmelichar@gmail.com"
+  },
   "urls": {
     "opravy-vozidel-kroupy": "opravy-vozidel-po-kroupach-bez-poskozeni-laku",
     "opravy-deformaci-pdr": "opravy-deformaci-bez-lakovani-metodou-pdr",
@@ -10,13 +13,23 @@
     "cisteni-a-myti": "cisteni-a-myti-vozidel",
     "bezna-udrzba": "bezna-udrzba-vozidel"
   },
+  "about": {
+    "title": "O nás",
+    "subtitle": "Profesionální přístup s důrazem na kvalitu",
+    "description": "Vítám vás na mé webové stránce KaroserieDOC. Můj smysl pro detail se ukázal jako ideální společník pro práci s auty. Ať už se jedná o opravy metodou PDR, kde řeším i takové maličkosti jako originální strukturu laku na vozidle, aby ani to nejbystřejší oko nepoznalo, kde promáčklina byla. Nebo běžné výměny brzd, kde je třeba pečlivě vyčistit a promazat veškeré potřebné součásti.",
+    "description2": "Komunikace se zákazníkem mě baví. Otrávené hovory kde se člověk cítí jako by překážel či dokonce otravoval vás u mě nečekají. K zákazníkům se věnuji jak jen to mé časové možnosti dovolují. K většině prací má zákazník pečlivou fotodokumentaci a je kompletně informován a prováděných opravách. Auta máme rádi a naše práce nás baví. Zkuste změnu a nechte se překvapit. Bude mi ctí postarat se o vaše auto.",
+    "stat1": "Vymačkaných důlků",
+    "stat2": "Úderů kladivem",
+    "stat3": "spasovaných blatníků",
+    "stat4": "Nalakovaných dílů"
+  },
   "usp": {
-    "title1": "Opravy metodou PDR",
-    "text1": "Opravy promáčklin bez lakování metodou PDR",
-    "title2": "Ochranné nástřiky dutin/podvozků",
-    "text2": "Profesionální ošetření podvozku, karoserie a dutin vašeho vozu.",
-    "title3": "Drobné klempířské/lakýrnické práce",
-    "text3": "Lakování/vyvařování jednotlivých dílů karoserie"
+    "title1": "Krátké objednávací termíny",
+    "text1": "Krátké objednávací termíny jsou zárukou rychlé opravy vašeho vozu.",
+    "title2": "Slušné a férové jednání",
+    "text2": "Slušné a férové jednání je zárukou spokojeného zákazníka.",
+    "title3": "Kvalitně odvedená práce",
+    "text3": "Kvalitní odvedená práce je zárukou bezpečnosti a pohodlí na cestě."
   },
   "nav": {
     "home": "Úvodní stránka",
@@ -32,7 +45,11 @@
     }
   },
   "contact": {
-    "consultation": "Konzultace zdarma!"
+    "contactPageTitle": "Kontakt",
+    "consultation": "Konzultace zdarma!",
+    "title": "Potřebujete poradit?",
+    "description": "Napište nám na email a my vám ozveme váše potřeby.",
+    "button": "Kontaktujte nás!"
   },
   "form": {
     "name": "Jméno",
@@ -47,5 +64,47 @@
     "messageSuccess": "Zpráva byla úspěšně odeslána.",
     "messageError": "Zpráva nebyla odeslána. Zkuste to znovu.",
     "upload": "Zde můžete nahrát fotku vašeho poškození"
+  },
+  "gallery": {
+    "galleryPageTitle": "Galerie",
+    "filter": {
+      "all": "Vše",
+      "filter1": "Pneuservis",
+      "filter2": "Opravy vozidel kroupách",
+      "filter3": "Ochranné nástřiky"
+    }
+  },
+  "services": {
+    "servicesPageTitle": "Služby",
+    "subtitle": "Co nabízíme",
+    "title": "VŠE NA JEDNOM MÍSTĚ.",
+    "serviceCard": {
+      "card1": "Opravy vozidel po kroupách bez poškození laku",
+      "card2": "Opravy deformací bez lakování metodou PDR",
+      "card3": "Ochranné nástřiky dutin a podvozků",
+      "card4": "Vyvařování a karosářské opravy",
+      "card5": "Údržba a opravy klimatizací",
+      "card6": "Pneuservis",
+      "card7": "Čištění a mytí vozidel",
+      "card8": "Běžná údržba vozidel"
+    }
+  },
+
+  "ratings": {
+    "title": "Co o nás říkají",
+    "subtitle": "Recenze Google"
+  },
+  "footer": {
+    "address": "Adresa",
+    "tel": "Zavolejte",
+    "services": {
+      "title": "Služby"
+    },
+    "openingHours": {
+      "title": "Otevírací doba",
+      "monday": "Po - Pá: 9:00 - 17:00",
+      "saturday": "So - Ne: Zavřeno",
+      "phone": "Případně dle telefonické domluvy"
+    }
   }
 }

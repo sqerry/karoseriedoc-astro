@@ -1,7 +1,7 @@
 ---
-title: 'Opravy vozidel po kroupách bez poškození laku'
+title: 'Opravy deformací bez lakování metodou PDR'
 customClass: 'service-detail--opravy-deformaci-bez-lakovani-metodou-pdr'
-description: 'Provádíme kompletní opravy důlků na karoserii vozidel poškozených krupobitím.'
+description: 'Oprava karosérie vozidla bez poškození laku technologií PDR'
 headerImage: '/images/DSC_5155.webp'
 uspItems:
   - text: 'Oprava karosérie vozidla bez poškození laku technologií PDR'

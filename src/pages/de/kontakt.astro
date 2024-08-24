@@ -75,8 +75,8 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
         source-list="local, camera"
         group-output>
     </uc-config>
-    <PageHeader pageName="Kontakt" imageSrc="/images/DSC_5058.webp" />
-    <!-- <PageHeader pageName="Kontakt" imageSrc="/images/DSC_5048.jpg" /> -->
+    <PageHeader pageName={t('contact.contactPageTitle')} imageSrc="/images/DSC_5058.webp" />
+
     <main>
         <section class="contact-section">
             <div class="container">
@@ -153,12 +153,10 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
     </main>
 
     <script>
-        import i18next, { t, changeLanguage } from 'i18next'
-
         setTimeout(() => {
             document.querySelector(
                 '#contactForm > div:nth-child(5) > div.uploadcare-wrapper > uc-file-uploader-regular > uc-simple-btn > uc-drop-area > button > span'
-            ).textContent = t('form.upload')
+            ).textContent = 'Zde můžete nahrát fotku vašeho poškození'
         }, 100)
     </script>
 

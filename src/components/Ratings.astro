@@ -1,10 +1,11 @@
 ---
 import Title from '../components/Title.astro'
 import RatingCard from '../components/RatingCard.astro'
+import i18next, { t, changeLanguage } from 'i18next'
 ---
 
 <div class="ratings">
-    <Title title="Co o nás říkají" subtitle="Recenze Google" position="center" />
+    <Title title={t('ratings.title')} subtitle={t('ratings.subtitle')} position="center" />
     <div class="ratings-wrapper">
         <div class="swiper mySwiper ratings-swiper" data-direction="right" data-speed="slow">
             <div class="swiper-wrapper">

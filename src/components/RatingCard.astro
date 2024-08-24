@@ -14,19 +14,23 @@ function timePassed(dateString) {
     const [day, month, year] = dateString.split('.').map(Number)
     const date = new Date(year, month - 1, day)
     const now = new Date()
-    const diffTime = Math.abs(now.getTime() - date.getTime()) // Fix: use getTime() to get timestamps
+    const diffTime = now.getTime() - date.getTime()
+    const isGerman = Astro.url.pathname.includes('/de/')
 
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-    const diffMonths = Math.ceil(diffDays / 30)
-    const diffYears = Math.ceil(diffDays / 365)
+    const periods = [
+        { unit: 'year', divisor: 365 * 24 * 60 * 60 * 1000, german: 'Jahren', czech: 'roky' },
+        { unit: 'month', divisor: 30 * 24 * 60 * 60 * 1000, german: 'Monaten', czech: 'měsícemi' },
+        { unit: 'day', divisor: 24 * 60 * 60 * 1000, german: 'Tagen', czech: 'dny' },
+    ]
 
-    if (diffYears > 1) {
-        return `před ${diffYears} roky`
-    } else if (diffMonths > 1) {
-        return `před ${diffMonths} měsícemi`
-    } else {
-        return `před ${diffDays} dny`
+    for (const period of periods) {
+        const value = Math.floor(diffTime / period.divisor)
+        if (value > 1) {
+            return isGerman ? `vor ${value} ${period.german}` : `před ${value} ${period.czech}`
+        }
     }
+
+    return isGerman ? 'heute' : 'dnes'
 }
 ---
 

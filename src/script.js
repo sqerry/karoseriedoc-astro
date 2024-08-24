@@ -7,8 +7,6 @@ import 'swiper/css/pagination'
 
 function initSwiper() {
     const swiper = new Swiper('.hero-section .swiper', {
-        // Optional parameters
-
         loop: true,
 
         autoplay: {
@@ -16,7 +14,6 @@ function initSwiper() {
             disableOnInteraction: false,
         },
 
-        // If we need pagination
         modules: [Navigation, Pagination, Autoplay],
 
         pagination: {
@@ -24,13 +21,11 @@ function initSwiper() {
             clickable: true,
         },
 
-        // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
 
-        // And if we need scrollbar
         scrollbar: {
             el: '.swiper-scrollbar',
         },

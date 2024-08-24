@@ -1,10 +1,14 @@
 ---
-import { slidesContent } from '../data/slideContent.js'
+// @ts-ignore
+import { getSlideContent } from '../data/slideContent.js'
 import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+
+const { lang = 'cs' } = Astro.props
+const slidesContent = getSlideContent(lang)
 ---
 
 <section class="hero-section">
@@ -69,6 +73,13 @@ import 'swiper/css/pagination'
 </script>
 
 <style lang="scss">
+    .slide-content--klimatizace {
+        .background-overlay {
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: scaleX(-1);
+        }
+    }
     .slide-content--klempir {
         .background-overlay {
             background-position: center -188rem;

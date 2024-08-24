@@ -1,10 +1,10 @@
-export const slidesContent = [
+export const slidesContentCs = [
     {
         title: 'Opravy promáčklin bez lakování metodou PDR',
         subtitle: 'Vítejte v KaroserieDoc',
         features: ['technologie PDR', 'Doživotní záruka', 'Bezplatná prohlídka a kalkulace ceny'],
         buttonText: 'VÍCE INFORMACÍ',
-        buttonLink: '#',
+        buttonLink: '/opravy-deformaci-bez-lakovani-metodou-pdr',
         image: '/images/deformace.webp',
         customClass: 'slide-content--deformace',
     },
@@ -13,7 +13,7 @@ export const slidesContent = [
         subtitle: 'Vítejte v KaroserieDoc',
         features: ['technologie PDR', 'Doživotní záruka', 'Bezplatná prohlídka a kalkulace ceny'],
         buttonText: 'VÍCE INFORMACÍ',
-        buttonLink: '#',
+        buttonLink: '/opravy-vozidel-po-kroupach-bez-poskozeni-laku',
         image: '/images/po-kroupech.webp',
     },
     {
@@ -25,7 +25,7 @@ export const slidesContent = [
             'Pokryje i dutiny spodní části vozidla a prodlouží životnost pohyblivých komponentů.',
         ],
         buttonText: 'VÍCE INFORMACÍ',
-        buttonLink: '#',
+        buttonLink: '/ochranne-nastriky-dutin-a-podvozku',
         image: '/images/ochrane-nastriky.webp',
         customClass: 'slide-content--ochrane-nastriky',
     },
@@ -39,8 +39,118 @@ export const slidesContent = [
             'Vyvařování/oprava zrezlých dílů karoserie',
         ],
         buttonText: 'VÍCE INFORMACÍ',
-        buttonLink: '#',
+        buttonLink: '/drobne-klempirske-a-lakyrnicke-prace',
         image: '/images/DSC_5215.webp',
         customClass: 'slide-content--klempir',
     },
+    {
+        title: 'Údržba a opravy klimatizací',
+        subtitle: 'Vítejte v KaroserieDoc',
+        features: [
+            'Kontrola a diagnostika',
+            'Čištění a dezinfekce',
+            'Výměna filtra',
+            'Doplnění chladiva',
+            'Opravy a údržba',
+            'Předělání ze starého plynu R12 na vašem veteránu na nový typ chladiva R-134a',
+        ],
+        buttonText: 'VÍCE INFORMACÍ',
+        buttonLink: '/udrzba-a-opravy-klimatizaci',
+        image: '/images/DSC_5099.webp',
+        customClass: 'slide-content--klimatizace',
+    },
+    {
+        title: 'Pneuservis',
+        subtitle: 'Vítejte v KaroserieDoc',
+        features: [
+            'Precizní vyvažování kol pro hladkou a bezpečnou jízdu.',
+            'Opravuji defekty a poškození pneumatik, abyste mohli pokračovat v jízdě bez obav.',
+            'Pravidelná kontrola a úprava tlaku v pneumatikách pro optimální výkon a bezpečnost.',
+            'Nabízím široký výběr kvalitních pneumatik od renomovaných výrobců.',
+        ],
+        buttonText: 'VÍCE INFORMACÍ',
+        buttonLink: '/pneuservis',
+        image: '/images/DSC_5099.webp',
+        customClass: 'slide-content--klimatizace',
+    },
 ]
+
+export const slidesContentDe = [
+    {
+        title: 'Dellenreparaturen ohne Lackierung mit PDR-Methode',
+        subtitle: 'Willkommen bei KaroserieDoc',
+        features: ['PDR-Technologie', 'Lebenslange Garantie', 'Kostenlose Inspektion und Kostenvoranschlag'],
+        buttonText: 'MEHR INFORMATIONEN',
+        buttonLink: '/dellenreparaturen-ohne-lackierung-mit-pdr-methode',
+        image: '/images/deformace.webp',
+        customClass: 'slide-content--deformace',
+    },
+    {
+        title: 'Hagelschadenreparaturen ohne Lackbeschädigung',
+        subtitle: 'Willkommen bei KaroserieDoc',
+        features: ['PDR-Technologie', 'Lebenslange Garantie', 'Kostenlose Inspektion und Kostenvoranschlag'],
+        buttonText: 'MEHR INFORMATIONEN',
+        buttonLink: '/hagelschadenreparaturen-ohne-lackbeschaedigung',
+        image: '/images/po-kroupech.webp',
+    },
+    {
+        title: 'Schutzbeschichtungen für Hohlräume und Unterböden',
+        subtitle: 'Willkommen bei KaroserieDoc',
+        features: [
+            'Schützt den Unterboden vor Streusalz, Feuchtigkeit, Frost und extremen Temperaturschwankungen.',
+            'Dient als Korrosionsschutz und verhindert die Schwächung der Karosseriestruktur.',
+            'Deckt auch die Hohlräume des Unterbodens ab und verlängert die Lebensdauer beweglicher Teile.',
+        ],
+        buttonText: 'MEHR INFORMATIONEN',
+        buttonLink: '/schutzbeschichtungen-fuer-hohlraeume-und-unterboeden',
+        image: '/images/ochrane-nastriky.webp',
+        customClass: 'slide-content--ochrane-nastriky',
+    },
+    {
+        title: 'Kleinere Karosserie- und Lackierarbeiten',
+        subtitle: 'Willkommen bei KaroserieDoc',
+        features: [
+            'Wir beraten Sie gerne, wie Sie den Schaden beheben können',
+            'Lackierung einzelner Teile',
+            'Schweißen/Reparatur von rostigen Karosserieteilen',
+        ],
+        buttonText: 'MEHR INFORMATIONEN',
+        buttonLink: '/kleinere-karosserie-und-lackierarbeiten',
+        image: '/images/DSC_5215.webp',
+        customClass: 'slide-content--klempir',
+    },
+    {
+        title: 'Wartung und Reparatur von Klimaanlagen',
+        subtitle: 'Willkommen bei KaroserieDoc',
+        features: [
+            'Kontrolle und Diagnose',
+            'Reinigung und Desinfektion',
+            'Filterwechsel',
+            'Kältemittel auffüllen',
+            'Reparaturen und Wartung',
+            'Umrüstung von altem R12-Kältemittel auf R-134a in Ihrem Oldtimer',
+        ],
+        buttonText: 'MEHR INFORMATIONEN',
+        buttonLink: '/wartung-und-reparatur-von-klimaanlagen',
+        image: '/images/DSC_5099.webp',
+        customClass: 'slide-content--klimatizace',
+    },
+    {
+        title: 'Reifenservice',
+        subtitle: 'Willkommen bei KaroserieDoc',
+        features: [
+            'Präzises Auswuchten der Räder für eine ruhige und sichere Fahrt.',
+            'Reparatur von Reifenpannen und -schäden, damit Sie sorgenfrei weiterfahren können.',
+            'Regelmäßige Kontrolle und Anpassung des Reifendrucks für optimale Leistung und Sicherheit.',
+            'Wir bieten eine große Auswahl an hochwertigen Reifen von renommierten Herstellern.',
+        ],
+        buttonText: 'MEHR INFORMATIONEN',
+        buttonLink: '/reifenservice',
+        image: '/images/DSC_5099.webp',
+        customClass: 'slide-content--klimatizace',
+    },
+]
+
+export const getSlideContent = (lang) => {
+    return lang === 'de' ? slidesContentDe : slidesContentCs
+}

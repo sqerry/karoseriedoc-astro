@@ -41,6 +41,11 @@ const { title, description } = Astro.props
         <script src="../script.js"></script>
 
         <style lang="scss" is:global>
+            @property --n {
+                syntax: '<integer>';
+                initial-value: 0;
+                inherits: false;
+            }
             html {
                 font-size: 62.5%;
                 background-color: $clr-black;

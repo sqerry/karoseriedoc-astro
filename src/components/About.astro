@@ -1,5 +1,6 @@
 ---
 import Title from '../components/Title.astro'
+import i18next, { t } from 'i18next'
 ---
 
 <section id="about-section" class="about-us-section">
@@ -8,32 +9,47 @@ import Title from '../components/Title.astro'
             <div class="about-us-image">
                 <img src="/images/DSC_5072.webp" alt="About Us" loading="lazy" />
                 <div class="stat-item image-stat">
-                    <span class="stat-number">2478+</span>
-                    <span class="stat-label">Vymačkaných důlků</span>
+                    <span class="stat-number" data-to="2478" style="min-width: 112px">
+                        <span class="number">0</span>
+                        <span class="plus">+</span>
+                    </span>
+                    <span class="stat-label">{t('about.stat1')}</span>
                 </div>
             </div>
             <div class="about-content">
-                <h3 class="section-title">O nás</h3>
-                <h2 class="section-subtitle">Profesionální přístup s důrazem na kvalitu</h2>
+                <h3 class="section-title">{t('about.title')}</h3>
+                <h2 class="section-subtitle">{t('about.subtitle')}</h2>
 
-                <p class="section-description">Textové informace v přípravě. Děkujeme za pochopení.</p>
+                <div class="section-description">
+                    <p>{t('about.description')}</p>
+                    <p>{t('about.description2')}</p>
+                </div>
                 <div class="stats">
                     <div class="stat-item">
                         <div class="stat-content">
-                            <span class="stat-number">15,365<span class="plus">+</span></span>
-                            <span class="stat-label">Úderů kladivem</span>
+                            <span class="stat-number" data-to="15365" style="min-width: 130px">
+                                <span class="number">0</span>
+                                <span class="plus">+</span>
+                            </span>
+                            <span class="stat-label">{t('about.stat2')}</span>
                         </div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-content">
-                            <span class="stat-number">198<span class="plus">+</span></span>
-                            <span class="stat-label">spasovanch blatníků</span>
+                            <span class="stat-number" data-to="198" style="min-width: 83px">
+                                <span class="number">0</span>
+                                <span class="plus">+</span>
+                            </span>
+                            <span class="stat-label">{t('about.stat3')}</span>
                         </div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-content">
-                            <span class="stat-number">142<span class="plus">+</span></span>
-                            <span class="stat-label">Nalakovanch dílů</span>
+                            <span class="stat-number" data-to="142" style="min-width: 82px">
+                                <span class="number">0</span>
+                                <span class="plus">+</span>
+                            </span>
+                            <span class="stat-label">{t('about.stat4')}</span>
                         </div>
                     </div>
                 </div>
@@ -41,6 +57,57 @@ import Title from '../components/Title.astro'
         </div>
     </div>
 </section>
+
+<script>
+    const easeOutCubic = (t) => --t * t * t + 1
+
+    const animateNumber = (element, start, end, duration) => {
+        let startTime = null
+        const step = (timestamp) => {
+            if (!startTime) startTime = timestamp
+            const progress = timestamp - startTime
+            const easing = easeOutCubic(progress / duration)
+            const current = Math.min(Math.floor(start + (end - start) * easing), end)
+            element.querySelector('.number').textContent = current.toLocaleString()
+            if (progress < duration) {
+                requestAnimationFrame(step)
+            } else {
+                element.querySelector('.number').textContent = end.toLocaleString()
+                element.removeAttribute('style')
+            }
+        }
+        requestAnimationFrame(step)
+    }
+
+    const observeStats = () => {
+        const aboutSection = document.querySelector('#about-section')
+
+        if (aboutSection) {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            document.querySelectorAll('.stat-number').forEach((element) => {
+                                const endValue = parseInt(element.getAttribute('data-to'), 10)
+                                animateNumber(element, 0, endValue, 3400)
+                            })
+                            observer.disconnect()
+                        }
+                    })
+                },
+                { threshold: 0.5 }
+            )
+
+            observer.observe(document.querySelector('#about-section'))
+        }
+    }
+
+    observeStats()
+
+    document.addEventListener('astro:after-swap', () => {
+        observeStats()
+    })
+</script>
 
 <style lang="scss">
     .about-us-section {
@@ -64,7 +131,6 @@ import Title from '../components/Title.astro'
 
             @media (max-width: 767px) {
                 img {
-                    // display: none;
                     position: absolute;
                     top: -380px;
                     z-index: -1;
@@ -140,6 +206,10 @@ import Title from '../components/Title.astro'
             }
             .section-description {
                 margin-bottom: 3.2rem;
+                max-width: 600px;
+                p {
+                    margin-bottom: 1.9rem;
+                }
                 @media (max-width: 767px) {
                     max-width: 100%;
                     text-align: center;
@@ -168,6 +238,7 @@ import Title from '../components/Title.astro'
                         font-size: 3.2rem;
                         font-weight: 700;
                         font-family: $ff-heading;
+                        text-align: center;
                         .plus {
                             margin-left: 0.4rem;
                             font-size: 2.4rem;
