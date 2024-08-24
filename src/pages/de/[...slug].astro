@@ -1,20 +1,20 @@
 ---
-import { changeLanguage } from "i18next";
-import { getCollection } from "astro:content";
-import ServiceDetail from "../../components/ServiceDetail.astro";
-import Layout from "../../layouts/Layout.astro";
+import { changeLanguage } from 'i18next'
+import { getCollection } from 'astro:content'
+import ServiceDetail from '../../components/ServiceDetail.astro'
+import Layout from '../../layouts/Layout.astro'
 
-changeLanguage("de");
+changeLanguage('de')
 
 export async function getStaticPaths() {
-    const serviceEntries = await getCollection("services");
+    const serviceEntries = await getCollection('services')
     return serviceEntries.map((entry) => ({
-        params: { slug: entry.slug },
+        params: { slug: entry.slug.replace('de/', '') },
         props: { entry },
-    }));
+    }))
 }
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { entry } = Astro.props
+const { Content } = await entry.render()
 ---
 
 <Layout title={entry.data.title} description={entry.data.description}>

@@ -1,14 +1,13 @@
 ---
-title: 'Běžná údržba vozidel'
+title: 'Regelmäßige Fahrzeugwartung'
 description: 'Základní servisní úkony provádíme expresně bez dlouhých objednacích lhůt.'
 headerImage: '/images/DSC_5238.webp'
-lang: 'cs'
+lang: 'de'
 ---
 
 # Popis služby
 
-Základní servisní úkony provádíme expresně bez dlouhých objednacích lhůt.
-Provádíme základní údržbu a servis všech značek, ať už se jedná o:
+GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT GERMAN TEXT
 
 <ul>
   <li>Kontrola a výměna brzdových destiček</li>
