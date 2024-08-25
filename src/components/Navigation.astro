@@ -14,7 +14,7 @@ import { LanguageSelector } from 'astro-i18next/components'
             <a id="services-link" href={localizePath('/sluzby', i18next.language)}>{t('nav.services')}</a>
         </li>
         <li><a href={localizePath('/kontakt', i18next.language)}>{t('nav.contact')}</a></li>
-        <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
+        <LanguageSelector showFlag={false} languageMapping={{ cs: '🇨🇿', de: '🇩🇪' }} class="lang-switcher" />
     </ul>
 </nav>
 <script>
