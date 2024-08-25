@@ -5,7 +5,7 @@ description: 'Oprava karosérie vozidla bez poškození laku technologií PDR'
 headerImage: '/images/DSC_5155.webp'
 uspItems:
   - text: 'Oprava karosérie vozidla bez poškození laku technologií PDR'
-  - text: 'Rychlost opravy – obvykle 2-3 pracovní dny'
+  - text: 'Rychlost opravy - malé promáčkliny vám opravíme i na počkání!'
   - text: 'Výměna poškozených dílů – (např. čelní sklo, lišty, kryty zrcátek...)'
   - text: '100% záruka kvality na všechny provedené práce'
   - text: 'Doživotní záruka na opravu technologií PDR bez poškození laku'

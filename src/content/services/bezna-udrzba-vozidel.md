@@ -15,4 +15,5 @@ Provádíme základní údržbu a servis všech značek, ať už se jedná o:
   <li>Výměna oleje a všech filtrů</li>
   <li>Výměna rozvodů</li>
   <li>opravy a výměny všech komponent nápravy vozidla</li>
+  <li>diagnostika vozidla</li>
 </ul>

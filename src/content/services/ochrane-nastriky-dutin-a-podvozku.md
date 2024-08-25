@@ -1,15 +1,13 @@
 ---
-title: 'Ochrané nástřiky dutin a podvozků'
+title: 'Ochranné nástřiky dutin a podvozků'
 description: 'Provádíme kompletní opravy důlků na karoserii vozidel poškozených krupobitím.'
 headerImage: '/images/ochrane-nastriky.webp'
 customClass: 'service-detail--ochrane-nastriky-dutin-a-podvozku'
-# uspItems:
-#   - text: 'Oprava karosérie vozidla bez poškození laku technologií PDR'
-#   - text: 'Rychlost opravy – obvykle 2-3 pracovní dny'
-#   - text: 'Výměna poškozených dílů – (např. čelní sklo, lišty, kryty zrcátek...)'
-#   - text: '100% záruka kvality na všechny provedené práce'
-#   - text: 'Doživotní záruka na opravu technologií PDR bez poškození laku'
-#   - text: 'Bezplatná kalkulace ceny'
+uspItems:
+  - text: 'používáme prémiové  materiály značky DINITROL'
+  - text: 'ošetření zahrnuje kvalitní umytí podvozku vašeho vozidla'
+  - text: 'nezkorodovaná karoserie je pevná a tudíž bezpečná '
+  - text: 'ochrana proti působení posypových solí, vlhkosti, mrazu a prudkých výkyvů teplot'
 ---
 
 # Popis služby

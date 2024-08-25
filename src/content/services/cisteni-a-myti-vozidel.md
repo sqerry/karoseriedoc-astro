@@ -14,6 +14,11 @@ customClass: 'service-detail--cisteni-a-myti-vozidel'
 
 # Popis služby
 
-<!-- Technologie PDR (Paintless Dent Repair) je oprava důlků a promáčklin na karoseriích vozidel. Je prováděna speciálním nářadím za studena bez porušení původní barvy i laku.
+Nechte si u nás pečlivě vyčistit svůj vůz.
+Zajistíme, aby váš automobil zářil čistotou jak zvenku, tak uvnitř. Pečujeme o každý detail, aby váš vůz vypadal jako nový.
 
-Technologie PDR je nekonvenční metodou, která se nejčastěji používá pro opravy karoserií vozidel po krupobití. Oproti konvenčním metodám (tmelení, broušení, lakování nebo výměny celých dílů), jsou náklady na opravu od 30 až 80% nižší, doba opravy se zkracuje z týdnů na hodiny, zachovává původní hodnotu vozidel a je 100% ekologická. -->
+<ul>
+  <li>Čištění suchou i mokrou cestou</li>
+  <li>impregnace čištěných ploch</li>
+  <li>ruční mytí karoserie</li>
+</ul>
