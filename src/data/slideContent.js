@@ -49,7 +49,7 @@ export const slidesContentCs = [
         features: [
             'Kontrola a diagnostika',
             'Čištění a dezinfekce',
-            'Výměna filtra',
+            'Výměna filtru',
             'Doplnění chladiva',
             'Opravy a údržba',
             'Předělání ze starého plynu R12 na vašem veteránu na nový typ chladiva R-134a',

@@ -6,7 +6,7 @@ headerImage: '/images/DSC_5099.webp'
 uspItems:
   - text: '<span>Kontrola a diagnostika</span> Pečlivě zkontroluji celý klimatizační systém, abych zjistil případné závady a navrhl optimální řešení.'
   - text: '<span>Čištění a dezinfekce</span> Zbavím váš klimatizační systém bakterií, plísní a nepříjemných zápachů pomocí speciálních čistících prostředků a technik.'
-  - text: '<span>Výměna filtra</span> Vyměním filtry a případné poškozené díly, aby systém mohl dále bez problémů fungovat.'
+  - text: '<span>Výměna filtru</span> Vyměním filtry a případné poškozené díly, aby systém mohl dále bez problémů fungovat.'
   - text: '<span>Doplnění chladiva</span> Zajistím, že vaše klimatizace bude mít dostatečné množství chladiva pro bezproblémový provoz.'
   - text: '<span>Opravy a údržba</span> Provádím veškeré potřebné opravy a výměny dílů, aby vaše klimatizace fungovala spolehlivě a efektivně.'
   - text: '<span>K dispozici oba chladírenské plyny R-134A a R-1234y</span> Servis provádíme na všech automobilech.'

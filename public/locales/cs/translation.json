@@ -1,6 +1,6 @@
 {
   "global": {
-    "email": "alexandrmelichar@gmail.com"
+    "email": "karoseriedoc@gmail.com"
   },
   "urls": {
     "opravy-vozidel-kroupy": "opravy-vozidel-po-kroupach-bez-poskozeni-laku",
@@ -16,8 +16,10 @@
   "about": {
     "title": "O nás",
     "subtitle": "Profesionální přístup s důrazem na kvalitu",
-    "description": "Vítám vás na mé webové stránce KaroserieDOC. Můj smysl pro detail se ukázal jako ideální společník pro práci s auty. Ať už se jedná o opravy metodou PDR, kde řeším i takové maličkosti jako originální strukturu laku na vozidle, aby ani to nejbystřejší oko nepoznalo, kde promáčklina byla. Nebo běžné výměny brzd, kde je třeba pečlivě vyčistit a promazat veškeré potřebné součásti.",
-    "description2": "Komunikace se zákazníkem mě baví. Otrávené hovory kde se člověk cítí jako by překážel či dokonce otravoval vás u mě nečekají. K zákazníkům se věnuji jak jen to mé časové možnosti dovolují. K většině prací má zákazník pečlivou fotodokumentaci a je kompletně informován a prováděných opravách. Auta máme rádi a naše práce nás baví. Zkuste změnu a nechte se překvapit. Bude mi ctí postarat se o vaše auto.",
+    "description": "Vážení zákazníci,",
+    "description2": "Komunikace se zákazníkem je pro mě radostí, a proto u mě nečekejte otrávené hovory, kde byste se cítili, jako byste překáželi nebo dokonce někoho obtěžovali. Každému zákazníkovi se věnuji, jak jen mi to mé časové možnosti dovolí.",
+    "description3": "U každé opravy poskytujeme pečlivou fotodokumentaci a zákazníka vždy kompletně informujeme o provedených úkonech. Auta máme rádi, a naše práce nás opravdu baví.",
+    "description4": "Vyzkoušejte něco nového a nechte se mile překvapit. Bude mi ctí postarat se o vaše auto.",
     "stat1": "Vymačkaných důlků",
     "stat2": "Úderů kladivem",
     "stat3": "spasovaných blatníků",
@@ -103,7 +105,8 @@
     "openingHours": {
       "title": "Otevírací doba",
       "monday": "Po - Pá: 9:00 - 17:00",
-      "saturday": "So - Ne: Zavřeno",
+      "saturday": "So - pouze na objednání",
+      "sunday": "Ne: Zavřeno",
       "phone": "Případně dle telefonické domluvy"
     }
   }
