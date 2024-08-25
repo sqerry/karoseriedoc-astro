@@ -49,7 +49,11 @@ import SocialLinks from '../components/SocialLinks.astro'
         </div>
         <div class="mobile-nav">
             <SiteNav />
-            <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
+            <LanguageSelector
+                showFlag={false}
+                languageMapping={{ cs: '🇨🇿', de: '🇩🇪' }}
+                class="lang-switcher"
+            />
         </div>
     </div>
 </header>
