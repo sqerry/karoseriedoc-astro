@@ -3,7 +3,15 @@ import SiteNav from '../components/Navigation.astro'
 import Logo from '../components/Logo.astro'
 import { LanguageSelector } from 'astro-i18next/components'
 import { t } from 'i18next'
+import { localizePath } from 'astro-i18next'
 import SocialLinks from '../components/SocialLinks.astro'
+
+const languages = [
+    { code: 'cs', name: 'Česky', flag: '/images/icons/cz.svg' },
+    { code: 'de', name: 'Deutsch', flag: '/images/icons/de.svg' },
+]
+
+const currentPath = Astro.url.pathname
 ---
 
 <div class="top-navigation-bar">
@@ -26,12 +34,36 @@ import SocialLinks from '../components/SocialLinks.astro'
             </li>
         </ul>
         <SocialLinks />
-        <LanguageSelector showFlag={false} languageMapping={{ cs: '🇨🇿', de: '🇩🇪' }} class="lang-switcher" />
+        <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
     </div>
 </div>
 <header class="header">
     <div class="container header-wrapper">
-        <LanguageSelector showFlag={false} languageMapping={{ cs: '🇨🇿', de: '🇩🇪' }} class="lang-switcher" />
+        <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
+        <!-- <div class="custom-language-selector lang-switcher">
+            <button class="language-select-btn">
+                <img
+                    src={languages.find((lang) => lang.code === Astro.currentLocale)?.flag}
+                    alt="Current language flag"
+                    class="flag-icon"
+                />
+                <span>{languages.find((lang) => lang.code === Astro.currentLocale)?.name}</span>
+            </button>
+            <ul class="language-select-dropdown">
+                {
+                    languages.map((lang) => (
+                        <li>
+                            <a
+                                href={localizePath(currentPath, lang.code)}
+                                class={lang.code === Astro.currentLocale ? 'active' : ''}>
+                                <img src={lang.flag} alt={`${lang.name} flag`} class="flag-icon" />
+                                {lang.name}
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div> -->
         <div class="header-logo">
             <Logo />
         </div>
@@ -49,16 +81,84 @@ import SocialLinks from '../components/SocialLinks.astro'
         </div>
         <div class="mobile-nav">
             <SiteNav />
-            <LanguageSelector
-                showFlag={false}
-                languageMapping={{ cs: '🇨🇿', de: '🇩🇪' }}
-                class="lang-switcher"
-            />
+            <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
         </div>
     </div>
 </header>
 
+<!-- <script>
+    document.addEventListener('astro:page-load', () => {
+        const languageSelector = document.querySelector('.custom-language-selector')
+        const selectBtn = languageSelector.querySelector('.language-select-btn')
+        const dropdown = languageSelector.querySelector('.language-select-dropdown')
+
+        selectBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('show')
+        })
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener('click', (event) => {
+            if (!languageSelector.contains(event.target)) {
+                dropdown.classList.remove('show')
+            }
+        })
+    })
+</script> -->
+
 <style lang="scss">
+    .flag-icon {
+        width: 20px;
+        height: 15px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    .custom-language-selector {
+        position: relative;
+        display: inline-block;
+
+        .language-select-btn {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: inherit;
+            color: inherit;
+        }
+
+        .language-select-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            &.show {
+                display: block;
+            }
+
+            li {
+                a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        background-color: #f1f1f1;
+                    }
+
+                    &.active {
+                        background-color: #ddd;
+                    }
+                }
+            }
+        }
+    }
+
     .top-navigation-bar {
         background-color: #1d2226;
 
