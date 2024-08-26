@@ -8,6 +8,7 @@ uspItems:
   - text: 'ošetření zahrnuje kvalitní umytí podvozku vašeho vozidla'
   - text: 'nezkorodovaná karoserie je pevná a tudíž bezpečná '
   - text: 'ochrana proti působení posypových solí, vlhkosti, mrazu a prudkých výkyvů teplot'
+lang: 'cs'
 ---
 
 # Popis služby

@@ -10,6 +10,7 @@ uspItems:
   - text: '100% záruka kvality na všechny provedené práce'
   - text: 'Doživotní záruka na opravu technologií PDR bez poškození laku'
   - text: 'Bezplatná kalkulace ceny'
+lang: 'cs'
 ---
 
 # Popis služby

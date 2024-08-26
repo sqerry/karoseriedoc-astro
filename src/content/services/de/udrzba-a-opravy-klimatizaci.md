@@ -2,7 +2,6 @@
 title: 'Wartung und Reparatur von Klimaanlagen'
 description: 'Ich sorge dafür, dass Ihr Klimagerät genügend Kältemittel für einen störungsfreien Betrieb hat.'
 headerImage: '/images/DSC_5099.webp'
-lang: 'de'
 uspItems:
   - text: '<span>Kontrola Inspektion und Diagnose</span> Ich werde die gesamte Klimaanlage sorgfältig inspizieren, um eventuelle Fehler zu erkennen und die optimale Lösung vorzuschlagen.'
   - text: '<span>Reinigung und Desinfektion</span> Ich befreie Ihre Klimaanlage mit speziellen Reinigungsmitteln und -techniken von Bakterien, Schimmel und unangenehmen Gerüchen.'
@@ -11,6 +10,7 @@ uspItems:
   - text: '<span>Reparatur und Wartung</span> Ich führe alle notwendigen Reparaturen und den Austausch von Teilen durch, damit Ihre Klimaanlage zuverlässig und effizient läuft.'
   - text: '<span>Beide Kältemittelgase R-134A und R-1234y verfügbar</span> Wir warten alle Fahrzeuge.'
   - text: '<span>Umstellung von altem R12-Gas in Ihrem Oldtimer auf das neue Kältemittel R-134a</span'
+lang: 'de'
 ---
 
 # Warum ist eine regelmäßige Wartung der Klimaanlage wichtig?
