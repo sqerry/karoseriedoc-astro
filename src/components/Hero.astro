@@ -6,7 +6,6 @@ import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { Image } from 'astro:assets'
 
 const { lang = 'cs' } = Astro.props
 const slidesContent = getSlideContent(lang)
@@ -18,18 +17,11 @@ const slidesContent = getSlideContent(lang)
             {
                 slidesContent.map((slide) => (
                     <div class={`swiper-slide ${slide.customClass ? slide.customClass : ''}`}>
-                        <div class="background-overlay">
-                            <img
-                                src=""
-                                alt=""
-                                width={1920}
-                                height={1080}
-                                class="background-image"
-                                loading="lazy"
-                                data-src-mobile={slide.imageMobile}
-                                data-src-desktop={slide.image}
-                            />
-                        </div>
+                        <div
+                            class="background-overlay"
+                            data-src-mobile={slide.imageMobile}
+                            data-src-desktop={slide.image}
+                        />
                         <div class="slide-content container">
                             <h6>{slide.subtitle}</h6>
                             <h2 class="hero-title">{slide.title}</h2>
@@ -56,47 +48,48 @@ const slidesContent = getSlideContent(lang)
 </section>
 
 <script>
-    const loadHighResImage = (img) => {
+    const setBackgroundImages = () => {
         const isMobile = window.innerWidth < 768
-        const src = isMobile ? img.dataset.srcMobile : img.dataset.srcDesktop
-
-        if (img.complete) {
-            img.src = src
-            img.classList.add('loaded')
-        } else {
-            img.onload = () => {
-                img.classList.add('loaded')
-            }
-            img.src = src
-        }
+        const slides = document.querySelectorAll('.swiper-slide .background-overlay')
+        slides.forEach((slide) => {
+            const img = slide as HTMLElement
+            const src = isMobile ? img.dataset.srcMobile : img.dataset.srcDesktop
+            img.style.backgroundImage = `url(${src})`
+        })
     }
 
     const lazyLoadImages = () => {
-        const images = document.querySelectorAll('.background-image')
-        const observer = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        loadHighResImage(entry.target)
-                        observer.unobserve(entry.target)
-                    }
-                })
-            },
-            { rootMargin: '100px' }
-        )
+        const slides = document.querySelectorAll('.swiper-slide .background-overlay')
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const img = entry.target as HTMLElement
+                    setBackgroundImages() // Call this instead of directly setting the background
+                    observer.unobserve(img)
+                }
+            })
+        })
 
-        images.forEach((img) => observer.observe(img))
+        slides.forEach((slide) => {
+            observer.observe(slide)
+        })
     }
 
+    setBackgroundImages() // Initial call
     lazyLoadImages()
 
     document.addEventListener('DOMContentLoaded', () => {
+        setBackgroundImages()
         lazyLoadImages()
     })
 
     document.addEventListener('astro:after-swap', () => {
+        setBackgroundImages()
         lazyLoadImages()
     })
+
+    // Add resize listener to handle orientation changes
+    window.addEventListener('resize', setBackgroundImages)
 </script>
 
 <style lang="scss">
@@ -163,7 +156,6 @@ const slidesContent = getSlideContent(lang)
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center -20rem;
-                overflow: hidden;
 
                 @media (max-width: 2600px) and (min-width: 2000px) {
                     background-position: center center !important;
@@ -174,22 +166,6 @@ const slidesContent = getSlideContent(lang)
                 }
                 @media (max-width: 767px) {
                     opacity: 0.38;
-                }
-
-                .background-image {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    filter: blur(20px);
-                    transform: scale(1.1);
-                    transition:
-                        filter 0.3s ease-out,
-                        transform 0.3s ease-out;
-
-                    &.loaded {
-                        filter: blur(0);
-                        transform: scale(1);
-                    }
                 }
             }
             .slide-content {
