@@ -6,6 +6,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { Image } from 'astro:assets'
 
 const { lang = 'cs' } = Astro.props
 const slidesContent = getSlideContent(lang)
@@ -17,11 +18,16 @@ const slidesContent = getSlideContent(lang)
             {
                 slidesContent.map((slide) => (
                     <div class={`swiper-slide ${slide.customClass ? slide.customClass : ''}`}>
-                        <div
-                            class="background-overlay"
-                            data-src-mobile={slide.imageMobile}
-                            data-src-desktop={slide.image}
-                        />
+                        <div class="background-overlay">
+                            <Image
+                                src={slide.image}
+                                alt=""
+                                width={1920}
+                                height={1080}
+                                class="background-image"
+                                loading="lazy"
+                            />
+                        </div>
                         <div class="slide-content container">
                             <h6>{slide.subtitle}</h6>
                             <h2 class="hero-title">{slide.title}</h2>
@@ -58,21 +64,29 @@ const slidesContent = getSlideContent(lang)
         })
     }
 
-    const lazyLoadImages = () => {
-        const slides = document.querySelectorAll('.swiper-slide .background-overlay')
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const img = entry.target as HTMLElement
-                    setBackgroundImages() // Call this instead of directly setting the background
-                    observer.unobserve(img)
-                }
-            })
-        })
+    const loadHighResImage = (img) => {
+        if (img.complete) {
+            img.classList.add('loaded')
+        } else {
+            img.onload = () => img.classList.add('loaded')
+        }
+    }
 
-        slides.forEach((slide) => {
-            observer.observe(slide)
-        })
+    const lazyLoadImages = () => {
+        const images = document.querySelectorAll('.background-image')
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        loadHighResImage(entry.target)
+                        observer.unobserve(entry.target)
+                    }
+                })
+            },
+            { rootMargin: '100px' }
+        )
+
+        images.forEach((img) => observer.observe(img))
     }
 
     setBackgroundImages() // Initial call
@@ -156,6 +170,7 @@ const slidesContent = getSlideContent(lang)
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center -20rem;
+                overflow: hidden;
 
                 @media (max-width: 2600px) and (min-width: 2000px) {
                     background-position: center center !important;
@@ -166,6 +181,22 @@ const slidesContent = getSlideContent(lang)
                 }
                 @media (max-width: 767px) {
                     opacity: 0.38;
+                }
+
+                .background-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: blur(20px);
+                    transform: scale(1.1);
+                    transition:
+                        filter 0.3s ease-out,
+                        transform 0.3s ease-out;
+
+                    &.loaded {
+                        filter: blur(0);
+                        transform: scale(1);
+                    }
                 }
             }
             .slide-content {
