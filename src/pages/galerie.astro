@@ -1,9 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import PageHeader from "../components/PageHeader.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import Layout from '../layouts/Layout.astro'
+import PageHeader from '../components/PageHeader.astro'
+import i18next, { t, changeLanguage } from 'i18next'
 
-changeLanguage("cs");
+changeLanguage('cs')
 ---
 
 <Layout title="Galerie" description="Galerie">
@@ -193,6 +193,10 @@ changeLanguage("cs");
                 display: block;
                 padding: 20px 0;
                 padding-top: 80px;
+
+                @media (max-width: 767px) {
+                    padding-top: 3rem;
+                }
             }
             .gallery .gallery-filter {
                 padding: 0 15px;

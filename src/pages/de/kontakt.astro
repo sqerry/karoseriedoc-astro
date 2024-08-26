@@ -154,10 +154,14 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
 
     <script>
         const changeFileUploadText = () => {
+            const isGerman = window.location.pathname.includes('/de/')
+
             setTimeout(() => {
                 document.querySelector(
                     '#contactForm > div:nth-child(5) > div.uploadcare-wrapper > uc-file-uploader-regular > uc-simple-btn > uc-drop-area > button > span'
-                ).textContent = 'Zde můžete nahrát fotku vašeho poškození'
+                ).textContent = isGerman
+                    ? 'Hier können Sie ein Foto von Ihrem Schaden hochladen'
+                    : 'Zde můžete nahrát fotku vašeho poškození'
             }, 100)
         }
 

@@ -1,11 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import PageHeader from "../components/PageHeader.astro";
-import Title from "../components/Title.astro";
-import Services from "../components/Services.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import Layout from '../layouts/Layout.astro'
+import PageHeader from '../components/PageHeader.astro'
+import Title from '../components/Title.astro'
+import Services from '../components/Services.astro'
+import i18next, { t, changeLanguage } from 'i18next'
 
-changeLanguage("cs");
+changeLanguage('cs')
 ---
 
 <Layout title="Služby" description="Služby">
@@ -23,5 +23,9 @@ changeLanguage("cs");
 <style lang="scss">
     .services-section {
         padding-top: 5rem;
+
+        @media (max-width: 767px) {
+            padding-top: 2rem;
+        }
     }
 </style>

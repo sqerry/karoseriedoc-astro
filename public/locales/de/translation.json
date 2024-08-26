@@ -79,10 +79,11 @@
   "services": {
     "servicesPageTitle": "Dienstleistungen",
     "subtitle": "Was wir anbieten",
+    "moreInfo": "Weitere Informationen",
     "title": "ALLES AN EINEM ORT.",
     "serviceCard": {
       "card1": "Reparatur von Fahrzeugen nach Hagelstürmen ohne Lackschäden",
-      "card2": "Deformationsreparaturen ohne Anstrich mit der PDR-Methode",
+      "card2": "PDR-Ausbeultechnik",
       "card3": "Schutzbesprühung von Hohlräumen und Chassis",
       "card4": "Schweißen und Karosseriereparaturen",
       "card5": "Wartung und Reparatur von Klimaanlagen",
