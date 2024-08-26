@@ -7,12 +7,15 @@ import Layout from '../../layouts/Layout.astro'
 changeLanguage('de')
 
 export async function getStaticPaths() {
-    const serviceEntries = await getCollection('services')
+    const serviceEntries = await getCollection('services', ({ id }) => {
+        return id.startsWith('de/')
+    })
     return serviceEntries.map((entry) => ({
-        params: { slug: entry.slug.replace('de/', '') },
+        params: { slug: entry.slug.split('/').pop() },
         props: { entry },
     }))
 }
+
 const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
