@@ -1,0 +1,119 @@
+---
+import { localizePath } from 'astro-i18next'
+
+const { customClass } = Astro.props
+const currentLocale = Astro.currentLocale
+const currentPath = Astro.url.pathname
+
+const languages = [
+    { code: 'cs', name: 'Česky', flag: '/images/icons/cz.svg' },
+    { code: 'de', name: 'Deutsch', flag: '/images/icons/de.svg' },
+]
+---
+
+<div class={`custom-language-selector lang-switcher ${customClass}`}>
+    <button class="language-select-btn">
+        <img
+            src={languages.find((lang) => lang.code === currentLocale)?.flag}
+            alt="Current language flag"
+            class="flag-icon"
+        />
+    </button>
+    <ul class="language-select-dropdown">
+        {
+            languages
+                .filter((lang) => lang.code !== currentLocale)
+                .map((lang) => (
+                    <li>
+                        <a href={localizePath(currentPath, lang.code)}>
+                            <img src={lang.flag} alt={`${lang.name} flag`} class="flag-icon" />
+                        </a>
+                    </li>
+                ))
+        }
+    </ul>
+</div>
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const languageSelector = document.querySelector('.custom-language-selector')
+        const selectBtn = languageSelector.querySelector('.language-select-btn')
+        const dropdown = languageSelector.querySelector('.language-select-dropdown')
+
+        selectBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('show')
+        })
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener('click', (event) => {
+            if (!languageSelector.contains(event.target as Node)) {
+                dropdown.classList.remove('show')
+            }
+        })
+    })
+</script>
+
+<style lang="scss">
+    .header-lang-switcher {
+        position: absolute !important;
+        cursor: pointer;
+        right: 1.5rem;
+        background-color: $clr-black;
+        font-size: 2.8rem;
+
+        @media (max-width: 1023px) {
+            display: none !important;
+        }
+    }
+    .flag-icon {
+        width: 20px;
+        height: 15px;
+        vertical-align: middle;
+    }
+    .custom-language-selector {
+        position: relative;
+        display: inline-block;
+
+        .language-select-btn {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: inherit;
+            color: inherit;
+        }
+
+        .language-select-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            background-color: #1d2226;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 5;
+
+            &.show {
+                display: block;
+            }
+
+            li {
+                a {
+                    color: black;
+                    padding: 12px 12px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        background-color: $clr-primary;
+                    }
+
+                    &.active {
+                        background-color: $clr-primary;
+                    }
+                }
+            }
+        }
+    }
+</style>

@@ -1,11 +1,37 @@
 {
+  "global": {
+    "email": "karoseriedoc@gmail.com"
+  },
+  "urls": {
+    "opravy-vozidel-kroupy": "opravy-vozidel-po-kroupach-bez-poskozeni-laku",
+    "opravy-deformaci-pdr": "opravy-deformaci-bez-lakovani-metodou-pdr",
+    "ochrane-nastriky": "ochranne-nastriky-dutin-a-podvozku",
+    "klempirnicka-lakyrnicka": "drobne-klempirske-a-lakyrnicke-prace",
+    "vyvarovani": "vyvarovani-a-karosarske-opravy",
+    "udrzba-klimatizace": "udrzba-a-opravy-klimatizaci",
+    "pneuservis": "pneuservis",
+    "cisteni-a-myti": "cisteni-a-myti-vozidel",
+    "bezna-udrzba": "bezna-udrzba-vozidel"
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Professioneller Ansatz mit Schwerpunkt auf Qualität",
+    "description": "Sehr geehrte Kunden,",
+    "description2": "die Kommunikation mit Kunden ist mir ein Vergnügen. Erwarten Sie also keine genervten Anrufe, bei denen Sie das Gefühl haben, dass Sie im Weg sind oder gar jemanden belästigen. Ich kümmere mich um jeden Kunden so viel, wie es meine Zeit erlaubt.",
+    "description3": "Jede Reparatur wird mit einer sorgfältigen Fotodokumentation versehen, und der Kunde wird stets umfassend über die durchgeführten Arbeiten informiert. Wir lieben Autos, und unsere Arbeit macht uns wirklich Spaß",
+    "description4": "Probieren Sie etwas Neues und lassen Sie sich angenehm überraschen. Es wird mir eine Ehre sein, mich um Ihr Auto zu kümmern.",
+    "stat1": "Gequetschte Grübchen",
+    "stat2": "Hammerschläge",
+    "stat3": "der Kotflügelverbreiterungen",
+    "stat4": "Lackierte Teile"
+  },
   "usp": {
-    "title1": "PDR-Reparaturen",
-    "text1": "Reparatur von Dellen ohne Lackierung durch PDR",
-    "title2": "Hohlraum-/Fahrgestell-Schutzlackierung",
-    "text2": "Professionelle Behandlung von Fahrwerk, Karosserie und Hohlräumen Ihres Fahrzeugs",
-    "title3": "Kleinere Klempner-/Lackierarbeiten",
-    "text3": "Lackieren/Schweißen einzelner Karosserieteile"
+    "title1": "Kurze Bestellfristen",
+    "text1": "Die meisten Reparaturen werden innerhalb von 7 Tagen nach der Bestellung ausgeführt.",
+    "title2": "Anständige und faire Behandlung",
+    "text2": "Sie jederzeit über den Fortgang der Arbeiten informiert werden",
+    "title3": "Eine gut gemachte Arbeit",
+    "text3": "Eine Garantie für Sicherheit und Komfort auf Ihren Reisen"
   },
   "nav": {
     "home": "Startseite",
@@ -20,15 +46,68 @@
       "cto": "Kostenlose Beratung!"
     }
   },
+  "contact": {
+    "contactPageTitle": "Kontakt",
+    "consultation": "Kostenlose Beratung!",
+    "title": "Brauchen Sie einen Rat?",
+    "description": "Schicken Sie mir eine E-Mail oder Whatsapp mit einem Foto Ihres Schadens und ich werde Ihnen einen Kostenvoranschlag unterbreiten.",
+    "button": "Kontaktieren Sie uns!"
+  },
   "form": {
-    "name": "Jméno",
+    "name": "Name",
     "namePlaceholder": "Petr Novák",
     "tel": "Telefon",
     "telPlaceholder": "+420 777 777 777",
     "email": "E-mail",
     "mailPlaceholder": "petr.novak@email.cz",
-    "message": "Zpráva",
-    "messagePlaceholder": "Vaše zpráva",
-    "send": "Odeslat"
+    "message": "Bericht",
+    "messagePlaceholder": "Ihre Nachricht",
+    "send": "Senden",
+    "messageSuccess": "Nachricht wurde erfolgreich gesendet.",
+    "messageError": "Nachricht wurde nicht gesendet. Bitte versuchen Sie es erneut.",
+    "upload": "Hier können Sie ein Foto Ihres Schadens hochladen"
+  },
+  "gallery": {
+    "galleryPageTitle": "Galerie",
+    "filter": {
+      "all": "Alle",
+      "filter1": "Pneuservis",
+      "filter2": "Opravy vozidel kroupách",
+      "filter3": "Ochranné nástřiky"
+    }
+  },
+  "services": {
+    "servicesPageTitle": "Dienstleistungen",
+    "subtitle": "Was wir anbieten",
+    "title": "ALLES AN EINEM ORT.",
+    "serviceCard": {
+      "card1": "Reparatur von Fahrzeugen nach Hagelstürmen ohne Lackschäden",
+      "card2": "Deformationsreparaturen ohne Anstrich mit der PDR-Methode",
+      "card3": "Schutzbesprühung von Hohlräumen und Chassis",
+      "card4": "Schweißen und Karosseriereparaturen",
+      "card5": "Wartung und Reparatur von Klimaanlagen",
+      "card6": "Pneuservice",
+      "card7": "Routinemäßige Fahrzeugwartung",
+      "card8": "Fahrzeugreinigung und -wäsche"
+    }
+  },
+
+  "ratings": {
+    "title": "Was sie über uns sagen",
+    "subtitle": "Google-Bewertungen"
+  },
+  "footer": {
+    "address": "Adresse",
+    "tel": "Rufen Sie  an.",
+    "services": {
+      "title": "Dienstleistungen"
+    },
+    "openingHours": {
+      "title": "Die Öffnungszeiten",
+      "monday": "Mo - Fr: 9:00 - 17:00",
+      "saturday": "Sa - nur auf Anfrage",
+      "sunday": "So: Geschlossen",
+      "phone": "Nach telefonischer Vereinbarung"
+    }
   }
 }
