@@ -2,6 +2,7 @@
 import Logo from '../components/Logo.astro'
 import SocialLinks from '../components/SocialLinks.astro'
 import i18next, { t, changeLanguage } from 'i18next'
+import { localizePath, localizeUrl } from 'astro-i18next'
 ---
 
 <div class="footer-bottom">
@@ -32,22 +33,33 @@ import i18next, { t, changeLanguage } from 'i18next'
             <li>
                 <div class="icon checkmark"></div>
 
-                <a href="">Opravy vozidel po kroupách bez poškození laku​</a>
+                <!-- <a href="/opravy-vozidel-po-kroupach-bez-poskozeni-laku/"
+                    >Opravy vozidel po kroupách bez poškození laku​</a
+                > -->
+                <a href={localizePath('/opravy-vozidel-po-kroupach-bez-poskozeni-laku', i18next.language)}
+                    >Opravy vozidel po kroupách bez poškození laku​</a
+                >
             </li>
             <li>
                 <div class="icon checkmark"></div>
 
-                <a href="">Opravy deformací bez lakování metodou PDR​</a>
+                <a href={localizePath('/opravy-deformaci-bez-lakovani-metodou-pdr', i18next.language)}
+                    >Opravy deformací bez lakování metodou PDR​</a
+                >
             </li>
             <li>
                 <div class="icon checkmark"></div>
 
-                <a href="">Ochranné nástřiky dutin a podvozků</a>
+                <a href={localizePath('/ochranne-nastriky-dutin-a-podvozku', i18next.language)}>
+                    Ochranné nástřiky dutin a podvozků
+                </a>
             </li>
             <li>
                 <div class="icon checkmark"></div>
 
-                <a href="">Drobné klempířské a lakýrnické práce</a>
+                <a href={localizePath('/vyvarovani-a-karosarske-opravy', i18next.language)}>
+                    Vyvařování a karosářské opravy
+                </a>
             </li>
         </ul>
     </div>
