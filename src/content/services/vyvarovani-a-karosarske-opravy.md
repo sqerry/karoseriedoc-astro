@@ -13,3 +13,9 @@ uspItems:
 # Popis služby
 
 Zrezlé prahy nebo blatníky. Nepříjemná záležitost, kvůli které neprojde vaše auto přes STK. V moji dílně provádíme veškeré karosářské opravy, které jsou potřebně pro další bezproblémový provoz vašeho vozu. Práce provádím od A do Z. To znamená od vyřezání napadeného plechu až po nalakování v naší partnerské lakovně.
+
+<ul>
+  <li>Rádi vám poradíme jakým způsobem poškození opravit</li>
+  <li>Lakovaní jednotlivých dílů</li>
+  <li>Vyvařování/oprava zrezlých dílů karoserie</li>
+</ul>

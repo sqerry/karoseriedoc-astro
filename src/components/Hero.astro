@@ -17,7 +17,11 @@ const slidesContent = getSlideContent(lang)
             {
                 slidesContent.map((slide) => (
                     <div class={`swiper-slide ${slide.customClass ? slide.customClass : ''}`}>
-                        <div class="background-overlay" data-src={slide.image} />
+                        <div
+                            class="background-overlay"
+                            data-src-mobile={slide.imageMobile}
+                            data-src-desktop={slide.image}
+                        />
                         <div class="slide-content container">
                             <h6>{slide.subtitle}</h6>
                             <h2 class="hero-title">{slide.title}</h2>
@@ -44,13 +48,23 @@ const slidesContent = getSlideContent(lang)
 </section>
 
 <script>
+    const setBackgroundImages = () => {
+        const isMobile = window.innerWidth < 768
+        const slides = document.querySelectorAll('.swiper-slide .background-overlay')
+        slides.forEach((slide) => {
+            const img = slide as HTMLElement
+            const src = isMobile ? img.dataset.srcMobile : img.dataset.srcDesktop
+            img.style.backgroundImage = `url(${src})`
+        })
+    }
+
     const lazyLoadImages = () => {
         const slides = document.querySelectorAll('.swiper-slide .background-overlay')
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const img = entry.target as HTMLElement
-                    img.style.backgroundImage = `url(${img.dataset.src})`
+                    setBackgroundImages() // Call this instead of directly setting the background
                     observer.unobserve(img)
                 }
             })
@@ -61,15 +75,21 @@ const slidesContent = getSlideContent(lang)
         })
     }
 
+    setBackgroundImages() // Initial call
     lazyLoadImages()
 
     document.addEventListener('DOMContentLoaded', () => {
+        setBackgroundImages()
         lazyLoadImages()
     })
 
     document.addEventListener('astro:after-swap', () => {
+        setBackgroundImages()
         lazyLoadImages()
     })
+
+    // Add resize listener to handle orientation changes
+    window.addEventListener('resize', setBackgroundImages)
 </script>
 
 <style lang="scss">

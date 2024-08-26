@@ -6,6 +6,7 @@ export const slidesContentCs = [
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '/opravy-deformaci-bez-lakovani-metodou-pdr',
         image: '/images/deformace.webp',
+        imageMobile: '/images/deformace-small.webp',
         customClass: 'slide-content--deformace',
     },
     {
@@ -15,6 +16,7 @@ export const slidesContentCs = [
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '/opravy-vozidel-po-kroupach-bez-poskozeni-laku',
         image: '/images/po-kroupech.webp',
+        imageMobile: '/images/po-kroupech-small.webp',
     },
     {
         title: 'Ochranné nástřiky dutin a podvozků',
@@ -27,11 +29,12 @@ export const slidesContentCs = [
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '/ochranne-nastriky-dutin-a-podvozku',
         image: '/images/ochrane-nastriky.webp',
+        imageMobile: '/images/ochrane-nastriky-small.webp',
         customClass: 'slide-content--ochrane-nastriky',
     },
 
     {
-        title: 'Drobné klempířské a lakýrnické práce',
+        title: 'Vyvařování a karosářské opravy',
         subtitle: 'Vítejte v KaroserieDoc',
         features: [
             'Rádí vám poradíme jakým způsobem poškození opravit',
@@ -39,8 +42,9 @@ export const slidesContentCs = [
             'Vyvařování/oprava zrezlých dílů karoserie',
         ],
         buttonText: 'VÍCE INFORMACÍ',
-        buttonLink: '/drobne-klempirske-a-lakyrnicke-prace',
+        buttonLink: '/vyvarovani-a-karosarske-opravy',
         image: '/images/DSC_5215.webp',
+        imageMobile: '/images/DSC_5215-small.webp',
         customClass: 'slide-content--klempir',
     },
     {

@@ -13,3 +13,9 @@ uspItems:
 # Popis služby
 
 Nejlepší ochrana podvozku je prevence. Nenechte si auto znehodnotit nebezpečnou rzí. Nejlepší je problémům s korozí předcházet. K tomu slouží nástřik podvozku nebo antikorozní nátěr. Dlouholeté zkušenosti a práce na denní bázi s vozy všech značek mi umožňují se efektivně zaměřit na kritická místa všech části karoserie.
+
+<ul>
+    <li>Ochrání podvozek před působením posypových solí, vlhkosti, mrazu a prudkých výkyvů teplot.</li>
+    <li>Slouží jako prevence vzniku koroze a oslabování pevnosti karoserie.</li>
+    <li>Pokryje i dutiny spodní části vozidla a prodlouží životnost pohyblivých komponentů.</li>
+</ul>
