@@ -36,29 +36,29 @@ import { localizePath, localizeUrl } from 'astro-i18next'
                 <!-- <a href="/opravy-vozidel-po-kroupach-bez-poskozeni-laku/"
                     >Opravy vozidel po kroupách bez poškození laku​</a
                 > -->
-                <a href={localizePath('/opravy-vozidel-po-kroupach-bez-poskozeni-laku', i18next.language)}
-                    >Opravy vozidel po kroupách bez poškození laku​</a
-                >
+                <a href={localizePath('/opravy-vozidel-po-kroupach-bez-poskozeni-laku', i18next.language)}>
+                    {t('services.serviceCard.card1')}
+                </a>
             </li>
             <li>
                 <div class="icon checkmark"></div>
 
-                <a href={localizePath('/opravy-deformaci-bez-lakovani-metodou-pdr', i18next.language)}
-                    >Opravy deformací bez lakování metodou PDR​</a
-                >
+                <a href={localizePath('/opravy-deformaci-bez-lakovani-metodou-pdr', i18next.language)}>
+                    {t('services.serviceCard.card2')}
+                </a>
             </li>
             <li>
                 <div class="icon checkmark"></div>
 
                 <a href={localizePath('/ochranne-nastriky-dutin-a-podvozku', i18next.language)}>
-                    Ochranné nástřiky dutin a podvozků
+                    {t('services.serviceCard.card3')}
                 </a>
             </li>
             <li>
                 <div class="icon checkmark"></div>
 
                 <a href={localizePath('/vyvarovani-a-karosarske-opravy', i18next.language)}>
-                    Vyvařování a karosářské opravy
+                    {t('services.serviceCard.card4')}
                 </a>
             </li>
         </ul>
