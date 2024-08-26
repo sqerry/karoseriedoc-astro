@@ -9,10 +9,10 @@ function initSwiper() {
     const swiper = new Swiper('.hero-section .swiper', {
         loop: true,
 
-        // autoplay: {
-        //     delay: 4000,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
 
         modules: [Navigation, Pagination, Autoplay],
 
