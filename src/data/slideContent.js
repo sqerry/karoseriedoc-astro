@@ -2,7 +2,14 @@ export const slidesContentCs = [
     {
         title: 'Opravy promáčklin bez lakování metodou PDR',
         subtitle: 'Vítejte v KaroserieDoc',
-        features: ['technologie PDR', 'Doživotní záruka', 'Bezplatná prohlídka a kalkulace ceny'],
+        features: [
+            'technologie PDR',
+            'Doživotní záruka',
+            'Bezplatná prohlídka a kalkulace ceny',
+            'Výměna poškozených dílů – (např. čelní sklo, lišty, kryty zrcátek...)',
+            '100% záruka kvality na všechny provedené práce',
+            'Rychlost opravy - malé promáčkliny vám opravíme i na počkání!',
+        ],
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '/opravy-deformaci-bez-lakovani-metodou-pdr',
         image: '/images/deformace.webp',
@@ -12,7 +19,14 @@ export const slidesContentCs = [
     {
         title: 'Opravy vozidel po kroupách bez poškození laku​',
         subtitle: 'Vítejte v KaroserieDoc',
-        features: ['technologie PDR', 'Doživotní záruka', 'Bezplatná prohlídka a kalkulace ceny'],
+        features: [
+            'technologie PDR',
+            'Doživotní záruka',
+            'Bezplatná prohlídka a kalkulace ceny',
+            'Výměna poškozených dílů – (např. čelní sklo, lišty, kryty zrcátek...)',
+            '100% záruka kvality na všechny provedené práce',
+            'Rychlost opravy - malé promáčkliny vám opravíme i na počkání!',
+        ],
         buttonText: 'VÍCE INFORMACÍ',
         buttonLink: '/opravy-vozidel-po-kroupach-bez-poskozeni-laku',
         image: '/images/po-kroupech.webp',
@@ -84,7 +98,14 @@ export const slidesContentDe = [
     {
         title: 'Deformationsreparaturen ohne Anstrich mit der PDR-Methode',
         subtitle: 'Willkommen bei KaroserieDoc',
-        features: ['PDR-Technologie', 'Lebenslange Garantie', 'Kostenlose Inspektion und Kostenvoranschlag'],
+        features: [
+            'PDR-Technologie',
+            'Lebenslange Garantie',
+            'Kostenlose Inspektion und Kostenvoranschlag',
+            'Ersatz von beschädigten Teilen (z.B. Windschutzscheibe, Zierleisten, Spiegelabdeckungen...)',
+            '100%ige Qualitätsgarantie auf alle ausgeführten Arbeiten',
+            'Schnelligkeit der Reparatur - kleine Dellen können an Ort und Stelle repariert werden!',
+        ],
         buttonText: 'MEHR INFORMATIONEN',
         buttonLink: '/de/opravy-deformaci-bez-lakovani-metodou-pdr',
         image: '/images/deformace.webp',
@@ -94,7 +115,14 @@ export const slidesContentDe = [
     {
         title: 'Reparatur von Fahrzeugen nach Hagelstürmen ohne Lackschäden',
         subtitle: 'Willkommen bei KaroserieDoc',
-        features: ['PDR-Technologie', 'Lebenslange Garantie', 'Kostenlose Inspektion und Kostenvoranschlag'],
+        features: [
+            'PDR-Technologie',
+            'Lebenslange Garantie',
+            'Kostenlose Inspektion und Kostenvoranschlag',
+            'Ersatz von beschädigten Teilen (z.B. Windschutzscheibe, Zierleisten, Spiegelabdeckungen...)',
+            '100%ige Qualitätsgarantie auf alle ausgeführten Arbeiten',
+            'Schnelligkeit der Reparatur - kleine Dellen können an Ort und Stelle repariert werden!',
+        ],
         buttonText: 'MEHR INFORMATIONEN',
         buttonLink: '/de/opravy-vozidel-po-kroupach-bez-poskozeni-laku',
         image: '/images/po-kroupech.webp',

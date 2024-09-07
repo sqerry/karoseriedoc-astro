@@ -1,9 +1,9 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import PageHeader from "../../components/PageHeader.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import Layout from '../../layouts/Layout.astro'
+import PageHeader from '../../components/PageHeader.astro'
+import i18next, { t, changeLanguage } from 'i18next'
 
-changeLanguage("de");
+changeLanguage('de')
 ---
 
 <Layout title="Galerie" description="Galerie">
@@ -18,74 +18,51 @@ changeLanguage("de");
             <div class="container">
                 <div class="row">
                     <div class="gallery-filter">
-                        <span class="filter-item active" data-filter="all">{t('gallery.filter.all')}</span>
+                        <!-- <span class="filter-item active" data-filter="all">{t('gallery.filter.all')}</span>
                         <span class="filter-item" data-filter="filter1">{t('gallery.filter.filter1')}</span>
                         <span class="filter-item" data-filter="filter2">{t('gallery.filter.filter2')}</span>
-                        <span class="filter-item" data-filter="filter3">{t('gallery.filter.filter3')}</span>
+                        <span class="filter-item" data-filter="filter3">{t('gallery.filter.filter3')}</span> -->
                         <div class="row">
                             <!-- gallery item start -->
-                            <div class="gallery-item shoe">
+                            <div class="gallery-item">
                                 <div class="gallery-item-inner">
-                                    <img
-                                        src="https://i.postimg.cc/7PJ4yYHh/revolt-164-6w-VEHf-I-unsplash.jpg"
-                                        alt="shoe"
-                                        loading="lazy"
-                                    />
+                                    <img src="/images/DSC_5099.webp" alt="Image 1" loading="lazy" />
                                 </div>
                             </div>
                             <!-- gallery item end -->
                             <!-- gallery item start -->
-                            <div class="gallery-item filter1">
+                            <div class="gallery-item">
                                 <div class="gallery-item-inner">
-                                    <img
-                                        src="https://i.postimg.cc/zf7MT4q9/istockphoto-1289318271-170667a.jpg"
-                                        alt="headphone"
-                                        loading="lazy"
-                                    />
+                                    <img src="/images/DSC_5152.webp" alt="Image 2" loading="lazy" />
                                 </div>
                             </div>
                             <!-- gallery item end -->
                             <!-- gallery item start -->
-                            <div class="gallery-item filter2">
+                            <div class="gallery-item">
                                 <div class="gallery-item-inner">
-                                    <img
-                                        src="https://i.postimg.cc/vZ7QQdMP/nordwood-themes-F3-Dde-9thd8-unsplash.jpg"
-                                        alt="camera"
-                                        loading="lazy"
-                                    />
+                                    <img src="/images/DSC_5238.webp" alt="Image 3" loading="lazy" />
                                 </div>
                             </div>
                             <!-- gallery item end -->
                             <!-- gallery item start -->
-                            <div class="gallery-item filter3">
+                            <div class="gallery-item">
                                 <div class="gallery-item-inner">
-                                    <img
-                                        src="https://i.postimg.cc/3xTY15HR/c-d-x-PDX-a-82obo-unsplash.jpg"
-                                        alt="headphone"
-                                        loading="lazy"
-                                    />
+                                    <img src="/images/DSC_5256.webp" alt="Image 4" loading="lazy" />
                                 </div>
                             </div>
                             <!-- gallery item end -->
                             <!-- gallery item start -->
-                            <div class="gallery-item filter2">
-                                <div class="gallery-item-inner">
-                                    <img
-                                        src="https://i.postimg.cc/PrYL89TD/patrick-dozk-Vh-Dyvh-Q-unsplash.jpg"
-                                        alt="camera"
-                                        loading="lazy"
-                                    />
-                                </div>
-                            </div>
+
                             <!-- gallery item end -->
                             <!-- gallery item start -->
-                            <div class="gallery-item filter3">
+                            <div class="gallery-item">
                                 <div class="gallery-item-inner">
-                                    <img
-                                        src="https://i.postimg.cc/PqYyN2Nr/ervo-rocks-Zam8-Tv-Eg-N5o-unsplash.jpg"
-                                        alt="headphone3"
-                                        loading="lazy"
-                                    />
+                                    <img src="/images/DSC_5155.webp" alt="Image 6" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-inner">
+                                    <img src="/images/DSC_5215.webp" alt="Image 6" loading="lazy" />
                                 </div>
                             </div>
                             <!-- gallery item end -->
@@ -186,6 +163,8 @@ changeLanguage("de");
             img {
                 max-width: 100%;
                 vertical-align: middle;
+                max-height: 400px;
+                object-fit: cover;
             }
             /*.gallery*/
             .gallery {

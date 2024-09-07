@@ -68,6 +68,18 @@ function toggleHamburgerMenu() {
     }
 }
 
+function detectLanguageAndRedirect() {
+    const userLang = navigator.language || navigator.userLanguage
+    const currentPath = window.location.pathname
+    if (userLang.startsWith('de') && !currentPath.startsWith('/de/')) {
+        window.location.href = '/de' + currentPath
+    }
+}
+
+if (window.location.pathname === '/') {
+    detectLanguageAndRedirect()
+}
+
 function handleScroll() {
     const navbarContainer = document.querySelector('.header')
 
