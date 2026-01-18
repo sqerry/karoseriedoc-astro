@@ -99,6 +99,21 @@ export const ui = {
     // Ratings
     'ratings.title': 'Co o nás říkají',
     'ratings.subtitle': 'Recenze Google',
+    'ratings.review1.name': 'Marek Šuraba',
+    'ratings.review1.description': 'Dnes mi pán dokázal, že je opravdu kouzelník!!! Měl jsem na své audi velmi špatně promáčklý lem zadního blatníku, u nejmenované konkurence mi řekli, že tohle nikdo nevytáhne na 100% protože to bylo fakt blbě promačklé přímo v lemu. Nicméně pán od KaroserieDoc řekl že to zvládne a taky zvládl!! Když jsem si byl auto vyzvednout nikdo by nepoznal že tam někdy promáčklina byla! A cena proti konkurenci byla opravdu luxusní, maximální spokojenost. Pánovi moc děkuji a určitě přijedu zas když to někde bouchnu 😅',
+    'ratings.review1.date': '27.2.2022',
+    'ratings.review2.name': 'Elušenka',
+    'ratings.review2.description': 'Chtěla bych se s Vámi podělit o skvělou péči mého auta.👌 Jak spasovaní dílů ,tak ošetření podvozku na jedničku.👌 Skvělá komunikace i práce mohu jen doporučit.🌼 Vím na koho se vždy obrátit.🤗',
+    'ratings.review2.date': '27.2.2022',
+    'ratings.review3.name': 'Drahoslav Koura',
+    'ratings.review3.description': 'Profesionální práce a vstřícnost.  Promáčklý zadní blatník u 3dv auta od fotbalového míče. Hloubka cca 12 mm a průměr 220 mm.Vypadalo to jak od medicinbalu. Má zlaté a šikovné ruce. Nepoznáte, že se autíčku něco stalo. Moc díky',
+    'ratings.review3.date': '27.2.2023',
+    'ratings.review4.name': 'Jana Hrdličková',
+    'ratings.review4.description': 'Perfektní, můžeme jen doporučit  - oprava promáčklé kapoty trvala sotva hodinku, na kapotě není poznat, že by byla kdy poškozená. S cenou jsme také spokojení - konkurence by stála rozhodně víc! A co určitě chci vyzvednout, je přístup k zákazníkovi - máme většinou problém zajet do servisu kvůli pracovnímu vytížení, ale pán nám velmi ochotně vyšel vstříc a opravu provedl v neděli. Takže, i když doufám, že už se našemu autu nic nestane, ale pokud ano, víme, na koho se obrátit.',
+    'ratings.review4.date': '27.2.2023',
+    'ratings.review5.name': 'Matteo Borgorelli',
+    'ratings.review5.description': 'Pan mi opravil nalakoval zrezlý blatnik. S opravou jsem více než spokojen. Mnohokrát děkuji .',
+    'ratings.review5.date': '27.2.2021',
 
     // Footer
     'footer.address': 'Adresa',
@@ -201,6 +216,21 @@ export const ui = {
     // Ratings
     'ratings.title': 'Was sie über uns sagen',
     'ratings.subtitle': 'Google-Bewertungen',
+    'ratings.review1.name': 'Marek Šuraba',
+    'ratings.review1.description': 'Heute hat mir der Herr bewiesen, dass er ein echter Zauberer ist!!! Ich hatte an meinem Audi eine sehr schlecht eingedrückte Kante am hinteren Kotflügel, bei einem namenlosen Konkurrenten sagten sie mir, dass das niemand zu 100% rausbekommt, weil es wirklich schlecht direkt in der Kante eingedrückt war. Aber der Herr von KaroserieDoc sagte, er schafft das und er hat es geschafft!! Als ich das Auto abholte, konnte niemand erkennen, dass dort jemals eine Delle war! Und der Preis war im Vergleich zur Konkurrenz wirklich luxuriös, maximale Zufriedenheit. Ich danke dem Herrn sehr und werde sicher wiederkommen, wenn ich irgendwo eine Delle bekomme 😅',
+    'ratings.review1.date': '27.2.2022',
+    'ratings.review2.name': 'Elušenka',
+    'ratings.review2.description': 'Ich möchte mit Ihnen die hervorragende Pflege meines Autos teilen.👌 Sowohl die Passgenauigkeit der Teile als auch die Behandlung des Unterbodens waren erstklassig.👌 Hervorragende Kommunikation und Arbeit, kann ich nur empfehlen.🌼 Ich weiß, an wen ich mich immer wenden kann.🤗',
+    'ratings.review2.date': '27.2.2022',
+    'ratings.review3.name': 'Drahoslav Koura',
+    'ratings.review3.description': 'Professionelle Arbeit und Hilfsbereitschaft. Eingedrückter hinterer Kotflügel bei einem 3-Türer-Auto durch einen Fußball. Tiefe ca. 12 mm und Durchmesser 220 mm. Es sah aus wie von einem Medizinball. Er hat goldene und geschickte Hände. Man erkennt nicht, dass dem Auto etwas passiert ist. Vielen Dank',
+    'ratings.review3.date': '27.2.2023',
+    'ratings.review4.name': 'Jana Hrdličková',
+    'ratings.review4.description': 'Perfekt, wir können nur empfehlen - die Reparatur der eingedrückten Motorhaube dauerte kaum eine Stunde, an der Haube ist nicht zu erkennen, dass sie jemals beschädigt war. Mit dem Preis sind wir auch zufrieden - die Konkurrenz wäre definitiv teurer gewesen! Und was ich besonders hervorheben möchte, ist der Kundenservice - wir haben meistens Probleme, wegen der Arbeitsbelastung in die Werkstatt zu fahren, aber der Herr kam uns sehr entgegen und führte die Reparatur am Sonntag durch. Also, auch wenn ich hoffe, dass unserem Auto nichts mehr passiert, aber falls doch, wissen wir, an wen wir uns wenden können.',
+    'ratings.review4.date': '27.2.2023',
+    'ratings.review5.name': 'Matteo Borgorelli',
+    'ratings.review5.description': 'Der Herr hat meinen verrosteten Kotflügel repariert und lackiert. Mit der Reparatur bin ich mehr als zufrieden. Vielen Dank.',
+    'ratings.review5.date': '27.2.2021',
 
     // Footer
     'footer.address': 'Adresse',

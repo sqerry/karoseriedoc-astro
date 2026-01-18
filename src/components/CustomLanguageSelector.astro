@@ -39,7 +39,7 @@ const alternateLanguage = languages.find(l => l.code === alternateCode);
     </button>
     <ul class="language-select-dropdown">
         <li>
-            <a href={alternatePath}>
+            <a href={alternatePath} data-lang={alternateCode} class="lang-switch-link">
                 <img src={alternateLanguage?.flag} alt={`${alternateLanguage?.name} flag`} class="flag-icon" />
             </a>
         </li>
@@ -64,6 +64,17 @@ const alternateLanguage = languages.find(l => l.code === alternateCode);
                     }
                 })
                 dropdown?.classList.toggle('show')
+            })
+
+            // Store language preference when user manually switches
+            const langLinks = languageSelector.querySelectorAll('.lang-switch-link')
+            langLinks.forEach((link) => {
+                link.addEventListener('click', () => {
+                    const targetLang = link.getAttribute('data-lang')
+                    if (targetLang && typeof window.setLanguagePreference === 'function') {
+                        window.setLanguagePreference(targetLang)
+                    }
+                })
             })
         })
 

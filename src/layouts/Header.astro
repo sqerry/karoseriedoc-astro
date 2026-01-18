@@ -1,13 +1,28 @@
 ---
-import SiteNav from '../components/Navigation.astro';
-import Logo from '../components/Logo.astro';
-import CustomLanguageSelector from '../components/CustomLanguageSelector.astro';
-import { useTranslations, getLangFromUrl, type Lang } from '../i18n';
+import SiteNav from '../components/Navigation.astro'
+import Logo from '../components/Logo.astro'
+import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
+import { useTranslations, getLangFromUrl, type Lang } from '../i18n'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
+<div class="top-navigation-bar">
+    <div class="container">
+        <ul>
+            <li class="tel">
+                <a href={`tel:${t('header.tel.number')}`}>{t('header.tel.number')}</a>
+            </li>
+            {lang === 'de' && (
+                <li class="tel">
+                    <a href="tel:+4915776568537">+49 1577 6568537</a>
+                </li>
+            )}
+        </ul>
+        <CustomLanguageSelector customClass="top-nav-lang" />
+    </div>
+</div>
 <header class="header">
     <div class="container header-wrapper">
         <CustomLanguageSelector customClass="header-lang-switcher" />
@@ -16,12 +31,17 @@ const t = useTranslations(lang);
         </div>
         <SiteNav lang={lang} />
         <div class="tel">
-            <a href={`tel:${t('header.tel.number')}`}>
-                <div class="tel-wrapper">
-                    <span class="tel">{t('header.tel.number')}</span>
-                    <span class="tel-text">{t('header.tel.cto')}</span>
-                </div>
-            </a>
+            <div class={`tel-wrapper ${lang === 'de' ? 'tel-wrapper--de' : ''}`}>
+                <a href={`tel:${t('header.tel.number')}`} class="tel-number">{t('header.tel.number')}</a>
+                {
+                    lang === 'de' && (
+                        <a href="tel:+4915776568537" class="tel-number">
+                            +49 1577 6568537
+                        </a>
+                    )
+                }
+                <span class="tel-text">{t('header.tel.cto')}</span>
+            </div>
         </div>
         <div class="hamburger-menu">
             <span></span>
@@ -34,6 +54,54 @@ const t = useTranslations(lang);
 </header>
 
 <style lang="scss">
+    .top-navigation-bar {
+        display: none;
+        background-color: #1d2226;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        :global(.top-nav-lang) {
+            margin-left: 5px;
+            font-size: 2rem;
+        }
+
+        ul {
+            display: flex;
+            gap: 1.2rem;
+            padding: 1rem 0;
+            flex: 1;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                &.tel {
+                    width: auto;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-size: 1.3rem;
+
+                        &:before {
+                            font-family: elementskit !important;
+                            content: '\e976';
+                            color: $clr-primary;
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
     a:not(.logo) {
         font-size: 1.5rem;
     }
@@ -59,7 +127,7 @@ const t = useTranslations(lang);
         }
     }
     .header {
-        padding: 2rem 0;
+        padding: 2.8rem 0;
         background-color: $clr-black;
         top: -130px;
         transition: 0.3s ease-in-out;
@@ -102,30 +170,43 @@ const t = useTranslations(lang);
             display: none;
         }
 
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 1rem;
+        .tel-wrapper {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.2rem;
+            position: relative;
 
             &:before {
                 font-family: elementskit !important;
                 content: '\e976';
                 color: $clr-primary;
                 font-size: 1.8rem;
+                position: absolute;
+                right: calc(100% + 1rem);
+                top: 50%;
+                transform: translateY(-50%);
             }
 
-            .tel {
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                gap: 1rem;
+            &--de:before {
+                right: calc(100% + 1rem);
             }
-            .tel-text {
-                font-size: 1.4rem;
-                font-weight: 600;
+        }
+
+        .tel-number {
+            font-size: 1.6rem;
+            font-weight: 600;
+            position: relative;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
             }
+        }
+
+        .tel-text {
+            font-size: 1.4rem;
+            font-weight: 600;
         }
     }
 

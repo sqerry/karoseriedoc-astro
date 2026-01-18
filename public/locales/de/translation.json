@@ -95,7 +95,32 @@
 
   "ratings": {
     "title": "Was sie über uns sagen",
-    "subtitle": "Google-Bewertungen"
+    "subtitle": "Google-Bewertungen",
+    "review1": {
+      "name": "Marek Šuraba",
+      "description": "Heute hat mir der Herr bewiesen, dass er ein echter Zauberer ist!!! Ich hatte an meinem Audi eine sehr schlecht eingedrückte Kante am hinteren Kotflügel, bei einem namenlosen Konkurrenten sagten sie mir, dass das niemand zu 100% rausbekommt, weil es wirklich schlecht direkt in der Kante eingedrückt war. Aber der Herr von KaroserieDoc sagte, er schafft das und er hat es geschafft!! Als ich das Auto abholte, konnte niemand erkennen, dass dort jemals eine Delle war! Und der Preis war im Vergleich zur Konkurrenz wirklich luxuriös, maximale Zufriedenheit. Ich danke dem Herrn sehr und werde sicher wiederkommen, wenn ich irgendwo eine Delle bekomme 😅",
+      "date": "27.2.2022"
+    },
+    "review2": {
+      "name": "Elušenka",
+      "description": "Ich möchte mit Ihnen die hervorragende Pflege meines Autos teilen.👌 Sowohl die Passgenauigkeit der Teile als auch die Behandlung des Unterbodens waren erstklassig.👌 Hervorragende Kommunikation und Arbeit, kann ich nur empfehlen.🌼 Ich weiß, an wen ich mich immer wenden kann.🤗",
+      "date": "27.2.2022"
+    },
+    "review3": {
+      "name": "Drahoslav Koura",
+      "description": "Professionelle Arbeit und Hilfsbereitschaft. Eingedrückter hinterer Kotflügel bei einem 3-Türer-Auto durch einen Fußball. Tiefe ca. 12 mm und Durchmesser 220 mm. Es sah aus wie von einem Medizinball. Er hat goldene und geschickte Hände. Man erkennt nicht, dass dem Auto etwas passiert ist. Vielen Dank",
+      "date": "27.2.2023"
+    },
+    "review4": {
+      "name": "Jana Hrdličková",
+      "description": "Perfekt, wir können nur empfehlen - die Reparatur der eingedrückten Motorhaube dauerte kaum eine Stunde, an der Haube ist nicht zu erkennen, dass sie jemals beschädigt war. Mit dem Preis sind wir auch zufrieden - die Konkurrenz wäre definitiv teurer gewesen! Und was ich besonders hervorheben möchte, ist der Kundenservice - wir haben meistens Probleme, wegen der Arbeitsbelastung in die Werkstatt zu fahren, aber der Herr kam uns sehr entgegen und führte die Reparatur am Sonntag durch. Also, auch wenn ich hoffe, dass unserem Auto nichts mehr passiert, aber falls doch, wissen wir, an wen wir uns wenden können.",
+      "date": "27.2.2023"
+    },
+    "review5": {
+      "name": "Matteo Borgorelli",
+      "description": "Der Herr hat meinen verrosteten Kotflügel repariert und lackiert. Mit der Reparatur bin ich mehr als zufrieden. Vielen Dank.",
+      "date": "27.2.2021"
+    }
   },
   "footer": {
     "address": "Adresse",

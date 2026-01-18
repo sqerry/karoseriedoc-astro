@@ -1,21 +1,21 @@
 ---
-import { useTranslations, type Lang, defaultLang } from '../i18n';
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { useTranslations, type Lang, defaultLang } from '../i18n'
+import { getRelativeLocaleUrl } from 'astro:i18n'
 
 interface Props {
-    lang?: Lang;
+    lang?: Lang
 }
 
-const { lang = 'cs' } = Astro.props;
-const t = useTranslations(lang);
+const { lang = 'cs' } = Astro.props
+const t = useTranslations(lang)
 
 // Helper to build localized paths
 const localePath = (path: string) => {
     if (lang === defaultLang) {
-        return path;
+        return path
     }
-    return `/${lang}${path}`;
-};
+    return `/${lang}${path}`
+}
 
 // Route mappings for German
 const routes = {
@@ -29,7 +29,7 @@ const routes = {
         galerie: '/de/galerie',
         kontakt: '/de/kontakt',
     },
-};
+}
 ---
 
 <nav class="site-nav">
@@ -95,7 +95,7 @@ const routes = {
 
             a {
                 color: $clr-white;
-                font-size: 2rem;
+                font-size: 2.2rem;
                 font-weight: 700;
                 padding: 1.6rem 0;
 

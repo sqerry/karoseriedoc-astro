@@ -95,7 +95,32 @@
 
   "ratings": {
     "title": "Co o nás říkají",
-    "subtitle": "Recenze Google"
+    "subtitle": "Recenze Google",
+    "review1": {
+      "name": "Marek Šuraba",
+      "description": "Dnes mi pán dokázal, že je opravdu kouzelník!!! Měl jsem na své audi velmi špatně promáčklý lem zadního blatníku, u nejmenované konkurence mi řekli, že tohle nikdo nevytáhne na 100% protože to bylo fakt blbě promačklé přímo v lemu. Nicméně pán od KaroserieDoc řekl že to zvládne a taky zvládl!! Když jsem si byl auto vyzvednout nikdo by nepoznal že tam někdy promáčklina byla! A cena proti konkurenci byla opravdu luxusní, maximální spokojenost. Pánovi moc děkuji a určitě přijedu zas když to někde bouchnu 😅",
+      "date": "27.2.2022"
+    },
+    "review2": {
+      "name": "Elušenka",
+      "description": "Chtěla bych se s Vámi podělit o skvělou péči mého auta.👌 Jak spasovaní dílů ,tak ošetření podvozku na jedničku.👌 Skvělá komunikace i práce mohu jen doporučit.🌼 Vím na koho se vždy obrátit.🤗",
+      "date": "27.2.2022"
+    },
+    "review3": {
+      "name": "Drahoslav Koura",
+      "description": "Profesionální práce a vstřícnost.  Promáčklý zadní blatník u 3dv auta od fotbalového míče. Hloubka cca 12 mm a průměr 220 mm.Vypadalo to jak od medicinbalu. Má zlaté a šikovné ruce. Nepoznáte, že se autíčku něco stalo. Moc díky",
+      "date": "27.2.2023"
+    },
+    "review4": {
+      "name": "Jana Hrdličková",
+      "description": "Perfektní, můžeme jen doporučit  - oprava promáčklé kapoty trvala sotva hodinku, na kapotě není poznat, že by byla kdy poškozená. S cenou jsme také spokojení - konkurence by stála rozhodně víc! A co určitě chci vyzvednout, je přístup k zákazníkovi - máme většinou problém zajet do servisu kvůli pracovnímu vytížení, ale pán nám velmi ochotně vyšel vstříc a opravu provedl v neděli. Takže, i když doufám, že už se našemu autu nic nestane, ale pokud ano, víme, na koho se obrátit.",
+      "date": "27.2.2023"
+    },
+    "review5": {
+      "name": "Matteo Borgorelli",
+      "description": "Pan mi opravil nalakoval zrezlý blatnik. S opravou jsem více než spokojen. Mnohokrát děkuji .",
+      "date": "27.2.2021"
+    }
   },
   "footer": {
     "address": "Adresa",
