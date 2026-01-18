@@ -1,27 +1,17 @@
 ---
+import { useTranslations } from "../../i18n/utils";
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
-import Title from "../../components/Title.astro";
-import i18next, { t, changeLanguage } from "i18next";
 
-changeLanguage("de");
-
-const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
+const lang = 'de';
+const t = useTranslations(lang);
 ---
 
 <script type="module">
     import * as UC from 'https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@v1/web/file-uploader.min.js'
-    import csLocale from 'https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@v1/locales/file-uploader/cs.min.js'
     import deLocale from 'https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@v1/locales/file-uploader/de.min.js'
 
-    function hasDeInUrl() {
-        return window.location.pathname.includes('/de/')
-    }
-
-    const locale = hasDeInUrl() ? 'de' : 'cs'
-
-    UC.defineLocale('cs', csLocale)
-    UC.defineLocale(locale, locale === 'de' ? deLocale : csLocale)
+    UC.defineLocale('de', deLocale)
     UC.defineComponents(UC)
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -61,13 +51,11 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
     })
 </script>
 
-<script></script>
-
 <Layout title="Kontakt" description="Kontakt">
     <uc-config
         ctx-name="my-uploader"
         pubkey="dc94fb893736715b0a69"
-        locale-name={locale}
+        locale-name="de"
         img-only="true"
         multiple="true"
         max-local-file-size-bytes="524288000"
@@ -154,14 +142,13 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
 
     <script>
         const changeFileUploadText = () => {
-            const isGerman = window.location.pathname.includes('/de/')
-
             setTimeout(() => {
-                document.querySelector(
+                const el = document.querySelector(
                     '#contactForm > div:nth-child(5) > div.uploadcare-wrapper > uc-file-uploader-regular > uc-simple-btn > uc-drop-area > button > span'
-                ).textContent = isGerman
-                    ? 'Hier können Sie ein Foto von Ihrem Schaden hochladen'
-                    : 'Zde můžete nahrát fotku vašeho poškození'
+                )
+                if (el) {
+                    el.textContent = 'Hier konnen Sie ein Foto von Ihrem Schaden hochladen'
+                }
             }, 100)
         }
 
@@ -210,7 +197,6 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
 
             label {
                 margin-bottom: 5px;
-                // color: $clr-primary;
                 font-family: $ff-heading;
             }
 
@@ -304,7 +290,6 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
             }
         }
         uc-file-uploader-regular > uc-modal > uc-upload-list > .uc-toolbar > .uc-cancel-btn.uc-secondary-btn {
-            // display: none;
             background-color: red !important;
         }
     </style>

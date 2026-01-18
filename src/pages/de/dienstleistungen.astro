@@ -1,20 +1,21 @@
 ---
+import { useTranslations } from "../../i18n/utils";
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import Title from "../../components/Title.astro";
 import Services from "../../components/Services.astro";
-import i18next, { t, changeLanguage } from "i18next";
 
-changeLanguage("de");
+const lang = 'de';
+const t = useTranslations(lang);
 ---
 
-<Layout title="Služby" description="Služby">
+<Layout title="Dienstleistungen" description="Dienstleistungen">
     <PageHeader pageName={t('services.servicesPageTitle')} imageSrc="/images/DSC_5264.webp" />
     <main>
         <section class="services-section">
             <Title subtitle={t('services.subtitle')} title={t('services.title')} position="center" />
             <div class="container">
-                <Services />
+                <Services lang={lang} />
             </div>
         </section>
     </main>

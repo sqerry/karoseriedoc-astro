@@ -1,54 +1,76 @@
 ---
-import { localizePath } from 'astro-i18next'
+import { getLangFromUrl, type Lang, defaultLang } from '../i18n';
 
-const { customClass } = Astro.props
-const currentLocale = Astro.currentLocale
-const currentPath = Astro.url.pathname
+const { customClass } = Astro.props;
+const currentLang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+
+// Build alternate path
+let alternatePath: string;
+let alternateCode: string;
+if (currentLang === 'de') {
+    alternatePath = currentPath.replace(/^\/de/, '') || '/';
+    alternatePath = alternatePath
+        .replace('/dienstleistungen', '/sluzby');
+    alternateCode = 'cs';
+} else {
+    alternatePath = `/de${currentPath}`;
+    alternatePath = alternatePath
+        .replace('/sluzby', '/dienstleistungen');
+    alternateCode = 'de';
+}
 
 const languages = [
     { code: 'cs', name: 'Česky', flag: '/images/icons/cz.svg' },
     { code: 'de', name: 'Deutsch', flag: '/images/icons/de.svg' },
-]
+];
+
+const currentLanguage = languages.find(l => l.code === currentLang);
+const alternateLanguage = languages.find(l => l.code === alternateCode);
 ---
 
 <div class={`custom-language-selector lang-switcher ${customClass}`}>
     <button class="language-select-btn">
         <img
-            src={languages.find((lang) => lang.code === currentLocale)?.flag}
+            src={currentLanguage?.flag}
             alt="Current language flag"
             class="flag-icon"
         />
     </button>
     <ul class="language-select-dropdown">
-        {
-            languages
-                .filter((lang) => lang.code !== currentLocale)
-                .map((lang) => (
-                    <li>
-                        <a href={localizePath(currentPath, lang.code)}>
-                            <img src={lang.flag} alt={`${lang.name} flag`} class="flag-icon" />
-                        </a>
-                    </li>
-                ))
-        }
+        <li>
+            <a href={alternatePath}>
+                <img src={alternateLanguage?.flag} alt={`${alternateLanguage?.name} flag`} class="flag-icon" />
+            </a>
+        </li>
     </ul>
 </div>
 
 <script>
     document.addEventListener('astro:page-load', () => {
-        const languageSelector = document.querySelector('.custom-language-selector')
-        const selectBtn = languageSelector.querySelector('.language-select-btn')
-        const dropdown = languageSelector.querySelector('.language-select-dropdown')
+        const languageSelectors = document.querySelectorAll('.custom-language-selector')
+        if (!languageSelectors.length) return;
 
-        selectBtn.addEventListener('click', () => {
-            dropdown.classList.toggle('show')
+        languageSelectors.forEach((languageSelector) => {
+            const selectBtn = languageSelector.querySelector('.language-select-btn')
+            const dropdown = languageSelector.querySelector('.language-select-dropdown')
+
+            selectBtn?.addEventListener('click', (e) => {
+                e.stopPropagation()
+                // Close all other dropdowns first
+                languageSelectors.forEach((other) => {
+                    if (other !== languageSelector) {
+                        other.querySelector('.language-select-dropdown')?.classList.remove('show')
+                    }
+                })
+                dropdown?.classList.toggle('show')
+            })
         })
 
-        // Close the dropdown if the user clicks outside of it
-        window.addEventListener('click', (event) => {
-            if (!languageSelector.contains(event.target as Node)) {
-                dropdown.classList.remove('show')
-            }
+        window.addEventListener('click', () => {
+            languageSelectors.forEach((selector) => {
+                selector.querySelector('.language-select-dropdown')?.classList.remove('show')
+            })
         })
     })
 </script>
@@ -88,7 +110,6 @@ const languages = [
         .language-select-dropdown {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
             background-color: #1d2226;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 5;

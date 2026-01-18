@@ -1,6 +1,13 @@
 ---
 import Title from '../components/Title.astro'
-import i18next, { t } from 'i18next'
+import { useTranslations, type Lang } from '../i18n';
+
+interface Props {
+    lang?: Lang;
+}
+
+const { lang = 'cs' } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <section id="about-section" class="about-us-section">

@@ -1,20 +1,46 @@
 ---
-import i18next from 'i18next'
-import { localizePath, localizeUrl } from 'astro-i18next'
-import { t } from 'i18next'
-import { LanguageSelector } from 'astro-i18next/components'
+import { useTranslations, type Lang, defaultLang } from '../i18n';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+interface Props {
+    lang?: Lang;
+}
+
+const { lang = 'cs' } = Astro.props;
+const t = useTranslations(lang);
+
+// Helper to build localized paths
+const localePath = (path: string) => {
+    if (lang === defaultLang) {
+        return path;
+    }
+    return `/${lang}${path}`;
+};
+
+// Route mappings for German
+const routes = {
+    cs: {
+        sluzby: '/sluzby',
+        galerie: '/galerie',
+        kontakt: '/kontakt',
+    },
+    de: {
+        sluzby: '/de/dienstleistungen',
+        galerie: '/de/galerie',
+        kontakt: '/de/kontakt',
+    },
+};
 ---
 
 <nav class="site-nav">
     <ul>
-        <li><a href={localizePath('/', i18next.language)}>{t('nav.home')}</a></li>
-        <li><a id="about-link" href={localizePath('/o-nas', i18next.language)}>{t('nav.about')}</a></li>
-        <li><a href={localizePath('/galerie', i18next.language)}>{t('nav.gallery')}</a></li>
+        <li><a href={localePath('/')}>{t('nav.home')}</a></li>
+        <li><a id="about-link" href={localePath('/#about-section')}>{t('nav.about')}</a></li>
+        <li><a href={routes[lang].galerie}>{t('nav.gallery')}</a></li>
         <li>
-            <a id="services-link" href={localizePath('/sluzby', i18next.language)}>{t('nav.services')}</a>
+            <a id="services-link" href={routes[lang].sluzby}>{t('nav.services')}</a>
         </li>
-        <li><a href={localizePath('/kontakt', i18next.language)}>{t('nav.contact')}</a></li>
-        <LanguageSelector showFlag={false} languageMapping={{ cs: '🇨🇿', de: '🇩🇪' }} class="lang-switcher" />
+        <li><a href={routes[lang].kontakt}>{t('nav.contact')}</a></li>
     </ul>
 </nav>
 <script>

@@ -1,16 +1,16 @@
 ---
-import i18next, { t } from 'i18next'
-import { HeadHrefLangs } from 'astro-i18next/components'
+import ResetCSS from '@appzic/astro-reset-css';
+import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import { getLangFromUrl } from '../i18n';
 
-import ResetCSS from '@appzic/astro-reset-css'
-import Header from '../layouts/Header.astro'
-import Footer from '../layouts/Footer.astro'
-import ViewTransitions from 'astro/components/ViewTransitions.astro'
-const { title, description } = Astro.props
+const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang={i18next.language}>
+<html lang={lang}>
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content={description} />
@@ -23,8 +23,8 @@ const { title, description } = Astro.props
             href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Russo+One&display=swap"
             rel="stylesheet"
         />
-
-        <HeadHrefLangs />
+        <link rel="alternate" hreflang="cs" href={Astro.url.pathname.replace(/^\/de/, '') || '/'} />
+        <link rel="alternate" hreflang="de" href={`/de${Astro.url.pathname.replace(/^\/de/, '')}`} />
         <ResetCSS />
         <title>{title}</title>
         <ViewTransitions />
@@ -81,16 +81,6 @@ const { title, description } = Astro.props
                 .facebook {
                 }
                 .instagram {
-                    // margin: 0;
-                    // position: relative;
-                    // &::before {
-                    //     font-family: $ff-icons;
-                    //     content: '\eb6c';
-                    //     font-size: 2rem;
-                    //     position: absolute;
-                    //     top: -2px;
-                    //     color: $clr-primary;
-                    // }
                 }
             }
             .icon {

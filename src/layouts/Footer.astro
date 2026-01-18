@@ -1,24 +1,27 @@
 ---
-import FooterBottom from '../components/FooterBottom.astro'
-import Ratings from '../components/Ratings.astro'
-import i18next, { t, changeLanguage } from 'i18next'
+import FooterBottom from '../components/FooterBottom.astro';
+import Ratings from '../components/Ratings.astro';
+import { useTranslations, getLangFromUrl } from '../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="footer">
     <div class="footer__container container">
-        <Ratings />
+        <Ratings lang={lang} />
         <div class="footer-top">
             <div class="footer-top-item">
                 <div class="icon map"></div>
                 <div class="footer-info-item">
                     <a
-                        href="https://www.google.com/maps/dir/?api=1&destination=Chodová+Planá+488,+Chodová+Planá+348+13"
+                        href="https://www.google.com/maps/dir/?api=1&destination=Pohraniční+střáže+474,+Chodová+Planá"
                         target="_blank"
                         class="footer-info-item__title">
                         <h4>{t('footer.address')}</h4>
                         <div class="footer-info-item__content">
-                            <p>Chodová Planá 488</p>
-                            <p>Chodová Planá, 348 13</p>
+                            <p>Pohraniční střáže 474</p>
+                            <p>Chodová Planá</p>
                         </div>
                     </a>
                 </div>
@@ -46,7 +49,7 @@ import i18next, { t, changeLanguage } from 'i18next'
                 </div>
             </a>
         </div>
-        <FooterBottom />
+        <FooterBottom lang={lang} />
         <div class="signature"></div>
     </div>
 </footer>

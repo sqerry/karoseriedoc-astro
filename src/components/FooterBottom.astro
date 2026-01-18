@@ -1,8 +1,22 @@
 ---
-import Logo from '../components/Logo.astro'
-import SocialLinks from '../components/SocialLinks.astro'
-import i18next, { t, changeLanguage } from 'i18next'
-import { localizePath, localizeUrl } from 'astro-i18next'
+import Logo from '../components/Logo.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import { useTranslations, type Lang, defaultLang } from '../i18n';
+
+interface Props {
+    lang?: Lang;
+}
+
+const { lang = 'cs' } = Astro.props;
+const t = useTranslations(lang);
+
+// Helper to build localized paths
+const localePath = (path: string) => {
+    if (lang === defaultLang) {
+        return path;
+    }
+    return `/${lang}${path}`;
+};
 ---
 
 <div class="footer-bottom">
@@ -12,9 +26,9 @@ import { localizePath, localizeUrl } from 'astro-i18next'
             <li>
                 <div class="icon location"></div>
                 <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=Chodová+Planá+488,+Chodová+Planá+348+13"
+                    href="https://www.google.com/maps/dir/?api=1&destination=Pohraniční+střáže+474,+Chodová+Planá"
                     target="_blank">
-                    Chodová Planá 488, Chodová Planá 348 13
+                    Pohraniční střáže 474, Chodová Planá
                 </a>
             </li>
             <li>
@@ -32,32 +46,25 @@ import { localizePath, localizeUrl } from 'astro-i18next'
         <ul>
             <li>
                 <div class="icon checkmark"></div>
-
-                <!-- <a href="/opravy-vozidel-po-kroupach-bez-poskozeni-laku/"
-                    >Opravy vozidel po kroupách bez poškození laku​</a
-                > -->
-                <a href={localizePath('/opravy-vozidel-po-kroupach-bez-poskozeni-laku', i18next.language)}>
+                <a href={localePath('/opravy-vozidel-po-kroupach-bez-poskozeni-laku')}>
                     {t('services.serviceCard.card1')}
                 </a>
             </li>
             <li>
                 <div class="icon checkmark"></div>
-
-                <a href={localizePath('/opravy-deformaci-bez-lakovani-metodou-pdr', i18next.language)}>
+                <a href={localePath('/opravy-deformaci-bez-lakovani-metodou-pdr')}>
                     {t('services.serviceCard.card2')}
                 </a>
             </li>
             <li>
                 <div class="icon checkmark"></div>
-
-                <a href={localizePath('/ochranne-nastriky-dutin-a-podvozku', i18next.language)}>
+                <a href={localePath('/ochranne-nastriky-dutin-a-podvozku')}>
                     {t('services.serviceCard.card3')}
                 </a>
             </li>
             <li>
                 <div class="icon checkmark"></div>
-
-                <a href={localizePath('/vyvarovani-a-karosarske-opravy', i18next.language)}>
+                <a href={localePath('/vyvarovani-a-karosarske-opravy')}>
                     {t('services.serviceCard.card4')}
                 </a>
             </li>

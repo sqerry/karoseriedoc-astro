@@ -1,0 +1,46 @@
+---
+import { defaultLang, type Lang } from '../i18n';
+
+interface Props {
+    customClass?: string;
+}
+
+const { customClass = '' } = Astro.props;
+
+// Get current path and determine the current language
+const currentPath = Astro.url.pathname;
+const isGerman = currentPath.startsWith('/de');
+const currentLang: Lang = isGerman ? 'de' : 'cs';
+
+// Build the alternate language URL
+let alternatePath: string;
+if (isGerman) {
+    // Currently German, switch to Czech
+    alternatePath = currentPath.replace(/^\/de/, '') || '/';
+    // Handle route translations
+    alternatePath = alternatePath
+        .replace('/dienstleistungen', '/sluzby')
+        .replace('/galerie', '/galerie')
+        .replace('/kontakt', '/kontakt');
+} else {
+    // Currently Czech, switch to German
+    alternatePath = `/de${currentPath}`;
+    // Handle route translations
+    alternatePath = alternatePath
+        .replace('/sluzby', '/dienstleistungen')
+        .replace('/galerie', '/galerie')
+        .replace('/kontakt', '/kontakt');
+}
+---
+
+<a href={alternatePath} class={`lang-switcher ${customClass}`}>
+    {currentLang === 'cs' ? '🇩🇪' : '🇨🇿'}
+</a>
+
+<style>
+    .lang-switcher {
+        font-size: 2.5rem;
+        cursor: pointer;
+        text-decoration: none;
+    }
+</style>

@@ -1,22 +1,25 @@
 ---
-import i18next from 'i18next'
-import { localizePath, localizeUrl } from 'astro-i18next'
-import { t } from 'i18next'
+import { useTranslations, getLocalizedPath, type Lang, defaultLang } from '../i18n';
 
 export interface Props {
-    link: string
-    imgSrc: string
-    title: string
-    imgPosition?: string
-    customStyleImg?: string
+    link: string;
+    imgSrc: string;
+    title: string;
+    imgPosition?: string;
+    customStyleImg?: string;
+    lang?: Lang;
 }
 
-const { link, imgSrc, title, imgPosition, customStyleImg } = Astro.props
+const { link, imgSrc, title, imgPosition, customStyleImg, lang = 'cs' } = Astro.props;
+const t = useTranslations(lang);
+
+// Build the localized path
+const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`;
 ---
 
 <div class="service-card">
     <div class="image-wrapper">
-        <a href={localizePath(link, i18next.language)}>
+        <a href={localizedLink}>
             <img
                 src={imgSrc}
                 alt={title}
@@ -30,9 +33,9 @@ const { link, imgSrc, title, imgPosition, customStyleImg } = Astro.props
     </div>
     <div class="service-card__content">
         <h3 class="service-card__title">
-            <a href={localizePath(link, i18next.language)}>{title}</a>
+            <a href={localizedLink}>{title}</a>
         </h3>
-        <a href={localizePath(link, i18next.language)} class="btn service-card__link"
+        <a href={localizedLink} class="btn service-card__link"
             >{t('services.moreInfo')}</a
         >
     </div>
@@ -75,7 +78,6 @@ const { link, imgSrc, title, imgPosition, customStyleImg } = Astro.props
         &__content {
             padding: 32px;
             text-align: center;
-            // min-height: 385px;
             display: flex;
             flex-direction: column;
             height: calc(100% - 200px);

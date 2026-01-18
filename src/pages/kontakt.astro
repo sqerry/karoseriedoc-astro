@@ -1,12 +1,10 @@
 ---
+import { useTranslations } from "../i18n/utils";
 import Layout from "../layouts/Layout.astro";
 import PageHeader from "../components/PageHeader.astro";
-import Title from "../components/Title.astro";
-import i18next, { t, changeLanguage } from "i18next";
 
-changeLanguage("cs");
-
-const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
+const lang = 'cs';
+const t = useTranslations(lang);
 ---
 
 <script type="module">
@@ -61,13 +59,11 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
     })
 </script>
 
-<script></script>
-
 <Layout title="Kontakt" description="Kontakt">
     <uc-config
         ctx-name="my-uploader"
         pubkey="dc94fb893736715b0a69"
-        locale-name={locale}
+        locale-name="cs"
         img-only="true"
         multiple="true"
         max-local-file-size-bytes="524288000"
@@ -160,8 +156,8 @@ const locale = Astro.url.pathname.includes("/de/") ? "de" : "cs";
                 document.querySelector(
                     '#contactForm > div:nth-child(5) > div.uploadcare-wrapper > uc-file-uploader-regular > uc-simple-btn > uc-drop-area > button > span'
                 ).textContent = isGerman
-                    ? 'Hier können Sie ein Foto von Ihrem Schaden hochladen'
-                    : 'Zde můžete nahrát fotku vašeho poškození'
+                    ? 'Hier konnen Sie ein Foto von Ihrem Schaden hochladen'
+                    : 'Zde muzete nahrat fotku vaseho poskozeni'
             }, 100)
         }
 

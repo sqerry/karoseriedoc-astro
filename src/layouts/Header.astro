@@ -1,11 +1,12 @@
 ---
-import SiteNav from '../components/Navigation.astro'
-import Logo from '../components/Logo.astro'
-import { LanguageSelector } from 'astro-i18next/components'
-import { t } from 'i18next'
-import { localizePath } from 'astro-i18next'
-import SocialLinks from '../components/SocialLinks.astro'
-import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
+import SiteNav from '../components/Navigation.astro';
+import Logo from '../components/Logo.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import CustomLanguageSelector from '../components/CustomLanguageSelector.astro';
+import { useTranslations, getLangFromUrl, type Lang } from '../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="top-navigation-bar">
@@ -14,9 +15,9 @@ import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
             <li class="location">
                 <div class="icon location"></div>
                 <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=Chodová+Planá+488,+Chodová+Planá+348+13"
+                    href="https://www.google.com/maps/dir/?api=1&destination=Pohraniční+střáže+474,+Chodová+Planá"
                     target="_blank">
-                    Chodová Planá 488, Chodová Planá 348 13
+                    Pohraniční střáže 474, Chodová Planá
                 </a>
             </li>
             <li>
@@ -28,7 +29,7 @@ import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
             </li>
         </ul>
         <SocialLinks />
-        <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
+        <CustomLanguageSelector customClass="top-nav-lang" />
     </div>
 </div>
 <header class="header">
@@ -37,7 +38,7 @@ import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
         <div class="header-logo">
             <Logo />
         </div>
-        <SiteNav />
+        <SiteNav lang={lang} />
         <div class="tel">
             <a href={`tel:${t('header.tel.number')}`}>
                 <div class="tel-wrapper">
@@ -50,8 +51,8 @@ import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
             <span></span>
         </div>
         <div class="mobile-nav">
-            <SiteNav />
-            <LanguageSelector showFlag={true} languageMapping={{ cs: '', de: '' }} class="lang-switcher" />
+            <SiteNav lang={lang} />
+            <CustomLanguageSelector customClass="mobile-lang" />
         </div>
     </div>
 </header>
@@ -63,20 +64,17 @@ import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
         .container {
             display: flex;
         }
-        // background-color: $clr-secondary;
-        .lang-switcher {
-            background-color: #1d2226;
+        :global(.top-nav-lang) {
+            display: none !important;
             margin-left: 5px;
             margin-top: 4px;
-            display: none;
             font-size: 2.5rem;
 
+            @media (max-width: 1023px) {
+                display: flex !important;
+            }
             @media (max-width: 767px) {
                 font-size: 2rem;
-            }
-
-            @media (max-width: 1023px) {
-                display: block;
             }
         }
         ul {
@@ -105,15 +103,30 @@ import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
                 }
             }
         }
-        a {
-            // color: $clr-black;
-        }
     }
     a:not(.logo) {
         font-size: 1.5rem;
     }
     .header-logo {
         width: 25%;
+    }
+    :global(.header-lang-switcher) {
+        position: absolute !important;
+        right: 1.5rem;
+        cursor: pointer;
+        font-size: 2.8rem;
+        background-color: $clr-black;
+
+        @media (max-width: 1023px) {
+            display: none !important;
+        }
+    }
+    :global(.mobile-lang) {
+        display: none !important;
+
+        @media (max-width: 1023px) {
+            display: block !important;
+        }
     }
     .header {
         padding: 2rem 0;
@@ -178,13 +191,6 @@ import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
                 justify-content: flex-end;
                 align-items: center;
                 gap: 1rem;
-
-                // &:before {
-                //     font-family: elementskit !important;
-                //     content: '\e976';
-                //     color: $clr-primary;
-                //     font-size: 1.8rem;
-                // }
             }
             .tel-text {
                 font-size: 1.4rem;

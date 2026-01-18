@@ -1,9 +1,10 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import PageHeader from '../../components/PageHeader.astro'
-import i18next, { t, changeLanguage } from 'i18next'
+import { useTranslations } from '../../i18n/utils';
+import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 
-changeLanguage('de')
+const lang = 'de';
+const t = useTranslations(lang);
 ---
 
 <Layout title="Galerie" description="Galerie">
@@ -18,43 +19,27 @@ changeLanguage('de')
             <div class="container">
                 <div class="row">
                     <div class="gallery-filter">
-                        <!-- <span class="filter-item active" data-filter="all">{t('gallery.filter.all')}</span>
-                        <span class="filter-item" data-filter="filter1">{t('gallery.filter.filter1')}</span>
-                        <span class="filter-item" data-filter="filter2">{t('gallery.filter.filter2')}</span>
-                        <span class="filter-item" data-filter="filter3">{t('gallery.filter.filter3')}</span> -->
                         <div class="row">
-                            <!-- gallery item start -->
                             <div class="gallery-item">
                                 <div class="gallery-item-inner">
                                     <img src="/images/DSC_5099.webp" alt="Image 1" loading="lazy" />
                                 </div>
                             </div>
-                            <!-- gallery item end -->
-                            <!-- gallery item start -->
                             <div class="gallery-item">
                                 <div class="gallery-item-inner">
                                     <img src="/images/DSC_5152.webp" alt="Image 2" loading="lazy" />
                                 </div>
                             </div>
-                            <!-- gallery item end -->
-                            <!-- gallery item start -->
                             <div class="gallery-item">
                                 <div class="gallery-item-inner">
                                     <img src="/images/DSC_5238.webp" alt="Image 3" loading="lazy" />
                                 </div>
                             </div>
-                            <!-- gallery item end -->
-                            <!-- gallery item start -->
                             <div class="gallery-item">
                                 <div class="gallery-item-inner">
                                     <img src="/images/DSC_5256.webp" alt="Image 4" loading="lazy" />
                                 </div>
                             </div>
-                            <!-- gallery item end -->
-                            <!-- gallery item start -->
-
-                            <!-- gallery item end -->
-                            <!-- gallery item start -->
                             <div class="gallery-item">
                                 <div class="gallery-item-inner">
                                     <img src="/images/DSC_5155.webp" alt="Image 6" loading="lazy" />
@@ -65,12 +50,10 @@ changeLanguage('de')
                                     <img src="/images/DSC_5215.webp" alt="Image 6" loading="lazy" />
                                 </div>
                             </div>
-                            <!-- gallery item end -->
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Add modal container -->
             <div id="imageModal" class="modal">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="modalImage" />
@@ -166,7 +149,6 @@ changeLanguage('de')
                 max-height: 400px;
                 object-fit: cover;
             }
-            /*.gallery*/
             .gallery {
                 width: 100%;
                 display: block;
@@ -222,7 +204,6 @@ changeLanguage('de')
                 display: none;
             }
 
-            /*responsive*/
             @media (max-width: 991px) {
                 .gallery .gallery-item {
                     width: 50%;
@@ -237,7 +218,6 @@ changeLanguage('de')
                 }
             }
 
-            /* Modal styles */
             .modal {
                 display: none;
                 position: fixed;

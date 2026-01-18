@@ -1,5 +1,5 @@
 ---
-import i18next, { t, changeLanguage } from "i18next";
+import { useTranslations } from "../../i18n/utils";
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import USP from "../../components/USP.astro";
@@ -7,24 +7,23 @@ import Services from "../../components/Services.astro";
 import Title from "../../components/Title.astro";
 import About from "../../components/About.astro";
 
-changeLanguage("de");
-
-const currentLang = i18next.language;
+const lang = 'de';
+const t = useTranslations(lang);
 ---
 
 <Layout
-    title="Opravy promáčklin bez lakování metodou PDR | KaroserieDoc"
-    description="KaroserieDoc nabízí Opravy promáčklin bez lakování metodou PDR,Ochranné nástřiky dutin/podvozků, Drobné klempířské/lakýrnické práce & další.">
+    title="Dellenreparatur ohne Lackierung mit PDR-Methode | KaroserieDoc"
+    description="KaroserieDoc bietet Dellenreparatur ohne Lackierung mit PDR-Methode, Schutzbespruhung von Hohlraumen/Fahrgestellen, kleine Klempner-/Lackierarbeiten und mehr.">
     <main>
-        <Hero lang={currentLang === 'de' ? 'de' : 'cs'} />
-        <USP />
+        <Hero lang={lang} />
+        <USP lang={lang} />
         <section class="services-section">
             <Title subtitle={t('services.subtitle')} title={t('services.title')} position="center" />
             <div class="container">
-                <Services />
+                <Services lang={lang} />
             </div>
         </section>
-        <About />
+        <About lang={lang} />
     </main>
 </Layout>
 

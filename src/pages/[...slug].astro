@@ -1,22 +1,22 @@
 ---
-import { changeLanguage } from "i18next";
 import { getCollection } from "astro:content";
 import ServiceDetail from "../components/ServiceDetail.astro";
 import Layout from "../layouts/Layout.astro";
 
-changeLanguage("cs");
-
 export async function getStaticPaths() {
-    const serviceEntries = await getCollection("services");
+    const serviceEntries = await getCollection("services", ({ data }) => {
+        return data.lang === "cs" || !data.lang;
+    });
     return serviceEntries.map((entry) => ({
         params: { slug: entry.slug },
         props: { entry },
     }));
 }
+
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title} description={entry.data.description}>
-    <ServiceDetail frontmatter={entry.data} Content={Content} />
+    <ServiceDetail frontmatter={entry.data} Content={Content} lang="cs" />
 </Layout>

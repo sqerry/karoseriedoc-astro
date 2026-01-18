@@ -1,10 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import PageHeader from './PageHeader.astro'
-import { localizePath, localizeUrl } from 'astro-i18next'
-import i18next, { t } from 'i18next'
+import Layout from '../layouts/Layout.astro';
+import PageHeader from './PageHeader.astro';
+import { useTranslations, type Lang, defaultLang } from '../i18n';
 
-const { frontmatter, Content } = Astro.props
+interface Props {
+    frontmatter: any;
+    Content: any;
+    lang?: Lang;
+}
+
+const { frontmatter, Content, lang = 'cs' } = Astro.props;
+const t = useTranslations(lang);
+
+// Helper to build localized paths
+const localePath = (path: string) => {
+    if (lang === defaultLang) {
+        return path;
+    }
+    return `/${lang}${path}`;
+};
 ---
 
 <PageHeader
@@ -38,7 +52,7 @@ const { frontmatter, Content } = Astro.props
             <div class="contact-banner-inner">
                 <h2>{t('contact.title')}</h2>
                 <p>{t('contact.description')}</p>
-                <a class="btn btn-primary" href={localizePath('/kontakt')} target="_blank" class="button"
+                <a class="btn btn-primary" href={localePath('/kontakt')} target="_blank" class="button"
                     >{t('contact.button')}</a
                 >
             </div>
@@ -84,8 +98,6 @@ const { frontmatter, Content } = Astro.props
                 }
 
                 :global(.color-primary) {
-                    // font-family: $ff-heading;
-                    // color: $clr-primary;
                     font-weight: 700;
                 }
                 :global(li span) {
@@ -151,7 +163,6 @@ const { frontmatter, Content } = Astro.props
 
                 .text {
                     :global(span) {
-                        // color: $clr-primary;
                         font-weight: 700;
                         width: 100%;
                         display: block;

@@ -1,5 +1,12 @@
 ---
-import i18next, { t } from 'i18next'
+import { useTranslations, type Lang } from '../i18n';
+
+interface Props {
+    lang?: Lang;
+}
+
+const { lang = 'cs' } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <div class="usp container">

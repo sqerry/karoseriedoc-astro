@@ -1,6 +1,13 @@
 ---
-import ServiceCard from './ServiceCard.astro'
-import i18next, { t } from 'i18next'
+import ServiceCard from './ServiceCard.astro';
+import { useTranslations, type Lang } from '../i18n';
+
+interface Props {
+    lang?: Lang;
+}
+
+const { lang = 'cs' } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <div class="services">
@@ -8,16 +15,19 @@ import i18next, { t } from 'i18next'
         link={t('urls.opravy-vozidel-kroupy')}
         imgSrc="/images/po-kroupech-small.webp"
         title={t('services.serviceCard.card1')}
+        lang={lang}
     />
     <ServiceCard
         link={t('urls.opravy-deformaci-pdr')}
         imgSrc="/images/deformace-small.webp"
         title={t('services.serviceCard.card2')}
+        lang={lang}
     />
     <ServiceCard
         link={t('urls.ochrane-nastriky')}
         imgSrc="/images/ochrane-nastriky-small.webp"
         title={t('services.serviceCard.card3')}
+        lang={lang}
     />
 
     <ServiceCard
@@ -25,40 +35,38 @@ import i18next, { t } from 'i18next'
         imgSrc="/images/DSC_5215-small.webp"
         title={t('services.serviceCard.card4')}
         imgPosition="-14"
+        lang={lang}
     />
     <ServiceCard
         link={t('urls.udrzba-klimatizace')}
         imgSrc="/images/DSC_5152-small.webp"
         title={t('services.serviceCard.card5')}
         imgPosition="-15"
+        lang={lang}
     />
     <ServiceCard
         link={t('urls.pneuservis')}
         imgSrc="/images/DSC_5227-small.webp"
         title={t('services.serviceCard.card6')}
         imgPosition="-13"
+        lang={lang}
     />
     <ServiceCard
         link={t('urls.bezna-udrzba')}
         imgSrc="/images/DSC_5256-small.webp"
         title={t('services.serviceCard.card7')}
         imgPosition="-13"
+        lang={lang}
     />
     <ServiceCard
         link={t('urls.cisteni-a-myti')}
         imgSrc="/images/cisteni.webp"
         title={t('services.serviceCard.card8')}
         customStyleImg="height: 100%; object-fit: cover;"
+        lang={lang}
     />
 </div>
 <style lang="scss">
-    // klimatizace object-position: 0px -15rem;
-    // nastriky object-position: center -5rem;
-    // Vyvařování a karosářské opravy object-position: center -14rem;
-    // pneuservis object-position: center -13rem;
-    // cisteni     height: 100%; object-fit: cover;
-    // bezna udrzba object-position: center -13rem;
-
     .services {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
