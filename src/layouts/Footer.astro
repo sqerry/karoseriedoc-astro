@@ -36,6 +36,16 @@ const t = useTranslations(lang);
                         <p>+420 777 076 174</p>
                     </div>
                 </a>
+                {lang === 'de' && (
+                    <a href="tel:+49 1577 656853" class="footer-info-item">
+                        <div class="footer-info-item__title footer-info-item__title--hidden">
+                            <h4>{t('footer.tel')}</h4>
+                        </div>
+                        <div class="footer-info-item__content">
+                            <p>+49 1577 656853</p>
+                        </div>
+                    </a>
+                )}
             </div>
             <a href="https://www.instagram.com/karoseriedoc/" target="_blank" class="footer-top-item">
                 <div class="icon ig"></div>
@@ -121,6 +131,9 @@ const t = useTranslations(lang);
                     font-size: 2rem;
                     font-weight: 700;
                     letter-spacing: 0.5px;
+                }
+                .footer-info-item__title--hidden {
+                    visibility: hidden;
                 }
 
                 &__content {
