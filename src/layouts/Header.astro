@@ -1,7 +1,6 @@
 ---
 import SiteNav from '../components/Navigation.astro';
 import Logo from '../components/Logo.astro';
-import SocialLinks from '../components/SocialLinks.astro';
 import CustomLanguageSelector from '../components/CustomLanguageSelector.astro';
 import { useTranslations, getLangFromUrl, type Lang } from '../i18n';
 
@@ -9,29 +8,6 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="top-navigation-bar">
-    <div class="container">
-        <ul>
-            <li class="location">
-                <div class="icon location"></div>
-                <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=Pohraniční+střáže+474,+Chodová+Planá"
-                    target="_blank">
-                    Pohraniční střáže 474, Chodová Planá
-                </a>
-            </li>
-            <li>
-                <div class="icon email"></div>
-                <a href={`mailto:${t('global.email')}`}>{t('global.email')}</a>
-            </li>
-            <li class="tel">
-                <a href={`tel:${t('header.tel.number')}`}>{t('header.tel.number')}</a>
-            </li>
-        </ul>
-        <SocialLinks />
-        <CustomLanguageSelector customClass="top-nav-lang" />
-    </div>
-</div>
 <header class="header">
     <div class="container header-wrapper">
         <CustomLanguageSelector customClass="header-lang-switcher" />
@@ -58,52 +34,6 @@ const t = useTranslations(lang);
 </header>
 
 <style lang="scss">
-    .top-navigation-bar {
-        background-color: #1d2226;
-
-        .container {
-            display: flex;
-        }
-        :global(.top-nav-lang) {
-            display: none !important;
-            margin-left: 5px;
-            margin-top: 4px;
-            font-size: 2.5rem;
-
-            @media (max-width: 1023px) {
-                display: flex !important;
-            }
-            @media (max-width: 767px) {
-                font-size: 2rem;
-            }
-        }
-        ul {
-            display: flex;
-            gap: 3rem;
-            padding: 1rem 0;
-            flex: 1;
-
-            li {
-                display: flex;
-                align-items: center;
-
-                &.tel {
-                    @media (min-width: 1024px) {
-                        display: none;
-                    }
-                }
-
-                @media (max-width: 1023px) {
-                    &:not(.tel) {
-                        display: none;
-                    }
-                    &.tel {
-                        width: 100% !important;
-                    }
-                }
-            }
-        }
-    }
     a:not(.logo) {
         font-size: 1.5rem;
     }

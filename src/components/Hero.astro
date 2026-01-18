@@ -25,13 +25,13 @@ const slidesContent = getSlideContent(lang)
                         <div class="slide-content container">
                             <h6>{slide.subtitle}</h6>
                             <h2 class="hero-title">{slide.title}</h2>
-                            <ul>
+                            {/* <ul>
                                 {slide.features.map((feature) => (
                                     <li>
                                         <span>{feature}</span>
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
                             <a href={slide.buttonLink} class="btn">
                                 {slide.buttonText}
                             </a>
@@ -133,12 +133,16 @@ const slidesContent = getSlideContent(lang)
             }
         }
         .swiper-slide {
-            height: auto;
+            height: 71.5rem;
             padding-top: 6em;
             padding-bottom: 14rem;
 
             @media (max-width: 1199px) {
                 padding-bottom: 8rem;
+            }
+
+            @media (max-width: 767px) {
+                height: 50rem;
             }
 
             @media (max-width: 479px) {
@@ -171,6 +175,10 @@ const slidesContent = getSlideContent(lang)
             .slide-content {
                 z-index: 3;
                 position: relative;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
 
                 h6 {
                     font-size: $fs-400;
@@ -187,7 +195,7 @@ const slidesContent = getSlideContent(lang)
                     font-size: 4rem;
                     max-width: 50rem;
                     line-height: 1.2;
-                    margin-bottom: 1.5rem;
+                    margin-bottom: 2.4rem;
 
                     @media (max-width: 479px) {
                         font-size: 3rem;
