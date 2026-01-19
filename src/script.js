@@ -47,13 +47,27 @@ document.addEventListener('astro:after-swap', () => {
 })
 
 function setActivePage() {
-    const currentUrl = window.location.pathname
+    const currentUrl = window.location.pathname.replace(/\/$/, '') || '/'
     const navLinks = document.querySelectorAll('.site-nav a')
 
     navLinks.forEach((link) => {
         const href = link.getAttribute('href')
-        const isActive = href === currentUrl
-        link.classList.toggle('active-page', isActive)
+
+        // Skip links with hash fragments (like /#about-section) - never mark as active
+        if (href.includes('#')) {
+            link.classList.remove('active-page')
+            return
+        }
+
+        // Strip trailing slash from href for comparison
+        const hrefPath = href.replace(/\/$/, '') || '/'
+
+        // Check for exact match or if current URL starts with this path (for nested routes)
+        // But exclude root path from startsWith check to avoid matching everything
+        const isExactMatch = hrefPath === currentUrl
+        const isNestedMatch = hrefPath !== '/' && hrefPath !== '/de' && currentUrl.startsWith(hrefPath + '/')
+
+        link.classList.toggle('active-page', isExactMatch || isNestedMatch)
     })
 }
 function toggleHamburgerMenu() {
