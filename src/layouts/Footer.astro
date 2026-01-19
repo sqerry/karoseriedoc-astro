@@ -1,10 +1,11 @@
 ---
-import FooterBottom from '../components/FooterBottom.astro';
-import Ratings from '../components/Ratings.astro';
-import { useTranslations, getLangFromUrl } from '../i18n';
+import FooterBottom from '../components/FooterBottom.astro'
+import Ratings from '../components/Ratings.astro'
+import { useTranslations, getLangFromUrl } from '../i18n'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+// @ts-ignore - Astro global is available in .astro files
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <footer class="footer">
@@ -36,16 +37,18 @@ const t = useTranslations(lang);
                         <p>+420 777 076 174</p>
                     </div>
                 </a>
-                {lang === 'de' && (
-                    <a href="tel:+49 1577 656853" class="footer-info-item">
-                        <div class="footer-info-item__title footer-info-item__title--hidden">
-                            <h4>{t('footer.tel')}</h4>
-                        </div>
-                        <div class="footer-info-item__content">
-                            <p>+49 1577 656853</p>
-                        </div>
-                    </a>
-                )}
+                {
+                    lang === 'de' && (
+                        <a href="tel:+49 1577 656853" class="footer-info-item">
+                            <div class="footer-info-item__title footer-info-item__title--hidden">
+                                <h4>{t('footer.tel')}</h4>
+                            </div>
+                            <div class="footer-info-item__content">
+                                <p>+49 1577 656853</p>
+                            </div>
+                        </a>
+                    )
+                }
             </div>
             <a href="https://www.instagram.com/karoseriedoc/" target="_blank" class="footer-top-item">
                 <div class="icon ig"></div>

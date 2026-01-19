@@ -4,8 +4,17 @@ import Header from '../layouts/Header.astro';
 import Footer from '../layouts/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 import { getLangFromUrl } from '../i18n';
+import SEO from '../components/SEO.astro';
 
-const { title, description } = Astro.props;
+export interface Props {
+    title: string;
+    description: string;
+    image?: string;
+    type?: 'website' | 'article';
+    noindex?: boolean;
+}
+
+const { title, description, image, type = 'website', noindex = false } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -13,29 +22,58 @@ const lang = getLangFromUrl(Astro.url);
 <html lang={lang}>
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Favicon -->
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="generator" content={Astro.generator} />
+        <meta name="theme-color" content="#ffc727" />
+
+        <!-- SEO Component (meta tags, OG, Twitter, structured data) -->
+        <SEO title={title} description={description} image={image} type={type} noindex={noindex} />
+
+        <!-- Preconnect for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+        <link rel="dns-prefetch" href="https://submit-form.com" />
+        <link rel="dns-prefetch" href="https://www.google.com" />
+
+        <!-- Preload LCP hero image -->
+        <link rel="preload" as="image" href="/images/deformace-small.webp" media="(max-width: 767px)" fetchpriority="high" />
+        <link rel="preload" as="image" href="/images/deformace.webp" media="(min-width: 768px)" fetchpriority="high" />
+
+        <!-- Preload critical fonts -->
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Russo+One&display=swap"
+            as="style"
+        />
         <link
             href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Russo+One&display=swap"
             rel="stylesheet"
         />
-        <link rel="alternate" hreflang="cs" href={Astro.url.pathname.replace(/^\/de/, '') || '/'} />
-        <link rel="alternate" hreflang="de" href={`/de${Astro.url.pathname.replace(/^\/de/, '')}`} />
+
+        <meta name="generator" content={Astro.generator} />
         <ResetCSS />
         <title>{title}</title>
         <ViewTransitions />
+        <!-- Uploadcare CSS - deferred load for non-critical styling -->
         <link
-            rel="stylesheet"
+            rel="preload"
             href="https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@v1/web/uc-file-uploader-regular.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
         />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@v1/web/uc-file-uploader-regular.min.css"
+            />
+        </noscript>
     </head>
 
     <body>

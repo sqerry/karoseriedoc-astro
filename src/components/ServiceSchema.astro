@@ -1,0 +1,79 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    slug: string;
+    lang: 'cs' | 'de';
+    image?: string;
+}
+
+const { title, description, slug, lang, image } = Astro.props;
+
+const siteUrl = 'https://karoseriedoc.cz';
+const serviceUrl = lang === 'cs' ? `${siteUrl}/${slug}` : `${siteUrl}/de/${slug}`;
+const servicesPageUrl = lang === 'cs' ? `${siteUrl}/sluzby` : `${siteUrl}/de/dienstleistungen`;
+const homeUrl = lang === 'cs' ? siteUrl : `${siteUrl}/de`;
+
+// Breadcrumb schema
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": lang === 'cs' ? 'Domů' : 'Startseite',
+            "item": homeUrl
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": lang === 'cs' ? 'Služby' : 'Dienstleistungen',
+            "item": servicesPageUrl
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": title,
+            "item": serviceUrl
+        }
+    ]
+};
+
+// Service schema
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${serviceUrl}#service`,
+    "name": title,
+    "description": description,
+    "url": serviceUrl,
+    "image": image ? `${siteUrl}${image}` : `${siteUrl}/images/DSC_5058.webp`,
+    "provider": {
+        "@type": "AutoBodyShop",
+        "@id": `${siteUrl}/#organization`,
+        "name": "KaroserieDoc"
+    },
+    "areaServed": [
+        {
+            "@type": "Country",
+            "name": "Czech Republic"
+        },
+        {
+            "@type": "Country",
+            "name": "Germany"
+        },
+        {
+            "@type": "Country",
+            "name": "Austria"
+        }
+    ],
+    "serviceType": "Auto Body Repair",
+    "termsOfService": lang === 'cs'
+        ? "Konzultace zdarma. Opravy do 7 dnů od objednání."
+        : "Kostenlose Beratung. Reparaturen innerhalb von 7 Tagen nach Bestellung."
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />

@@ -1,0 +1,231 @@
+---
+import { getLangFromUrl } from '../i18n';
+
+export interface Props {
+    title: string;
+    description: string;
+    image?: string;
+    type?: 'website' | 'article';
+    noindex?: boolean;
+}
+
+const { title, description, image, type = 'website', noindex = false } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+
+// Site configuration
+const siteUrl = 'https://karoseriedoc.cz';
+const siteName = 'KaroserieDoc';
+const defaultImage = '/images/og-image.webp';
+
+// Build absolute URLs
+const currentPath = Astro.url.pathname;
+const canonicalUrl = `${siteUrl}${currentPath}`;
+const ogImage = `${siteUrl}${image || defaultImage}`;
+
+// Build alternate language URLs
+const csPath = currentPath.replace(/^\/de/, '') || '/';
+const dePath = currentPath.startsWith('/de') ? currentPath : `/de${currentPath === '/' ? '' : currentPath}`;
+const csUrl = `${siteUrl}${csPath}`;
+const deUrl = `${siteUrl}${dePath}`;
+
+// Locale for Open Graph
+const ogLocale = lang === 'de' ? 'de_DE' : 'cs_CZ';
+const ogLocaleAlternate = lang === 'de' ? 'cs_CZ' : 'de_DE';
+
+// Business structured data (LocalBusiness / AutoBodyShop)
+const businessSchema = {
+    "@context": "https://schema.org",
+    "@type": "AutoBodyShop",
+    "@id": `${siteUrl}/#organization`,
+    "name": "KaroserieDoc",
+    "alternateName": "Karoserie Doc",
+    "description": lang === 'de'
+        ? "Professionelle Dellenentfernung ohne Lackierung (PDR), Hagelschadenreparatur, Karosseriereparaturen und Fahrzeugwartung in Chodová Planá, Tschechien."
+        : "Profesionální opravy promáčklin bez lakování metodou PDR, opravy vozidel po kroupách, karosářské opravy a údržba vozidel v Chodové Plané.",
+    "url": siteUrl,
+    "logo": `${siteUrl}/karoseriedoc-logo.png`,
+    "image": `${siteUrl}/images/DSC_5058.webp`,
+    "telephone": "+420 777 076 174",
+    "email": "karoseriedoc@gmail.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pohraniční střáže 474",
+        "addressLocality": "Chodová Planá",
+        "postalCode": "348 13",
+        "addressCountry": "CZ"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.9060,
+        "longitude": 12.7310
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "17:00",
+            "description": lang === 'de' ? "Nur auf Anfrage" : "Pouze na objednání"
+        }
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "CZK, EUR",
+    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+    "areaServed": [
+        {
+            "@type": "Country",
+            "name": "Czech Republic"
+        },
+        {
+            "@type": "Country",
+            "name": "Germany"
+        },
+        {
+            "@type": "Country",
+            "name": "Austria"
+        }
+    ],
+    "sameAs": [
+        "https://www.instagram.com/karoseriedoc/",
+        "https://www.google.com/maps/place/Opravy+prom%C3%A1%C4%8Dklin+metodou+PDR+%2F+KaroserieDoc"
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "155",
+        "reviewCount": "155"
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": lang === 'de' ? "Dienstleistungen" : "Služby",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": lang === 'de' ? "Hagelschadenreparatur ohne Lackierung" : "Opravy vozidel po kroupách bez poškození laku"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": lang === 'de' ? "PDR Dellenentfernung" : "Opravy deformací bez lakování metodou PDR"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": lang === 'de' ? "Unterbodenschutz" : "Ochranné nástřiky dutin a podvozků"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": lang === 'de' ? "Karosseriereparaturen" : "Vyvařování a karosářské opravy"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": lang === 'de' ? "Klimaanlagenwartung" : "Údržba a opravy klimatizací"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pneuservis"
+                }
+            }
+        ]
+    }
+};
+
+// Website schema
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    "url": siteUrl,
+    "name": siteName,
+    "description": description,
+    "inLanguage": [lang === 'de' ? 'de-DE' : 'cs-CZ'],
+    "publisher": {
+        "@id": `${siteUrl}/#organization`
+    }
+};
+
+// WebPage schema
+const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    "url": canonicalUrl,
+    "name": title,
+    "description": description,
+    "inLanguage": lang === 'de' ? 'de-DE' : 'cs-CZ',
+    "isPartOf": {
+        "@id": `${siteUrl}/#website`
+    },
+    "about": {
+        "@id": `${siteUrl}/#organization`
+    }
+};
+---
+
+<!-- Primary Meta Tags -->
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="author" content="KaroserieDoc" />
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+<meta name="googlebot" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Alternate Language URLs (hreflang) -->
+<link rel="alternate" hreflang="cs" href={csUrl} />
+<link rel="alternate" hreflang="de" href={deUrl} />
+<link rel="alternate" hreflang="x-default" href={csUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:locale:alternate" content={ogLocaleAlternate} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- Geo Meta Tags (for local SEO) -->
+<meta name="geo.region" content="CZ-PL" />
+<meta name="geo.placename" content="Chodová Planá" />
+<meta name="geo.position" content="49.9060;12.7310" />
+<meta name="ICBM" content="49.9060, 12.7310" />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />

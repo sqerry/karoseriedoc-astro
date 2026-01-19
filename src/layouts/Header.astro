@@ -4,6 +4,7 @@ import Logo from '../components/Logo.astro'
 import CustomLanguageSelector from '../components/CustomLanguageSelector.astro'
 import { useTranslations, getLangFromUrl, type Lang } from '../i18n'
 
+// @ts-ignore - Astro global is available in .astro files
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
@@ -14,11 +15,13 @@ const t = useTranslations(lang)
             <li class="tel">
                 <a href={`tel:${t('header.tel.number')}`}>{t('header.tel.number')}</a>
             </li>
-            {lang === 'de' && (
-                <li class="tel">
-                    <a href="tel:+4915776568537">+49 1577 6568537</a>
-                </li>
-            )}
+            {
+                lang === 'de' && (
+                    <li class="tel">
+                        <a href="tel:+4915776568537">+49 1577 6568537</a>
+                    </li>
+                )
+            }
         </ul>
         <CustomLanguageSelector customClass="top-nav-lang" />
     </div>
@@ -107,6 +110,10 @@ const t = useTranslations(lang)
     }
     .header-logo {
         width: 25%;
+
+        @media (max-width: 767px) {
+            width: 35%;
+        }
     }
     :global(.header-lang-switcher) {
         position: absolute !important;
@@ -131,6 +138,13 @@ const t = useTranslations(lang)
         background-color: $clr-black;
         top: -130px;
         transition: 0.3s ease-in-out;
+
+        @media (max-width: 767px) {
+            padding: 0;
+            height: 9rem;
+            display: flex;
+            align-items: center;
+        }
 
         &.sticky {
             position: sticky;
@@ -195,7 +209,8 @@ const t = useTranslations(lang)
 
         .tel-number {
             font-size: 1.6rem;
-            font-weight: 600;
+            font-weight: 700;
+            color: $clr-primary;
             position: relative;
             transition: transform 0.3s ease;
 

@@ -7,7 +7,9 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
+// @ts-ignore - Astro global is available in .astro files
 const { lang = 'cs' } = Astro.props
+
 const slidesContent = getSlideContent(lang)
 ---
 
@@ -15,23 +17,27 @@ const slidesContent = getSlideContent(lang)
     <div class="swiper">
         <div class="swiper-wrapper">
             {
-                slidesContent.map((slide) => (
+                slidesContent.map((slide, index) => (
                     <div class={`swiper-slide ${slide.customClass ? slide.customClass : ''}`}>
-                        <div
-                            class="background-overlay"
-                            data-src-mobile={slide.imageMobile}
-                            data-src-desktop={slide.image}
-                        />
+                        <picture class="slide-image-wrapper">
+                            {/* Mobile image */}
+                            <source
+                                media="(max-width: 767px)"
+                                srcset={slide.imageMobile || slide.image}
+                            />
+                            {/* Desktop image */}
+                            <img
+                                src={slide.image}
+                                alt={slide.title}
+                                class="slide-image"
+                                loading={index === 0 ? 'eager' : 'lazy'}
+                                fetchpriority={index === 0 ? 'high' : 'auto'}
+                                decoding={index === 0 ? 'sync' : 'async'}
+                            />
+                        </picture>
                         <div class="slide-content container">
-                            <h6>{slide.subtitle}</h6>
+                            <p class="hero-subtitle">{slide.subtitle}</p>
                             <h2 class="hero-title">{slide.title}</h2>
-                            {/* <ul>
-                                {slide.features.map((feature) => (
-                                    <li>
-                                        <span>{feature}</span>
-                                    </li>
-                                ))}
-                            </ul> */}
                             <a href={slide.buttonLink} class="btn">
                                 {slide.buttonText}
                             </a>
@@ -48,77 +54,39 @@ const slidesContent = getSlideContent(lang)
 </section>
 
 <script>
-    const setBackgroundImages = () => {
-        const isMobile = window.innerWidth < 768
-        const slides = document.querySelectorAll('.swiper-slide .background-overlay')
-        slides.forEach((slide) => {
-            const img = slide as HTMLElement
-            const src = isMobile ? img.dataset.srcMobile : img.dataset.srcDesktop
-            img.style.backgroundImage = `url(${src})`
-        })
-    }
-
-    const lazyLoadImages = () => {
-        const slides = document.querySelectorAll('.swiper-slide .background-overlay')
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const img = entry.target as HTMLElement
-                    setBackgroundImages() // Call this instead of directly setting the background
-                    observer.unobserve(img)
-                }
-            })
-        })
-
-        slides.forEach((slide) => {
-            observer.observe(slide)
-        })
-    }
-
-    setBackgroundImages() // Initial call
-    lazyLoadImages()
-
-    document.addEventListener('DOMContentLoaded', () => {
-        setBackgroundImages()
-        lazyLoadImages()
-    })
-
-    document.addEventListener('astro:after-swap', () => {
-        setBackgroundImages()
-        lazyLoadImages()
-    })
-
-    // Add resize listener to handle orientation changes
-    window.addEventListener('resize', setBackgroundImages)
+    // No JavaScript needed for image loading anymore!
+    // Native loading="lazy" handles lazy loading
+    // <picture> with <source> handles responsive images
+    // fetchpriority="high" on first image ensures LCP priority
 </script>
 
 <style lang="scss">
+    // Slide-specific image positioning
     .slide-content--klimatizace {
-        .background-overlay {
-            background-size: cover;
-            background-repeat: no-repeat;
+        .slide-image {
             transform: scaleX(-1);
         }
     }
     .slide-content--klempir {
-        .background-overlay {
-            background-position: center -188rem;
+        .slide-image {
+            object-position: center -188rem;
         }
     }
     .slide-content--deformace {
-        .background-overlay {
+        .slide-image {
             @media (min-width: 1024px) {
-                background-position: center -87px !important;
+                object-position: center -87px !important;
             }
         }
     }
     .slide-content--ochrane-nastriky {
-        .background-overlay {
+        .slide-image {
             @media (min-width: 1024px) {
-                background-position: center -34rem !important;
+                object-position: center -34rem !important;
             }
         }
     }
+
     .hero-section {
         .swiper-pagination {
             bottom: 8.5rem;
@@ -149,29 +117,38 @@ const slidesContent = getSlideContent(lang)
                 padding-top: 3em;
             }
 
-            .background-overlay {
-                height: 100%;
-                width: 100%;
+            // Image wrapper - acts like background container
+            .slide-image-wrapper {
+                position: absolute;
                 top: 0;
                 left: 0;
-                position: absolute;
+                width: 100%;
+                height: 100%;
                 z-index: 2;
+                overflow: hidden;
+            }
+
+            // Image - behaves like background-image: cover
+            .slide-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center -20rem;
                 opacity: 0.5;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center -20rem;
 
                 @media (max-width: 2600px) and (min-width: 2000px) {
-                    background-position: center center !important;
+                    object-position: center center !important;
                 }
 
                 @media (max-width: 140rem) {
-                    background-position: center center;
+                    object-position: center center;
                 }
+
                 @media (max-width: 767px) {
                     opacity: 0.38;
                 }
             }
+
             .slide-content {
                 z-index: 3;
                 position: relative;
@@ -180,7 +157,7 @@ const slidesContent = getSlideContent(lang)
                 flex-direction: column;
                 justify-content: center;
 
-                h6 {
+                .hero-subtitle {
                     font-size: $fs-400;
                     font-weight: 500;
                     letter-spacing: 0.1rem;
