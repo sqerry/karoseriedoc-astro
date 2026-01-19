@@ -39,7 +39,11 @@ const slidesContent = getSlideContent(lang)
                         </picture>
                         <div class="slide-content container">
                             <p class="hero-subtitle">{slide.subtitle}</p>
-                            <h2 class="hero-title">{slide.title}</h2>
+                            {index === 0 ? (
+                                <h1 class="hero-title">{slide.title}</h1>
+                            ) : (
+                                <h2 class="hero-title">{slide.title}</h2>
+                            )}
                             <a href={slide.buttonLink} class="btn">
                                 {slide.buttonText}
                             </a>
@@ -170,7 +174,7 @@ const slidesContent = getSlideContent(lang)
                         font-size: 1.4rem;
                     }
                 }
-                h2.hero-title {
+                .hero-title {
                     font-size: 5rem;
                     max-width: 52rem;
                     line-height: 1.2;
