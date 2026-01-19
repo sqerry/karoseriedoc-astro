@@ -145,14 +145,29 @@ const t = useTranslations(lang);
 
     <script>
         const changeFileUploadText = () => {
-            setTimeout(() => {
-                const el = document.querySelector(
-                    '#contactForm > div:nth-child(5) > div.uploadcare-wrapper > uc-file-uploader-regular > uc-simple-btn > uc-drop-area > button > span'
-                )
-                if (el) {
-                    el.textContent = 'Hier konnen Sie ein Foto von Ihrem Schaden hochladen'
+            const text = 'Hier können Sie ein Foto von Ihrem Schaden hochladen'
+
+            const findAndUpdateText = () => {
+                // Elements are in light DOM, not shadow DOM
+                const span = document.querySelector('uc-file-uploader-regular uc-simple-btn uc-drop-area button > span')
+                if (span) {
+                    span.textContent = text
+                    return true
                 }
-            }, 100)
+                return false
+            }
+
+            // Try immediately, then retry with increasing delays
+            if (!findAndUpdateText()) {
+                let attempts = 0
+                const maxAttempts = 20
+                const interval = setInterval(() => {
+                    attempts++
+                    if (findAndUpdateText() || attempts >= maxAttempts) {
+                        clearInterval(interval)
+                    }
+                }, 100)
+            }
         }
 
         changeFileUploadText()

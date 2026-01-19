@@ -154,14 +154,31 @@ const t = useTranslations(lang);
     <script>
         const changeFileUploadText = () => {
             const isGerman = window.location.pathname.includes('/de/')
+            const text = isGerman
+                ? 'Hier können Sie ein Foto von Ihrem Schaden hochladen'
+                : 'Zde můžete nahrát fotku vašeho poškození'
 
-            setTimeout(() => {
-                document.querySelector(
-                    '#contactForm > div:nth-child(5) > div.uploadcare-wrapper > uc-file-uploader-regular > uc-simple-btn > uc-drop-area > button > span'
-                ).textContent = isGerman
-                    ? 'Hier konnen Sie ein Foto von Ihrem Schaden hochladen'
-                    : 'Zde muzete nahrat fotku vaseho poskozeni'
-            }, 100)
+            const findAndUpdateText = () => {
+                // Elements are in light DOM, not shadow DOM
+                const span = document.querySelector('uc-file-uploader-regular uc-simple-btn uc-drop-area button > span')
+                if (span) {
+                    span.textContent = text
+                    return true
+                }
+                return false
+            }
+
+            // Try immediately, then retry with increasing delays
+            if (!findAndUpdateText()) {
+                let attempts = 0
+                const maxAttempts = 20
+                const interval = setInterval(() => {
+                    attempts++
+                    if (findAndUpdateText() || attempts >= maxAttempts) {
+                        clearInterval(interval)
+                    }
+                }, 100)
+            }
         }
 
         changeFileUploadText()
