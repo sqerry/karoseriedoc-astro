@@ -103,6 +103,13 @@ const localePath = (path: string) => {
                 :global(li span) {
                     font-weight: 700;
                 }
+                :global(h2) {
+                    color: $clr-primary;
+                    font-size: 1.6rem;
+                    margin-top: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+
                 :global(li:before) {
                     content: '';
 
@@ -112,6 +119,47 @@ const localePath = (path: string) => {
                     background-color: $clr-primary;
                     border-radius: 50%;
                     margin-right: 1rem;
+                }
+
+                :global(.cta-buttons) {
+                    display: inline-flex;
+                    gap: 1.5rem;
+                    margin-top: 2rem;
+                    flex-wrap: wrap;
+
+                    :global(a) {
+                        display: inline-flex;
+                        align-items: center;
+                        padding: 1rem 2rem;
+                        font-weight: 700;
+                        text-align: center;
+                        text-decoration: none;
+                        border-radius: 4px;
+                        transition: 0.3s;
+                        font-size: 1.4rem;
+                        white-space: nowrap;
+                        max-width: none;
+                    }
+
+                    :global(.btn-primary) {
+                        background-color: $clr-primary;
+                        color: #000;
+
+                        &:hover {
+                            opacity: 0.85;
+                        }
+                    }
+
+                    :global(.btn-secondary) {
+                        background-color: transparent;
+                        border: 2px solid $clr-primary;
+                        color: $clr-primary;
+
+                        &:hover {
+                            background-color: $clr-primary;
+                            color: #000;
+                        }
+                    }
                 }
             }
         }
