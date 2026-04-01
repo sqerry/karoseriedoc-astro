@@ -1,5 +1,5 @@
 ---
-title: 'Servis, plnění a opravy autoklimatizací | Tachov, Mariánské Lázně'
+title: 'Servis, plnění a opravy autoklimatizací | Tachov, Mariánské Lázně, Plzeň'
 description: 'Ztrácí vaše klimatizace výkon nebo zapáchá? Provádíme plnění chladiva, detekci úniků, dezinfekci ozonem i opravy kompresorů.'
 headerImage: '/images/DSC_5099.webp'
 uspItems:
