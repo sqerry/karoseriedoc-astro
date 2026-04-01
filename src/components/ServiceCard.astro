@@ -1,21 +1,21 @@
 ---
-import { useTranslations, getLocalizedPath, type Lang, defaultLang } from '../i18n';
+import { useTranslations, getLocalizedPath, type Lang, defaultLang } from '../i18n'
 
 export interface Props {
-    link: string;
-    imgSrc: string;
-    title: string;
-    description?: string;
-    imgPosition?: string;
-    customStyleImg?: string;
-    lang?: Lang;
+    link: string
+    imgSrc: string
+    title: string
+    description?: string
+    imgPosition?: string
+    customStyleImg?: string
+    lang?: Lang
 }
 
-const { link, imgSrc, title, description, imgPosition, customStyleImg, lang = 'cs' } = Astro.props;
-const t = useTranslations(lang);
+const { link, imgSrc, title, description, imgPosition, customStyleImg, lang = 'cs' } = Astro.props
+const t = useTranslations(lang)
 
 // Build the localized path
-const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`;
+const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`
 ---
 
 <div class="service-card">
@@ -39,9 +39,7 @@ const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`;
             <a href={localizedLink}>{title}</a>
         </h3>
         {description && <p class="service-card__description">{description}</p>}
-        <a href={localizedLink} class="btn service-card__link"
-            >{t('services.moreInfo')}</a
-        >
+        <a href={localizedLink} class="btn service-card__link">{t('services.moreInfo')}</a>
     </div>
 </div>
 
@@ -99,7 +97,7 @@ const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`;
             color: #b0b0b0;
 
             @media (max-width: 767px) {
-                display: none;
+                // display: none;
             }
         }
 
@@ -113,9 +111,9 @@ const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`;
             font-family: $ff-primary;
 
             @media (max-width: 767px) {
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 1.2;
-                margin-top: 0.5rem;
+                margin-top: 1rem;
             }
 
             a {
@@ -133,6 +131,7 @@ const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`;
             @media (max-width: 767px) {
                 width: 100%;
                 font-size: 13px;
+                margin-bottom: 1rem;
             }
         }
     }
