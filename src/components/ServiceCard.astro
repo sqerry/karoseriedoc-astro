@@ -5,12 +5,13 @@ export interface Props {
     link: string;
     imgSrc: string;
     title: string;
+    description?: string;
     imgPosition?: string;
     customStyleImg?: string;
     lang?: Lang;
 }
 
-const { link, imgSrc, title, imgPosition, customStyleImg, lang = 'cs' } = Astro.props;
+const { link, imgSrc, title, description, imgPosition, customStyleImg, lang = 'cs' } = Astro.props;
 const t = useTranslations(lang);
 
 // Build the localized path
@@ -37,6 +38,7 @@ const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`;
         <h3 class="service-card__title">
             <a href={localizedLink}>{title}</a>
         </h3>
+        {description && <p class="service-card__description">{description}</p>}
         <a href={localizedLink} class="btn service-card__link"
             >{t('services.moreInfo')}</a
         >
@@ -92,8 +94,13 @@ const localizedLink = lang === defaultLang ? `/${link}` : `/${lang}/${link}`;
 
         &__description {
             margin-bottom: 19px;
-            font-size: 16px;
-            display: none;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #b0b0b0;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
 
         &__title {

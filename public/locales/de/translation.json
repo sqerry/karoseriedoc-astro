@@ -14,24 +14,26 @@
     "bezna-udrzba": "bezna-udrzba-vozidel"
   },
   "about": {
-    "title": "Über uns",
+    "title": "Über uns und unsere Arbeit bei KaroserieDoc",
     "subtitle": "Professioneller Ansatz mit Schwerpunkt auf Qualität",
-    "description": "Sehr geehrte Kunden,",
-    "description2": "die Kommunikation mit Kunden ist mir ein Vergnügen. Erwarten Sie also keine genervten Anrufe, bei denen Sie das Gefühl haben, dass Sie im Weg sind oder gar jemanden belästigen. Ich kümmere mich um jeden Kunden so viel, wie es meine Zeit erlaubt.",
-    "description3": "Jede Reparatur wird mit einer sorgfältigen Fotodokumentation versehen, und der Kunde wird stets umfassend über die durchgeführten Arbeiten informiert. Wir lieben Autos, und unsere Arbeit macht uns wirklich Spaß",
-    "description4": "Probieren Sie etwas Neues und lassen Sie sich angenehm überraschen. Es wird mir eine Ehre sein, mich um Ihr Auto zu kümmern.",
-    "stat1": "Gequetschte Grübchen",
-    "stat2": "Hammerschläge",
-    "stat3": "der Kotflügelverbreiterungen",
-    "stat4": "Lackierte Teile"
+    "description": "Sehr geehrte Kunden, willkommen bei KaroserieDoc. Ich spezialisiere mich vor allem auf die Reparatur von Dellen ohne Lackierung mit der PDR-Methode, biete aber auch umfassende Karosseriearbeiten, Unterbodenschutz-Beschichtungen und weitere Serviceleistungen in Chodová Planá und Umgebung an.",
+    "description2": "Da die PDR-Methode hochspezialisiert ist und maximale Präzision erfordert, habe ich eine professionelle Ausbildung in PDR-Reparaturen bei den Spezialisten der Firma PROPDR absolviert, um Ihrem Fahrzeug das bestmögliche Ergebnis ohne Lackschäden garantieren zu können.",
+    "description3": "Der Automobilmarkt ist dynamisch und die Technologien schreiten stetig voran. Deshalb bleiben wir nicht zurück und nehmen regelmäßig an Kursen und Schulungen direkt von Automobilherstellern oder spezialisierten Schulen teil. Im letzten Jahr können wir stolz auf den Erwerb der Qualifikation als Hochvolt-Techniker sein. Dadurch können wir auch Ihre Elektrofahrzeuge und Hybride, die auf unseren Straßen immer häufiger anzutreffen sind, völlig sicher reparieren.",
+    "description4": "Die Kommunikation mit Kunden ist mir ein Vergnügen. Erwarten Sie also keine genervten Anrufe, bei denen Sie das Gefühl haben, dass Sie im Weg sind oder gar jemanden belästigen. Ich kümmere mich um jeden Kunden so viel, wie es meine Zeit erlaubt.",
+    "description5": "Jede Reparatur wird mit einer sorgfältigen Fotodokumentation versehen, und der Kunde wird stets umfassend über die durchgeführten Arbeiten informiert.",
+    "description6": "Wir lieben Autos, unsere Arbeit macht uns wirklich Spaß und wir gehen jedes Fahrzeug mit größter Sorgfalt an, ob es sich um eine kleine Parkdelle oder eine umfangreichere Hagelreparatur handelt. Probieren Sie etwas Neues und lassen Sie sich angenehm überraschen. Es wird mir eine Ehre sein, mich um Ihr Auto zu kümmern.",
+    "stat1": "Jahre Erfahrung",
+    "stat2": "Reparierte Autos nach Hagel",
+    "stat3": "Zufriedene Kunden",
+    "stat4": "Hammerschläge"
   },
   "usp": {
-    "title1": "Kurze Bestellfristen",
-    "text1": "Die meisten Reparaturen werden innerhalb von 7 Tagen nach der Bestellung ausgeführt.",
+    "title1": "Leihwagen KOSTENLOS",
+    "text1": "Dauert die Reparatur länger? Kein Problem – bei uns erhalten Sie einen Leihwagen KOSTENLOS.",
     "title2": "Anständige und faire Behandlung",
-    "text2": "Sie jederzeit über den Fortgang der Arbeiten informiert werden",
-    "title3": "Eine gut gemachte Arbeit",
-    "text3": "Eine Garantie für Sicherheit und Komfort auf Ihren Reisen"
+    "text2": "Während der gesamten Zeit werden Sie über den Fortgang der ausgeführten Arbeiten informiert.",
+    "title3": "Qualitativ gute Arbeit",
+    "text3": "Garantie für Sicherheit und Komfort auf Ihren Reisen."
   },
   "nav": {
     "home": "Startseite",
@@ -83,13 +85,21 @@
     "title": "ALLES AN EINEM ORT.",
     "serviceCard": {
       "card1": "Reparatur von Fahrzeugen nach Hagelstürmen ohne Lackschäden",
+      "desc1": "Hat ein Hagelsturm Hunderte von Dellen auf Ihrer Karosserie hinterlassen? Wir sind auf das massenhafte Ausbeulen von Hagelschäden spezialisiert. Wir bringen Ihr Auto in einem Bruchteil der Zeit im Vergleich zur herkömmlichen Lackierung in den Originalzustand zurück – mit 100%iger Qualitätsgarantie und Werterhaltung.",
       "card2": "Lackschadenfreie Ausbeultechnik (PDR-Verfahren)",
+      "desc2": "Schnelle und schonende Entfernung von Parkdellen, Vandalismusschäden oder Schäden durch herabfallende Äste. Die PDR-Methode (Paintless Dent Repair) bewahrt Ihren Originallack, erfordert kein Spachteln und spart Zeit und Geld. Wir reparieren für Kunden aus Pilsen, Tachov, Marienbad und Umgebung.",
       "card3": "Schutzbesprühung von Hohlräumen und Chassis",
+      "desc3": "Verlängern Sie die Lebensdauer Ihres Autos und schützen Sie es vor Rost, Salz und Feuchtigkeit. Wir führen sorgfältige Korrosionsschutzbeschichtungen von Unterboden und Hohlräumen mit professionellen Materialien durch. Ideale Vorbereitung vor dem Winter oder für ältere Fahrzeuge.",
       "card4": "Schweißen und Karosseriereparaturen",
+      "desc4": "Leidet Ihr Fahrzeug unter Korrosion oder müssen Sie die Folgen eines kleineren Unfalls beheben? Wir führen präzise Schweißarbeiten an verrosteten Schwellern, Kotflügelkanten, Böden und tragenden Karosserieteilen durch. Wir legen Wert auf exakte Passgenauigkeit und maximale Schweißnahtfestigkeit für Ihre Sicherheit.",
       "card5": "Wartung und Reparatur von Klimaanlagen",
+      "desc5": "Verliert Ihr Auto an Kühlleistung oder riecht es unangenehm? Wir bieten einen kompletten Klimaanlagenservice – von der Kältemittelbefüllung über die Ozondesinfektion bis hin zur Lecksuche und zum Austausch beschädigter Teile. Atmen Sie in Ihrem Auto wieder saubere und kühle Luft.",
       "card6": "Pneuservice",
+      "desc6": "Wir bieten komplette Reifenserviceleistungen für PKW und Transporter. Wir übernehmen den Reifenwechsel, das präzise Auswuchten der Räder sowie Reparaturen von Reifenschäden. Wir bereiten Ihr Fahrzeug schnell, zuverlässig und ohne unnötige Wartezeiten auf die Sommer- und Wintersaison vor.",
       "card7": "Routinemäßige Fahrzeugwartung",
-      "card8": "Fahrzeugreinigung und -wäsche"
+      "desc7": "Wir gewährleisten einen kompletten regelmäßigen Service und die Wartung Ihres Fahrzeugs, damit Sie sicher und sorgenfrei unterwegs sind. Wir führen Motorölwechsel, Filterwechsel, Bremssystemprüfungen und -reparaturen, Fehlerdiagnosen sowie Standard-Serviceinspektionen durch.",
+      "card8": "Fahrzeugreinigung und -wäsche",
+      "desc8": "Wir geben Ihrem Auto Glanz und Sauberkeit zurück, damit es wieder wie neu aussieht. Wir bieten gründliche Handwäsche der Karosserie, Tiefenreinigung des Innenraums einschließlich Polsterreinigung, Ozondesinfektion sowie detaillierte Pflege von Kunststoff- und Lederteilen."
     }
   },
 

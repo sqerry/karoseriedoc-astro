@@ -1,26 +1,28 @@
 ---
 import Title from '../components/Title.astro'
-import { useTranslations, type Lang } from '../i18n';
+import { useTranslations, type Lang } from '../i18n'
 
 interface Props {
-    lang?: Lang;
+    lang?: Lang
 }
 
-const { lang = 'cs' } = Astro.props;
-const t = useTranslations(lang);
+const { lang = 'cs' } = Astro.props
+const t = useTranslations(lang)
 ---
 
 <section id="about-section" class="about-us-section">
     <div class="container">
         <div class="about-wrapper">
             <div class="about-us-image">
-                <img src="/images/DSC_5072.webp" alt="About Us" loading="lazy" width="500" height="600" />
-                <div class="stat-item image-stat">
-                    <span class="stat-number" data-to="2478" style="min-width: 112px">
-                        <span class="number">0</span>
-                        <span class="plus">+</span>
-                    </span>
-                    <span class="stat-label">{t('about.stat1')}</span>
+                <div class="image-wrapper">
+                    <img src="/images/DSC_5072.webp" alt="About Us" loading="lazy" width="500" height="600" />
+                    <div class="stat-item image-stat">
+                        <span class="stat-number" data-to="9">
+                            <span class="number">9</span>
+                            <span class="plus">+</span>
+                        </span>
+                        <span class="stat-label">{t('about.stat1')}</span>
+                    </div>
                 </div>
             </div>
             <div class="about-content">
@@ -32,12 +34,14 @@ const t = useTranslations(lang);
                     <p>{t('about.description2')}</p>
                     <p>{t('about.description3')}</p>
                     <p>{t('about.description4')}</p>
+                    <p>{t('about.description5')}</p>
+                    <p>{t('about.description6')}</p>
                 </div>
                 <div class="stats">
                     <div class="stat-item">
                         <div class="stat-content">
-                            <span class="stat-number" data-to="15365" style="min-width: 130px">
-                                <span class="number">0</span>
+                            <span class="stat-number" data-to="250">
+                                <span class="number">250</span>
                                 <span class="plus">+</span>
                             </span>
                             <span class="stat-label">{t('about.stat2')}</span>
@@ -45,8 +49,8 @@ const t = useTranslations(lang);
                     </div>
                     <div class="stat-item">
                         <div class="stat-content">
-                            <span class="stat-number" data-to="198" style="min-width: 83px">
-                                <span class="number">0</span>
+                            <span class="stat-number" data-to="600">
+                                <span class="number">600</span>
                                 <span class="plus">+</span>
                             </span>
                             <span class="stat-label">{t('about.stat3')}</span>
@@ -54,8 +58,8 @@ const t = useTranslations(lang);
                     </div>
                     <div class="stat-item">
                         <div class="stat-content">
-                            <span class="stat-number" data-to="142" style="min-width: 82px">
-                                <span class="number">0</span>
+                            <span class="stat-number" data-to="2000000">
+                                <span class="number">2 000 000</span>
                                 <span class="plus">+</span>
                             </span>
                             <span class="stat-label">{t('about.stat4')}</span>
@@ -98,6 +102,7 @@ const t = useTranslations(lang);
                         if (entry.isIntersecting) {
                             document.querySelectorAll('.stat-number').forEach((element) => {
                                 const endValue = parseInt(element.getAttribute('data-to'), 10)
+                                element.querySelector('.number').textContent = '0'
                                 animateNumber(element, 0, endValue, 3400)
                             })
                             observer.disconnect()
@@ -132,10 +137,13 @@ const t = useTranslations(lang);
 
         .about-us-image {
             width: 35%;
-            position: relative;
 
             @media (max-width: 991px) {
                 width: 100%;
+            }
+
+            .image-wrapper {
+                position: relative;
             }
 
             @media (max-width: 767px) {
@@ -191,7 +199,7 @@ const t = useTranslations(lang);
                 width: 100%;
             }
             .section-title {
-                margin-top: 4.8rem;
+                // margin-top: 0.4re,m
                 color: $clr-primary;
                 margin-bottom: 1.2rem;
                 @media (max-width: 767px) {
@@ -215,7 +223,7 @@ const t = useTranslations(lang);
             }
             .section-description {
                 margin-bottom: 3.2rem;
-                max-width: 600px;
+                max-width: 70rem;
                 p {
                     margin-bottom: 1.9rem;
                 }

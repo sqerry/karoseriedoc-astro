@@ -29,6 +29,7 @@ German pages are duplicated in `src/pages/de/` with `changeLanguage("de")` calls
 ### Content Collections
 
 Services are defined in `src/content/services/` as markdown files with frontmatter:
+
 - Czech services: root of `services/` directory (e.g., `pneuservis.md`)
 - German services: `services/de/` subdirectory
 
