@@ -53,7 +53,8 @@
     "consultation": "Konzultace zdarma!",
     "title": "Potřebujete poradit?",
     "description": "Napište mi na Email nebo Whatsapp s fotkou vašeho poškození a já se vám ozvu zpátky s cenovou nabídkou.",
-    "button": "Kontaktujte nás!"
+    "button": "Kontaktujte nás!",
+    "callUs": "Zavolejte nám"
   },
   "form": {
     "name": "Jméno",

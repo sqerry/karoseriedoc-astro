@@ -1,24 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PageHeader from './PageHeader.astro';
-import { useTranslations, type Lang, defaultLang } from '../i18n';
+import Layout from '../layouts/Layout.astro'
+import PageHeader from './PageHeader.astro'
+import { useTranslations, type Lang, defaultLang } from '../i18n'
 
 interface Props {
-    frontmatter: any;
-    Content: any;
-    lang?: Lang;
+    frontmatter: any
+    Content: any
+    lang?: Lang
 }
 
-const { frontmatter, Content, lang = 'cs' } = Astro.props;
-const t = useTranslations(lang);
+const { frontmatter, Content, lang = 'cs' } = Astro.props
+const t = useTranslations(lang)
 
 // Helper to build localized paths
 const localePath = (path: string) => {
     if (lang === defaultLang) {
-        return path;
+        return path
     }
-    return `/${lang}${path}`;
-};
+    return `/${lang}${path}`
+}
 ---
 
 <PageHeader
@@ -55,6 +55,7 @@ const localePath = (path: string) => {
                 <a class="btn btn-primary" href={localePath('/kontakt')} target="_blank" class="button"
                     >{t('contact.button')}</a
                 >
+                <span class="contact-phone">{t('contact.callUs')}: <a href="tel:+420777076174">+420 777 076 174</a></span>
             </div>
         </div>
     </div>
@@ -188,6 +189,10 @@ const localePath = (path: string) => {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                @media (min-width: 992px) {
+                    position: sticky;
+                    top: 121px;
+                }
             }
 
             h2 {
@@ -198,6 +203,23 @@ const localePath = (path: string) => {
 
             p {
                 margin-bottom: 1.9rem !important;
+            }
+
+            .contact-phone {
+                display: inline-block;
+                margin-top: 1.2rem;
+                color: #fff;
+                font-size: 1.25rem;
+                font-weight: 600;
+
+                a {
+                    color: $clr-primary;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
         .service-usp {
