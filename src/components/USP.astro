@@ -1,12 +1,12 @@
 ---
-import { useTranslations, type Lang } from '../i18n';
+import { useTranslations, type Lang } from '../i18n'
 
 interface Props {
-    lang?: Lang;
+    lang?: Lang
 }
 
-const { lang = 'cs' } = Astro.props;
-const t = useTranslations(lang);
+const { lang = 'cs' } = Astro.props
+const t = useTranslations(lang)
 ---
 
 <div class="usp container">
@@ -133,6 +133,6 @@ const t = useTranslations(lang);
     .usp-content p {
         margin: 0.5rem 0 0;
         font-size: 1.4rem;
-        max-width: 295px;
+        max-width: 33.5rem;
     }
 </style>
