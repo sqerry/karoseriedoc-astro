@@ -12,15 +12,15 @@ uspItems:
 lang: 'cs'
 ---
 
-# Profesionální oprava auta po kroupách bez nutnosti lakování (PDR)
+<h2 class="servis-description">Profesionální oprava auta po kroupách bez nutnosti lakování (PDR)</h2>
 
-## Zničily vám kroupy auto a karoserie je posetá stovkami důlků?
+### Zničily vám kroupy auto a karoserie je posetá stovkami důlků?
 
 Pohled na auto po letní bouřce s kroupami dokáže zkazit náladu každému řidiči. Kapota, střecha i sloupky často nesou desítky až stovky drobných promáčklin. Tradiční oprava by znamenala auto na dlouhé týdny odstavit, kytovat a kompletně přelakovat.
 
 V KaroserieDoc na to jdeme jinak. Jako certifikovaní specialisté na metodu PDR (Paintless Dent Repair) dokážeme vaši opravu po kroupách zvládnout nesrovnatelně rychleji a šetrněji. Působíme v Chodové Plané a pokrýváme široké okolí (Tachov, Mariánské Lázně, Cheb, Plzeň a Stříbro).
 
-## Proč je metoda PDR po kroupách absolutní nutností?
+### Proč je metoda PDR po kroupách absolutní nutností?
 
 Když máte na autě stovky důlků, výhody metody PDR oproti klasické lakovně se násobí:
 
@@ -32,7 +32,7 @@ Když máte na autě stovky důlků, výhody metody PDR oproti klasické lakovn�
 
 **Časová úspora:** Místo týdnů v běžné lakovně je oprava metodou PDR hotová zpravidla v řádu dnů.
 
-## Kompletní servis: Pojišťovna, okna i náhradní vůz
+### Kompletní servis: Pojišťovna, okna i náhradní vůz
 
 Rozumíme, že řešit auto po kroupách je stresující. Proto nabízíme službu na klíč, abyste se nemuseli starat absolutně o nic:
 
@@ -44,22 +44,17 @@ Rozumíme, že řešit auto po kroupách je stresující. Proto nabízíme služ
 
 **Mobilní servis:** Náš technik může po dohodě provést prvotní ohledání nebo i samotnou opravu přímo u vás doma či ve firmě.
 
-## Zvládneme i obří zakázky: Vlastní PDR skupina pro firemní klienty
+### Zvládneme i obří zakázky: Vlastní PDR skupina pro firemní klienty
 
 Zastihlo krupobití vaši firemní flotilu, autobazar nebo rovnou celé dealerství s desítkami nových vozů na dvoře? Žádný problém. V KaroserieDoc spravujeme vlastní rozsáhlou PDR skupinu techniků. Díky této kapacitě dokážeme obsloužit i ty největší klienty a plynule opravit i stovky poškozených aut v rekordním čase a ve špičkové kvalitě.
 
-## Jak probíhá oprava po kroupách u KaroserieDoc?
+### Jak probíhá oprava po kroupách u KaroserieDoc?
 
 1. **Detailní prohlídka a nacenění:** Vůz umístíme pod speciální PDR lampy, zjistíme přesný rozsah škod a případně rovnou zahájíme řešení s vaší pojišťovnou.
 2. **Návrh postupu a termín:** Dohodneme se na termínu opravy a předáme vám klíčky od náhradního vozu.
 3. **Mravenčí práce (Samotná oprava):** Pomocí speciálních ocelových pák a lepících systémů bod po bodu vyhladíme karoserii zpět do původního tvaru a vyměníme rozbitá skla či lišty.
 4. **Předání dokonalého vozu:** Vaše auto bude opět vypadat, jako by kroupy nikdy nepadaly.
 
-## Nečekejte na zhoršení stavu. Domluvte si prohlídku!
+### Nečekejte na zhoršení stavu. Domluvte si prohlídku!
 
 Zavolejte nám a nechte starosti s poškozeným autem (i s pojišťovnou) na nás.
-
-<div class="cta-buttons">
-  <a href="tel:+420777076174" class="btn btn-primary">Zavolejte nám: +420 777 076 174</a>
-  <a href="https://wa.me/420777076174" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Napište nám na WhatsApp</a>
-</div>

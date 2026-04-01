@@ -11,7 +11,7 @@ customClass: 'service-detail--pneuservis'
 lang: 'cs'
 ---
 
-# Popis služby
+<h2 class="servis-description">Popis služby</h2>
 
 <ul>
   <li><span>Vyvažování kol:</span> Precizní vyvažování kol pro hladkou a bezpečnou jízdu.</li>

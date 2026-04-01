@@ -5,7 +5,7 @@ headerImage: '/images/DSC_5238.webp'
 lang: 'de'
 ---
 
-# Beschreibung der Dienstleistung
+<h2 class="servis-description">Beschreibung der Dienstleistung</h2>
 
 Wir führen grundlegende Servicearbeiten ausdrücklich ohne lange Bestellzeiten durch.
 Wir bieten grundlegende Wartung und Service für alle Marken, ob es ist:

@@ -1,5 +1,5 @@
 ---
-title: 'Servis, plnění a opravy autoklimatizací | Tachov, Mariánské Lázně, Plzeň'
+title: 'Servis, plnění a opravy autoklimatizací | Tachov, Mariánské Lázně, Planá'
 description: 'Ztrácí vaše klimatizace výkon nebo zapáchá? Provádíme plnění chladiva, detekci úniků, dezinfekci ozonem i opravy kompresorů.'
 headerImage: '/images/DSC_5099.webp'
 uspItems:
@@ -12,15 +12,15 @@ uspItems:
 lang: 'cs'
 ---
 
-# Kompletní servis, plnění a opravy autoklimatizací
+<h2 class="servis-description">Kompletní servis, plnění a opravy autoklimatizací</h2>
 
-## Chladí vaše auto slabě, nebo se z něj line nepříjemný zápach?
+### Chladí vaše auto slabě, nebo se z něj line nepříjemný zápach?
 
 Správně fungující klimatizace není jen o komfortu v letních vedrech, ale i o bezpečnosti – pomáhá rychle odmlžit okna na podzim a v zimě. Pokud z průduchů necítíte ledový vzduch, nebo vás při zapnutí praští do nosu zatuchlina, je nejvyšší čas na odborný servis.
 
 V KaroserieDoc v Chodové Plané poskytujeme kompletní péči o autoklimatizace. Od běžného doplnění chladiva až po složité opravy netěsností a výměny kompresorů. Běžně obsluhujeme zákazníky nejen z Chodové Plané, ale pravidelně k nám jezdí řidiči z celého okolí – z Tachova, Mariánských Lázní, Plané, ale i ze Stříbra nebo Boru. Víme, že za kvalitním servisem klimatizace (včetně předělání veteránů ze starého chladiva R12 na R-134a) se vyplatí těch pár minut přijet.
 
-## Co všechno pro vaši klimatizaci uděláme?
+### Co všechno pro vaši klimatizaci uděláme?
 
 Nejsme jen "plniči", kteří nasadí hadice a zmáčknou tlačítko. Řešíme problémy komplexně:
 
@@ -32,7 +32,7 @@ Nejsme jen "plniči", kteří nasadí hadice a zmáčknou tlačítko. Řešíme 
 
 **Opravy a výměny kompresorů:** Pokud je srdce vaší klimatizace poškozené, zajistíme jeho opravu nebo výměnu za nový kus, včetně nezbytného proplachu celého systému.
 
-## Proč je pravidelný servis klimatizace tak důležitý?
+### Proč je pravidelný servis klimatizace tak důležitý?
 
 I u zcela nového a těsného auta přirozeně unikne zhruba 5–10 % chladiva ročně.
 
@@ -42,11 +42,6 @@ I u zcela nového a těsného auta přirozeně unikne zhruba 5–10 % chladiva r
 
 **Zvýšená spotřeba:** Pokud je v systému málo chladiva, kompresor musí běžet mnohem častěji, což zvyšuje spotřebu paliva.
 
-## Zastavte se na kontrolu klimatizace
+### Zastavte se na kontrolu klimatizace
 
 Nečekejte, až uhodí třicetistupňová vedra a všechny servisy budou mít plno. Servis klimatizace u nás zabere většinou jen chvilku a můžete na něj počkat.
-
-<div class="cta-buttons">
-  <a href="tel:+420777076174" class="btn btn-primary">Zavolejte nám: +420 777 076 174</a>
-  <a href="https://wa.me/420777076174" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Napište nám na WhatsApp</a>
-</div>

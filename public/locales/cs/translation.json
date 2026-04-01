@@ -54,7 +54,8 @@
     "title": "Potřebujete poradit?",
     "description": "Napište mi na Email nebo Whatsapp s fotkou vašeho poškození a já se vám ozvu zpátky s cenovou nabídkou.",
     "button": "Kontaktujte nás!",
-    "callUs": "Zavolejte nám"
+    "callUs": "Zavolejte nám",
+    "whatsapp": "Napište nám na WhatsApp"
   },
   "form": {
     "name": "Jméno",

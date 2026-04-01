@@ -11,7 +11,7 @@ uspItems:
 lang: 'de'
 ---
 
-# Servicebeschreibung
+<h2 class="servis-description">Servicebeschreibung</h2>
 
 Der beste Schutz für Ihr Fahrgestell ist Vorbeugung. Lassen Sie nicht zu, dass gefährlicher Rost Ihr Auto ruiniert. Am besten ist es, Rostproblemen vorzubeugen. Dafür gibt es die Fahrwerksspritzung oder Rostschutzbehandlung. Jahrelange Erfahrung und die tägliche Arbeit mit Fahrzeugen aller Marken ermöglichen es mir, kritische Bereiche aller Karosserieteile effektiv zu behandeln.
 

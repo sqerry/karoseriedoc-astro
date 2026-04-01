@@ -13,7 +13,7 @@ lang: 'de'
 #   - text: 'Bezplatná kalkulace ceny'
 ---
 
-# Beschreibung der Dienstleistung
+<h2 class="servis-description">Beschreibung der Dienstleistung</h2>
 
 Lassen Sie Ihr Auto von uns gründlich reinigen.
 Wir sorgen dafür, dass Ihr Auto von außen und innen sauber glänzt. Wir kümmern uns um jedes Detail, damit Ihr Auto wie neu aussieht.

@@ -10,7 +10,7 @@ uspItems:
   - text: 'umíme zařídit následné lakování dílů pro maximální ochranu vašeho vozu.'
 ---
 
-# Popis služby
+<h2 class="servis-description">Popis služby</h2>
 
 Zrezlé prahy nebo blatníky. Nepříjemná záležitost, kvůli které neprojde vaše auto přes STK. V moji dílně provádíme veškeré karosářské opravy, které jsou potřebně pro další bezproblémový provoz vašeho vozu. Práce provádím od A do Z. To znamená od vyřezání napadeného plechu až po nalakování v naší partnerské lakovně.
 

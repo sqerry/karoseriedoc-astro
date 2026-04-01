@@ -11,7 +11,7 @@ uspItems:
 lang: 'de'
 ---
 
-# Servicebeschreibung
+<h2 class="servis-description">Servicebeschreibung</h2>
 
 Verrostete Schweller oder Kotflügel. Ein unangenehmes Problem, das dazu führen kann, dass Ihr Auto die TÜV-Prüfung nicht besteht. In meiner Werkstatt führen wir alle Karosseriereparaturen durch, die für den weiteren reibungslosen Betrieb Ihres Autos notwendig sind. Ich erledige die Arbeit von A bis Z. Das heißt, vom Ausschneiden der angegriffenen Bleche bis zur Lackierung in unserer Partnerlackiererei.
 

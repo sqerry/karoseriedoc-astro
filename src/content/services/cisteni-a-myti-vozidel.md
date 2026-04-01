@@ -13,7 +13,7 @@ customClass: 'service-detail--cisteni-a-myti-vozidel'
 lang: 'cs'
 ---
 
-# Popis služby
+<h2 class="servis-description">Popis služby</h2>
 
 Nechte si u nás pečlivě vyčistit svůj vůz.
 Zajistíme, aby váš automobil zářil čistotou jak zvenku, tak uvnitř. Pečujeme o každý detail, aby váš vůz vypadal jako nový.

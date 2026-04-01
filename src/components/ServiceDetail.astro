@@ -32,6 +32,10 @@ const localePath = (path: string) => {
         <div class="service-content">
             <div class="service-content-inner markdown-content">
                 <Content />
+                <div class="cta-buttons">
+                    <a href="tel:+420777076174" class="btn btn-primary">{t('contact.callUs')}: +420 777 076 174</a>
+                    <a href="https://wa.me/420777076174" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">{t('contact.whatsapp')}</a>
+                </div>
             </div>
             {
                 frontmatter.uspItems && frontmatter.uspItems.length > 0 && (
@@ -88,10 +92,10 @@ const localePath = (path: string) => {
                 padding: 2rem;
                 background-color: #1d2226;
 
-                :global(h1) {
+                :global(h2.servis-description) {
                     color: $clr-primary !important;
                     margin-bottom: 1.9rem !important;
-                    font-size: 2.1rem;
+                    font-size: 2.4rem;
                 }
 
                 :global(p) {
@@ -104,7 +108,7 @@ const localePath = (path: string) => {
                 :global(li span) {
                     font-weight: 700;
                 }
-                :global(h2) {
+                :global(h3) {
                     color: $clr-primary;
                     font-size: 1.6rem;
                     margin-top: 2.5rem;

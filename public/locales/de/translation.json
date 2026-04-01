@@ -54,7 +54,8 @@
     "title": "Brauchen Sie einen Rat?",
     "description": "Schicken Sie mir eine E-Mail oder Whatsapp mit einem Foto Ihres Schadens und ich werde Ihnen einen Kostenvoranschlag unterbreiten.",
     "button": "Kontaktieren Sie uns!",
-    "callUs": "Rufen Sie uns an"
+    "callUs": "Rufen Sie uns an",
+    "whatsapp": "Schreiben Sie uns auf WhatsApp"
   },
   "form": {
     "name": "Name",

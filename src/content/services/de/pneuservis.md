@@ -6,7 +6,7 @@ customClass: 'service-detail--pneuservis'
 lang: 'de'
 ---
 
-# Beschreibung des Dienstes
+<h2 class="servis-description">Beschreibung des Dienstes</h2>
 
 <ul>
   <li><span>Auswuchten von Rädern:</span> PPräzises Auswuchten der Räder für eine ruhige und sichere Fahrt.</li>

@@ -5,7 +5,7 @@ headerImage: '/images/DSC_5238.webp'
 lang: 'cs'
 ---
 
-# Popis služby
+<h2 class="servis-description">Popis služby</h2>
 
 Základní servisní úkony provádíme expresně bez dlouhých objednacích lhůt.
 Provádíme základní údržbu a servis všech značek, ať už se jedná o:

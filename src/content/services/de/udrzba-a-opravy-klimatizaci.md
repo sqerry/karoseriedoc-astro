@@ -13,7 +13,7 @@ uspItems:
 lang: 'de'
 ---
 
-# Warum ist eine regelmäßige Wartung der Klimaanlage wichtig?
+<h2 class="servis-description">Warum ist eine regelmäßige Wartung der Klimaanlage wichtig?</h2>
 
 Ihr Auto verdient nur das Beste, und dazu gehört auch seine Klimaanlage. Eine regelmäßige Wartung und Pflege der Klimaanlage sorgt nicht nur für eine angenehme Temperatur in Ihrem Auto, sondern trägt auch zu einer besseren Luftqualität bei und verringert das Risiko unangenehmer Gerüche. Bei regelmäßiger Wartung können Sie kostspielige Reparaturen vermeiden und die Lebensdauer des gesamten Systems verlängern.
 
