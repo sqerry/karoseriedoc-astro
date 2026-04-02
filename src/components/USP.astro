@@ -127,12 +127,20 @@ const t = useTranslations(lang)
     .usp-content h3 {
         color: $clr-primary;
         margin: 0;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+        }
     }
 
     .usp-content p {
         margin: 0.5rem 0 0;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         max-width: 33.5rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.2rem;
+        }
     }
 </style>

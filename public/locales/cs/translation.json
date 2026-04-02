@@ -15,13 +15,11 @@
   },
   "about": {
     "title": "O nás a naší práci v KaroserieDoc",
-    "subtitle": "Profesionální přístup s důrazem na kvalitu",
-    "description": "Vážení zákazníci, vítejte u KaroserieDoc. Specializuji se především na opravy promáčklin bez lakování metodou PDR a servisem klimatizací, ale nabízím i komplexní karosářské práce, ochranné nástřiky podvozků a další servisní služby v Chodové Plané a okolí.",
-    "description2": "Protože je metoda PDR vysoce odborná a vyžaduje maximální přesnost, prošel jsem profesionálním výcvikem na opravy PDR u specialistů z firmy PROPDR, abych vašemu vozu mohl zaručit ten nejlepší výsledek bez poškození laku.",
-    "description3": "Automobilový trh je dynamický a technologie jdou neustále kupředu. Proto nezůstáváme pozadu a pravidelně se účastníme kurzů a vzdělávacích akcí přímo od automobilek či specializovaných škol. V posledním roce se můžeme pochlubit získáním oprávnění Vysokonapěťový technik. Díky tomu můžeme zcela bezpečně opravovat i vaše elektrovozidla a hybridy, které se na našich silnicích objevují stále častěji.",
-    "description4": "Komunikace se zákazníkem je pro mě radostí, a proto u mě nečekejte otrávené hovory, kde byste se cítili, jako byste překáželi nebo dokonce někoho obtěžovali. Každému zákazníkovi se věnuji, jak jen mi to mé časové možnosti dovolí.",
-    "description5": "U každé opravy poskytujeme pečlivou fotodokumentaci a zákazníka vždy kompletně informujeme o provedených úkonech.",
-    "description6": "Auta máme rádi, naše práce nás opravdu baví a ke každému vozu přistupujeme s maximální pečlivostí, ať už jde o drobný parkovací důlek nebo rozsáhlejší opravu po kroupách. Vyzkoušejte něco nového a nechte se mile překvapit. Bude mi ctí postarat se o vaše auto.",
+    "subtitle": "Profesionální přístup, osobní jednání a špičková kvalita oprav",
+    "description": "Vážení zákazníci, vítejte v KaroserieDoc. Naše moderní dílna sídlí v Chodové Plané, kde nabízíme komplexní karosářské práce, ochranné nástřiky podvozků i servis klimatizací. Mojí absolutní specializací jsou ale opravy promáčklin bez lakování metodou PDR. S touto službou navíc funguji i jako mobilní PDR technik – pro zákazníky z Plzně a širokého okolí běžně jezdím opravovat parkovací důlky přímo k nim domů nebo do firmy. Šetřím tak váš čas.",
+    "description2": "Protože metoda PDR vyžaduje naprostou preciznost a cit pro detail, prošel jsem náročným profesionálním výcvikem u specialistů z firmy PROPDR. Automobilový trh jde ale neustále kupředu a my nezůstáváme pozadu. Pravidelně se účastníme kurzů přímo od automobilek. Můžeme se pochlubit i získáním certifikace Vysokonapěťový technik, díky které u nás zcela bezpečně a odborně opravíme také vaše elektrovozy a hybridy.",
+    "description3": "Zakládám si na lidském a poctivém přístupu. Nečekejte u mě žádné otrávené hovory, kde byste měli pocit, že obtěžujete. Komunikace se zákazníkem je pro mě radostí a každému se věnuji na maximum. Samozřejmostí je u mě pečlivá fotodokumentace z průběhu opravy, abyste vždy přesně věděli, co a jak se na vašem autě dělalo.",
+    "description4": "Auta máme zkrátka rádi a naše práce nás baví. Ke každému vozu přistupujeme s maximální pečlivostí, ať už jde o vytažení drobného důlku u vás v Plzni, nebo rozsáhlou záchranu laku po kroupách u nás na dílně. Vyzkoušejte něco nového a nechte se mile překvapit. Bude mi ctí postarat se o vaše auto.",
     "stat1": "Let zkušeností",
     "stat2": "Opravených aut po kroupách",
     "stat3": "Spokojených zákazníků",
@@ -29,11 +27,11 @@
   },
   "usp": {
     "title1": "Půjčení náhradního vozu ZDARMA",
-    "text1": "Bude oprava trvat déle? To nevadí, u nás máte náhradní vůz ZDARMA",
-    "title2": "Oprava i u vás doma!",
-    "text2": "Šetříme vám čas a peníze. Nikam jezdit nemusíte, my přijedeme za vámi.",
+    "text1": "Nechcete být bez auta? Při složitějších opravách nebo nástřicích podvozků vám zdarma zapůjčíme náhradní vůz. Zůstaňte neustále mobilní.",
+    "title2": "Mobilní PDR servis: Plzeň a okolí",
+    "text2": "Nemáte čas? Drobné parkovací důlky opravíme metodou PDR přímo u vás doma nebo ve firmě. Běžně takto obsluhujeme celou Plzeň a široké okolí.",
     "title3": "Specialisté v oboru",
-    "text3": "Pravidelně absolvujeme různá školení a kurzy, abychom nezůstali pozadu a vy dostali jen to nejlepší."
+    "text3": "Vlastníme certifikaci od PROPDR i oprávnění pro bezpečnou práci s elektrovozy a hybridy. Vaše auto je u nás v těch naprosto nejlepších rukách."
   },
   "nav": {
     "home": "Úvodní stránka",
@@ -81,27 +79,28 @@
     }
   },
   "services": {
-    "servicesPageTitle": "Služby",
+    "servicesPageTitle": "Naše služby: PDR opravy, údržba a kompletní servis vozidel",
     "subtitle": "Co nabízíme",
     "moreInfo": "Více informací",
     "title": "VŠE NA JEDNOM MÍSTĚ.",
+    "title2": "Špičková péče o vaše auto na jednom místě pro Tachovsko, Chebsko a široké okolí",
     "serviceCard": {
       "card1": "Opravy vozidel po kroupách bez poškození laku",
-      "desc1": "Krupobití zanechalo na vaší karoserii stovky důlků? Specializujeme se na hromadné vytahování promáčklin po kroupách. Vaše auto vrátíme do původního stavu za zlomek času oproti běžnému lakování, a to se 100% garancí kvality a udržení hodnoty vozu.",
+      "desc1": "Krupobití zanechalo na vaší karoserii stovky důlků? Specializujeme se na hromadné vytahování promáčklin metodou PDR bez lakování. Kompletně za vás vyřídíme pojišťovnu na plnou moc a po dobu opravy vám ZDARMA půjčíme náhradní vůz.",
       "card2": "Opravy deformací bez lakování metodou PDR",
-      "desc2": "Rychlé a šetrné odstranění důlků z parkovišť, poškození od vandalismu nebo pádu větví. Metoda PDR (Paintless Dent Repair) zachová váš originální lak, nevyžaduje kytování a šetří váš čas i peníze. Opravy provádíme pro zákazníky z Plzně, Tachovska, Mariánských Lázní a okolí.",
+      "desc2": "Rychlé a šetrné odstranění důlků z parkovišť nebo od padajících větví na počkání. Metoda PDR zachová originální lak a hodnotu vozu. Nabízíme náhradní vůz zdarma nebo jako mobilní technici přijedeme opravit auto přímo k vám domů.",
       "card3": "Ochranné nástřiky dutin a podvozků",
-      "desc3": "Prodlužte životnost svého auta a chraňte ho před rzí, solí a vlhkostí. Provádíme pečlivé antikorozní nástřiky podvozků a dutin profesionálními materiály. Ideální příprava před zimou nebo pro starší vozy, kterým chcete vrátit odolnost.",
+      "desc3": "Prodlužte životnost svého auta a chraňte ho před rzí. Provádíme pečlivé mytí, odstranění rzi a antikorozní nástřiky podvozků i dutin prémiovými švédskými materiály DINITROL. Dostanete fotodokumentaci z průběhu práce a náhradní vůz ZDARMA.",
       "card4": "Vyvařování a karosářské opravy",
-      "desc4": "Trápí váš vůz koroze nebo potřebujete opravit následky drobné havárie? Zajišťujeme precizní vyvařování zrezivělých prahů, lemů blatníků, podlah i nosných částí karoserie. Klademe důraz na přesné slícování dílů a maximální pevnost svárů pro vaši bezpečnost na silnicích.",
+      "desc4": "Trápí váš vůz koroze a neprošel STK? Zajišťujeme precizní vyvařování zrezivělých prahů, podlah a lemů. Sváry poctivě cínujeme pro maximální životnost, zajistíme finální lakování v partnerské lakovně a půjčíme vám náhradní auto.",
       "card5": "Údržba a opravy klimatizací",
-      "desc5": "Ztrácí vaše auto výkon při chlazení nebo se z něj line nepříjemný zápach? Provádíme kompletní servis autoklimatizací – od plnění chladivem přes dezinfekci ozonem až po detekci úniků a výměnu poškozených dílů. Dýchejte ve svém voze opět čistý a chladný vzduch.",
+      "desc5": "Ztrácí auto výkon při chlazení nebo zapáchá? Provádíme kompletní servis – plnění novým i starým chladivem (včetně předělání veteránů), detekci úniků, opravy kompresorů a dezinfekci ozonem. Zastavte se na rychlou kontrolu bez dlouhého čekání.",
       "card6": "Pneuservis",
-      "desc6": "Nabízíme kompletní pneuservisní služby pro osobní a dodávková vozidla. Zajišťujeme přezouvání pneumatik, přesné vyvažování kol i opravy defektů. Připravíme váš vůz na letní i zimní sezónu rychle, spolehlivě a bez zbytečného čekání.",
+      "desc6": "Kompletní a rychlý pneuservis pro osobní i dodávková auta. Zajišťujeme šetrné přezouvání, precizní vyvažování kol i opravy defektů. Připravíme váš vůz na sezónu profesionálně a bez zbytečného čekání ve zdlouhavých frontách.",
       "card7": "Běžná údržba vozidel",
-      "desc7": "Zajišťujeme kompletní pravidelný servis a údržbu vašeho vozu, abyste na silnici jezdili bezpečně a bez starostí. Provádíme výměny motorových olejů a filtrů, kontrolu a opravy brzdových systémů, diagnostiku závad i standardní servisní prohlídky. Postaráme se o auto rychle a kvalitně přímo v Chodové Plané.",
+      "desc7": "Nenechávejte základní servis na poslední chvíli. Provádíme výměny olejů, filtrů, brzd i rozvodů a opravy podvozků. Základní servisní úkony provádíme pro zákazníky z celého okolí expresně, kvalitně a bez dlouhých objednacích lhůt.",
       "card8": "Čištění a mytí vozidel",
-      "desc8": "Navrátíme vašemu autu lesk a čistotu, aby vypadalo opět jako nové. Nabízíme důkladné ruční mytí karoserie, hloubkové čištění interiérů včetně tepování sedaček, dezinfekci ozonem i detailní ošetření plastových a kožených částí vozu."
+      "desc8": "Vraťte svému autu vůni a lesk. Nabízíme šetrné ruční mytí karoserie, hloubkové tepování interiérů i ošetření plastů. Ideální péče pro váš dobrý pocit ze zdravého prostředí, nebo jako dokonalá příprava vozu před prodejem za vyšší cenu."
     }
   },
 

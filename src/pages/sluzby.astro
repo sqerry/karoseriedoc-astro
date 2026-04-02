@@ -1,22 +1,22 @@
 ---
-import { useTranslations } from "../i18n/utils";
-import Layout from "../layouts/Layout.astro";
-import PageHeader from "../components/PageHeader.astro";
-import Title from "../components/Title.astro";
-import Services from "../components/Services.astro";
+import { useTranslations } from '../i18n/utils'
+import Layout from '../layouts/Layout.astro'
+import PageHeader from '../components/PageHeader.astro'
+import Title from '../components/Title.astro'
+import Services from '../components/Services.astro'
 
-const lang = 'cs';
-const t = useTranslations(lang);
+const lang = 'cs'
+const t = useTranslations(lang)
 ---
 
 <Layout
-    title="Naše služby - Autokarosárna KaroserieDoc | Chodová Planá"
-    description="Kompletní nabídka služeb autokarosárny KaroserieDoc: opravy promáčklin PDR, opravy po kroupách, ochranné nástřiky, karosářské práce, klimatizace, pneuservis. Vše na jednom místě!"
+    title="Kompletní autoslužby, PDR a karosárna | Tachov, Mar. Lázně, Cheb"
+    description="Od šetrného odstranění důlků PDR a oprav po kroupách až po pneuservis, klimatizace a antikorozní nástřiky podvozku. Vaše auto v těch nejlepších rukách."
     image="/images/DSC_5264.webp">
     <PageHeader pageName={t('services.servicesPageTitle')} imageSrc="/images/DSC_5264.webp" />
     <main>
         <section class="services-section">
-            <Title subtitle={t('services.subtitle')} title={t('services.title')} position="center" />
+            <Title subtitle={t('services.subtitle')} title={t('services.title2')} position="center" />
             <div class="container">
                 <Services lang={lang} />
             </div>
@@ -30,6 +30,13 @@ const t = useTranslations(lang);
 
         @media (max-width: 767px) {
             padding-top: 2rem;
+        }
+
+        :global(.title-component__title) {
+            max-width: 100rem;
+            margin-left: auto;
+            margin-right: auto;
+            letter-spacing: 1.1px;
         }
     }
 </style>

@@ -1,6 +1,6 @@
 export const slidesContentCs = [
     {
-        title: 'Opravy promáčklin bez lakování metodou PDR',
+        title: 'Mobilní PDR servis a opravy promáčklin (Plzeň, Tachov a okolí)',
         subtitle: 'Vítejte v KaroserieDoc',
         features: [
             'technologie PDR',
@@ -17,7 +17,7 @@ export const slidesContentCs = [
         customClass: 'slide-content--deformace',
     },
     {
-        title: 'Opravy vozidel po kroupách bez poškození laku​',
+        title: 'Opravy po kroupách bez lakování (Kompletně vyřídíme pojišťovnu)',
         subtitle: 'Vítejte v KaroserieDoc',
         features: [
             'technologie PDR',
@@ -33,7 +33,7 @@ export const slidesContentCs = [
         imageMobile: '/images/po-kroupech-small.webp',
     },
     {
-        title: 'Ochranné nástřiky dutin a podvozků',
+        title: 'Ochranné nástřiky podvozků a dutin (Prémiová ochrana DINITROL)',
         subtitle: 'Vítejte v KaroserieDoc',
         features: [
             'Ochrání podvozek před působením posypových solí, vlhkosti, mrazu a prudkých výkyvů teplot.',
@@ -48,7 +48,7 @@ export const slidesContentCs = [
     },
 
     {
-        title: 'Vyvařování a karosářské opravy',
+        title: 'Precizní vyvařování karoserií a spolehlivá příprava na STK',
         subtitle: 'Vítejte v KaroserieDoc',
         features: [
             'Rádí vám poradíme jakým způsobem poškození opravit',

@@ -21,10 +21,7 @@ const slidesContent = getSlideContent(lang)
                     <div class={`swiper-slide ${slide.customClass ? slide.customClass : ''}`}>
                         <picture class="slide-image-wrapper">
                             {/* Mobile image */}
-                            <source
-                                media="(max-width: 767px)"
-                                srcset={slide.imageMobile || slide.image}
-                            />
+                            <source media="(max-width: 767px)" srcset={slide.imageMobile || slide.image} />
                             {/* Desktop image */}
                             <img
                                 src={slide.image}
@@ -176,7 +173,7 @@ const slidesContent = getSlideContent(lang)
                 }
                 .hero-title {
                     font-size: 5rem;
-                    max-width: 52rem;
+                    max-width: 60rem;
                     line-height: 1.2;
                     margin-bottom: 2.4rem;
 

@@ -15,13 +15,11 @@
   },
   "about": {
     "title": "Über uns und unsere Arbeit bei KaroserieDoc",
-    "subtitle": "Professioneller Ansatz mit Schwerpunkt auf Qualität",
-    "description": "Sehr geehrte Kunden, willkommen bei KaroserieDoc. Ich spezialisiere mich vor allem auf die Reparatur von Dellen ohne Lackierung mit der PDR-Methode und den Klimaanlagenservice, biete aber auch umfassende Karosseriearbeiten, Unterbodenschutz-Beschichtungen und weitere Serviceleistungen in Chodová Planá und Umgebung an.",
-    "description2": "Da die PDR-Methode hochspezialisiert ist und maximale Präzision erfordert, habe ich eine professionelle Ausbildung in PDR-Reparaturen bei den Spezialisten der Firma PROPDR absolviert, um Ihrem Fahrzeug das bestmögliche Ergebnis ohne Lackschäden garantieren zu können.",
-    "description3": "Der Automobilmarkt ist dynamisch und die Technologien schreiten stetig voran. Deshalb bleiben wir nicht zurück und nehmen regelmäßig an Kursen und Schulungen direkt von Automobilherstellern oder spezialisierten Schulen teil. Im letzten Jahr können wir stolz auf den Erwerb der Qualifikation als Hochvolt-Techniker sein. Dadurch können wir auch Ihre Elektrofahrzeuge und Hybride, die auf unseren Straßen immer häufiger anzutreffen sind, völlig sicher reparieren.",
-    "description4": "Die Kommunikation mit Kunden ist mir ein Vergnügen. Erwarten Sie also keine genervten Anrufe, bei denen Sie das Gefühl haben, dass Sie im Weg sind oder gar jemanden belästigen. Ich kümmere mich um jeden Kunden so viel, wie es meine Zeit erlaubt.",
-    "description5": "Jede Reparatur wird mit einer sorgfältigen Fotodokumentation versehen, und der Kunde wird stets umfassend über die durchgeführten Arbeiten informiert.",
-    "description6": "Wir lieben Autos, unsere Arbeit macht uns wirklich Spaß und wir gehen jedes Fahrzeug mit größter Sorgfalt an, ob es sich um eine kleine Parkdelle oder eine umfangreichere Hagelreparatur handelt. Probieren Sie etwas Neues und lassen Sie sich angenehm überraschen. Es wird mir eine Ehre sein, mich um Ihr Auto zu kümmern.",
+    "subtitle": "Professioneller Ansatz, persönliche Betreuung und erstklassige Reparaturqualität",
+    "description": "Sehr geehrte Kunden, willkommen bei KaroserieDoc. Unsere moderne Werkstatt befindet sich in Chodová Planá, wo wir umfassende Karosseriearbeiten, Unterbodenschutz-Beschichtungen und Klimaanlagenservice anbieten. Meine absolute Spezialisierung sind jedoch Dellenreparaturen ohne Lackierung mit der PDR-Methode. Mit diesem Service bin ich zusätzlich als mobiler PDR-Techniker unterwegs – für Kunden aus Pilsen und der weiten Umgebung fahre ich regelmäßig Parkdellen direkt bei ihnen zu Hause oder in der Firma reparieren. So spare ich Ihnen Zeit.",
+    "description2": "Da die PDR-Methode absolute Präzision und Fingerspitzengefühl erfordert, habe ich ein anspruchsvolles professionelles Training bei den Spezialisten der Firma PROPDR absolviert. Der Automobilmarkt geht aber ständig voran und wir bleiben nicht zurück. Regelmäßig nehmen wir an Kursen direkt von Automobilherstellern teil. Wir können auch stolz auf die Zertifizierung als Hochvolt-Techniker sein, dank der wir bei uns auch Ihre Elektrofahrzeuge und Hybride völlig sicher und fachgerecht reparieren.",
+    "description3": "Ich lege Wert auf einen menschlichen und ehrlichen Umgang. Erwarten Sie bei mir keine genervten Anrufe, bei denen Sie das Gefühl hätten zu stören. Die Kommunikation mit dem Kunden ist mir eine Freude und jedem widme ich mich voll und ganz. Selbstverständlich ist bei mir eine sorgfältige Fotodokumentation des Reparaturverlaufs, damit Sie immer genau wissen, was und wie an Ihrem Auto gemacht wurde.",
+    "description4": "Wir lieben Autos einfach und unsere Arbeit macht uns Spaß. An jedes Fahrzeug gehen wir mit maximaler Sorgfalt heran, ob es sich um das Herausziehen einer kleinen Delle bei Ihnen in Pilsen oder eine umfangreiche Lackrettung nach Hagel bei uns in der Werkstatt handelt. Probieren Sie etwas Neues und lassen Sie sich angenehm überraschen. Es wird mir eine Ehre sein, mich um Ihr Auto zu kümmern.",
     "stat1": "Jahre Erfahrung",
     "stat2": "Reparierte Autos nach Hagel",
     "stat3": "Zufriedene Kunden",
@@ -29,11 +27,11 @@
   },
   "usp": {
     "title1": "Leihwagen KOSTENLOS",
-    "text1": "Dauert die Reparatur länger? Kein Problem – bei uns erhalten Sie einen Leihwagen KOSTENLOS.",
-    "title2": "Reparatur auch bei Ihnen zu Hause!",
-    "text2": "Wir sparen Ihnen Zeit und Geld. Sie müssen nirgendwo hinfahren, wir kommen zu Ihnen.",
+    "text1": "Wollen Sie nicht ohne Auto sein? Bei aufwändigeren Reparaturen oder Unterbodenbeschichtungen leihen wir Ihnen kostenlos ein Ersatzfahrzeug. Bleiben Sie jederzeit mobil.",
+    "title2": "Mobiler PDR-Service: Pilsen und Umgebung",
+    "text2": "Keine Zeit? Kleine Parkdellen reparieren wir mit der PDR-Methode direkt bei Ihnen zu Hause oder in der Firma. Wir bedienen so routinemäßig ganz Pilsen und die weite Umgebung.",
     "title3": "Spezialisten in der Branche",
-    "text3": "Wir absolvieren regelmäßig verschiedene Schulungen und Kurse, damit wir nicht zurückbleiben und Sie nur das Beste bekommen."
+    "text3": "Wir besitzen die Zertifizierung von PROPDR sowie die Berechtigung für sicheres Arbeiten an Elektrofahrzeugen und Hybriden. Ihr Auto ist bei uns in den allerbesten Händen."
   },
   "nav": {
     "home": "Startseite",
@@ -81,27 +79,28 @@
     }
   },
   "services": {
-    "servicesPageTitle": "Dienstleistungen",
+    "servicesPageTitle": "Unsere Leistungen: PDR-Reparaturen, Wartung und Komplettservice",
     "subtitle": "Was wir anbieten",
     "moreInfo": "Weitere Informationen",
     "title": "ALLES AN EINEM ORT.",
+    "title2": "Erstklassige Autopflege an einem Ort für die Region Tachov, Cheb und weite Umgebung",
     "serviceCard": {
       "card1": "Reparatur von Fahrzeugen nach Hagelstürmen ohne Lackschäden",
-      "desc1": "Hat ein Hagelsturm Hunderte von Dellen auf Ihrer Karosserie hinterlassen? Wir sind auf das massenhafte Ausbeulen von Hagelschäden spezialisiert. Wir bringen Ihr Auto in einem Bruchteil der Zeit im Vergleich zur herkömmlichen Lackierung in den Originalzustand zurück – mit 100%iger Qualitätsgarantie und Werterhaltung.",
+      "desc1": "Hat Hagel Hunderte von Dellen auf Ihrer Karosserie hinterlassen? Wir sind auf massenhaftes Ausbeulen mit der PDR-Methode ohne Lackierung spezialisiert. Wir erledigen die Versicherung komplett mit Vollmacht und leihen Ihnen KOSTENLOS ein Ersatzfahrzeug während der Reparatur.",
       "card2": "Lackschadenfreie Ausbeultechnik (PDR-Verfahren)",
-      "desc2": "Schnelle und schonende Entfernung von Parkdellen, Vandalismusschäden oder Schäden durch herabfallende Äste. Die PDR-Methode (Paintless Dent Repair) bewahrt Ihren Originallack, erfordert kein Spachteln und spart Zeit und Geld. Wir reparieren für Kunden aus Pilsen, Tachov, Marienbad und Umgebung.",
+      "desc2": "Schnelle und schonende Entfernung von Parkdellen oder Schäden durch herabfallende Äste – auf Wartezeit. Die PDR-Methode bewahrt Originallack und Fahrzeugwert. Wir bieten ein Ersatzfahrzeug kostenlos oder kommen als mobile Techniker direkt zu Ihnen nach Hause.",
       "card3": "Schutzbesprühung von Hohlräumen und Chassis",
-      "desc3": "Verlängern Sie die Lebensdauer Ihres Autos und schützen Sie es vor Rost, Salz und Feuchtigkeit. Wir führen sorgfältige Korrosionsschutzbeschichtungen von Unterboden und Hohlräumen mit professionellen Materialien durch. Ideale Vorbereitung vor dem Winter oder für ältere Fahrzeuge.",
+      "desc3": "Verlängern Sie die Lebensdauer Ihres Autos und schützen Sie es vor Rost. Wir führen sorgfältiges Waschen, Rostentfernung und Korrosionsschutzbeschichtungen von Unterboden und Hohlräumen mit schwedischen Premium-Materialien DINITROL durch. Sie erhalten eine Fotodokumentation und ein Ersatzfahrzeug KOSTENLOS.",
       "card4": "Schweißen und Karosseriereparaturen",
-      "desc4": "Leidet Ihr Fahrzeug unter Korrosion oder müssen Sie die Folgen eines kleineren Unfalls beheben? Wir führen präzise Schweißarbeiten an verrosteten Schwellern, Kotflügelkanten, Böden und tragenden Karosserieteilen durch. Wir legen Wert auf exakte Passgenauigkeit und maximale Schweißnahtfestigkeit für Ihre Sicherheit.",
+      "desc4": "Plagt Ihr Fahrzeug Korrosion und hat den TÜV nicht bestanden? Wir führen präzises Schweißen von verrosteten Schwellern, Böden und Kanten durch. Schweißnähte verzinnen wir gewissenhaft für maximale Lebensdauer, organisieren die Endlackierung in der Partnerlackiererei und leihen Ihnen ein Ersatzfahrzeug.",
       "card5": "Wartung und Reparatur von Klimaanlagen",
-      "desc5": "Verliert Ihr Auto an Kühlleistung oder riecht es unangenehm? Wir bieten einen kompletten Klimaanlagenservice – von der Kältemittelbefüllung über die Ozondesinfektion bis hin zur Lecksuche und zum Austausch beschädigter Teile. Atmen Sie in Ihrem Auto wieder saubere und kühle Luft.",
-      "card6": "Pneuservice",
-      "desc6": "Wir bieten komplette Reifenserviceleistungen für PKW und Transporter. Wir übernehmen den Reifenwechsel, das präzise Auswuchten der Räder sowie Reparaturen von Reifenschäden. Wir bereiten Ihr Fahrzeug schnell, zuverlässig und ohne unnötige Wartezeiten auf die Sommer- und Wintersaison vor.",
+      "desc5": "Verliert Ihr Auto Kühlleistung oder riecht es unangenehm? Wir bieten Komplettservice – Befüllung mit neuem und altem Kältemittel (einschließlich Umrüstung von Oldtimern), Lecksuche, Kompressorreparaturen und Ozondesinfektion. Kommen Sie zur schnellen Kontrolle ohne langes Warten.",
+      "card6": "Reifenservice",
+      "desc6": "Kompletter und schneller Reifenservice für PKW und Transporter. Wir bieten schonenden Reifenwechsel, präzises Auswuchten und Reparatur von Reifenpannen. Wir bereiten Ihr Fahrzeug professionell auf die Saison vor – ohne unnötiges Warten in langen Schlangen.",
       "card7": "Routinemäßige Fahrzeugwartung",
-      "desc7": "Wir gewährleisten einen kompletten regelmäßigen Service und die Wartung Ihres Fahrzeugs, damit Sie sicher und sorgenfrei unterwegs sind. Wir führen Motorölwechsel, Filterwechsel, Bremssystemprüfungen und -reparaturen, Fehlerdiagnosen sowie Standard-Serviceinspektionen durch.",
+      "desc7": "Schieben Sie den Grundservice nicht auf die letzte Minute. Wir führen Öl-, Filter-, Bremsen- und Zahnriemenwechsel sowie Fahrwerksreparaturen durch. Grundlegende Servicearbeiten erledigen wir für Kunden aus der gesamten Umgebung express, qualitativ und ohne lange Bestellfristen.",
       "card8": "Fahrzeugreinigung und -wäsche",
-      "desc8": "Wir geben Ihrem Auto Glanz und Sauberkeit zurück, damit es wieder wie neu aussieht. Wir bieten gründliche Handwäsche der Karosserie, Tiefenreinigung des Innenraums einschließlich Polsterreinigung, Ozondesinfektion sowie detaillierte Pflege von Kunststoff- und Lederteilen."
+      "desc8": "Geben Sie Ihrem Auto Duft und Glanz zurück. Wir bieten schonende Handwäsche der Karosserie, Tiefenreinigung der Innenräume und Kunststoffpflege. Ideale Pflege für Ihr Wohlbefinden in einem gesunden Ambiente oder als perfekte Vorbereitung des Fahrzeugs vor dem Verkauf zu einem höheren Preis."
     }
   },
 
